@@ -1,4 +1,4 @@
-.header{
+.cover{
   height: 100vh;
   background-image: url(/assets/hero.png);
   background-repeat: no-repeat;
@@ -13,6 +13,24 @@
     align-items: center;
   }
 
+  &__hero {
+    justify-content: center;
+    height: 100%;
+    display: flex;
+    padding: 0 10%;
+    flex-direction: column;
+  }
+
+  &__search {
+    max-width: 500px;
+  }
+
+  &__input {
+    height: 49px;
+    border-radius: 10px;
+    border: none;
+    opacity: 0.8;
+  }
 
 }
 
