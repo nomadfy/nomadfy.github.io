@@ -1,16 +1,34 @@
-.cover{
+.header{
   height: 100vh;
   background-image: url(/assets/hero.png);
   background-repeat: no-repeat;
   background-size: cover;
 
   &__navbar {
-    height: 4.2em;
-    background-color: white;
     display: flex;
     justify-content: space-between;
-    padding: 0 10%;
+    padding: 2% 10%;
     align-items: center;
+    opacity: 0.8;
+    background-color: #FFFFFF;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  &__overlay {
+    position: absolute;
+    display: inline-block;
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+  }
+
+  &__image {
+  left: 10%;
+  position: relative;
   }
 
   &__hero {

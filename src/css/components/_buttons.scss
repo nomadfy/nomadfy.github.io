@@ -1,4 +1,6 @@
 .button {
+  margin: 0 15px;
+  display: inline-block;
 
   &--circle {
     border-radius: 50%;
@@ -29,6 +31,11 @@
   &__holder {
     display: inline-block;
     text-align: center;
-    
+  }
+
+  &__holder-is-relative {
+    position: relative;
+    right: 10%;
+    top: 0;
   }
 }

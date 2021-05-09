@@ -1,15 +1,18 @@
-nav.cover__navbar 
-    img.cover__image(src="/assets/header-logo.png", alt="")
-    .button__holder
+header 
+  nav.header__navbar 
+  .header__overlay
+    img.header__image(src="/assets/header-logo.png", alt="")
+    .button__holder.button__holder-is-relative
       a.button.button--borderless ENTRAR
       a.button.button--login CADASTRAR-SE
 
-.cover
-  .cover__hero
-    .cover__text
-      h3  ENCONTRE OU MONTE
-          br 
-          | O ROTEIRO IDEAL DA SUA VIAGEM!
-    .cover__search
-      input.cover__input(type="text" placeholder="Qual será o seu destino?")
-      a.button.button__holder.button--search.button--borderless BUSCAR
+  .header
+    .header__hero
+      .header__text
+        h3  ENCONTRE OU MONTE
+            br 
+            | O ROTEIRO IDEAL DA SUA VIAGEM!
+      .header__search
+        input.header__input(type="text" placeholder="Qual será o seu destino?")
+        a.button.button__holder.button--search.button--borderless BUSCAR
+
