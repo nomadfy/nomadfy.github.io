@@ -22,13 +22,20 @@ h4,
 h5,
 h6{
   font-family: 'Asap Condensed', sans-serif;
+  line-height: 1.4;
 }
 
 p {
-font-family: 'Atma', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  line-height: 1.1;
 }
 
 svg {
   max-width: 25px;
   max-height: 25px;
+}
+
+span {
+  color: white;
 }

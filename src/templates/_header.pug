@@ -1,26 +1,27 @@
 header 
-  nav.header__navbar 
-  .header__overlay
-    img.header__image(src="/assets/header-logo.png", alt="")
-    .button__block.is-relative
-      a.button.button--borderless ENTRAR
-      a.button.button--login CADASTRAR-SE
+  nav.navbar 
+  .navbar__overlay
+    .navbar__logo 
+      img(src="/assets/logo.png", alt="")
+    .button__block
+      a.button.button--login ENTRAR
 
   .header
     .header__hero
       .header__text
-        h3  ENCONTRE OU MONTE
-            br 
-            | O ROTEIRO IDEAL DA SUA VIAGEM!
-      .header__search
-        input.input.input__header(type="text" placeholder="Qual será o seu destino?")
-        a.button.button__holder.button--search.button--borderless BUSCAR
-          svg.icon.icon--small.has-margin-right
-            use(xlink:href="assets/icons/icons.svg#icon-search")
+        h1.header__title ENCONTRE OU MONTE O
+          br
+          | ROTEIRO IDEAL DA SUA VIAGEM!
+      input.input.input__header(type="text" placeholder="Qual será o seu destino?")
 
-      a.button.button__centralized.button--round.button--borderless
-        svg
-          use(xlink:href="assets/icons/icons.svg#icon-arrow-down")
-
-      
+.container
+  .container__body   
+    h1 COMPONENTS HERE
+  .container__body   
+    h1 COMPONENTS HERE
+  .container__body   
+    h1 COMPONENTS HERE
+  .container__body   
+    h1 COMPONENTS HERE
+  .container__body 
 
