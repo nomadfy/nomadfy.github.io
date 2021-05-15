@@ -1,0 +1,9 @@
+{ 
+  "destinations": {
+    "mariana": {
+      "image" : "/assets/explore/roteiro-mariana.png",
+      "title": "7 cachoeiras em 7 dias",
+      "location": "Mariana / MG"
+    }
+  }
+}
