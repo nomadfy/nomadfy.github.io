@@ -1,0 +1,13 @@
+.input {
+  padding: 0 0 0 15px;
+
+  &__header {
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    opacity: 0.8;
+    width: 600px;
+    padding: 0 0 0 50px !important;
+    color: $black;
+  }
+}

@@ -1,0 +1,41 @@
+.button {
+  display: inline-block;
+  cursor: pointer;
+
+  &:not(.button--borderless) {
+    border: 2px solid $orange;
+  }
+
+  &--login {
+    border-radius: 15px;
+    width: 120px;
+    padding: 10px;
+    background-color: $orange;
+    color: $white;
+  }
+
+  &--round {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.6;
+  }
+
+  &__block {
+    display: inline-block;
+    text-align: center;
+  }
+
+  &__holder {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  &__centralized {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
