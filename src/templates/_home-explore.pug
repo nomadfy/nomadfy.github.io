@@ -1,12 +1,26 @@
-.container.explore
+.explore
   h1.explore__title EXPLORE 
     strong ROTEIROS 
     | PRONTOS 
-  .explore__components
-    .explore__card.explore__card--mariana
+  nav.explore__components
+    #image.explore__card([data-card])
       .explore__linear
-        h3.explore__subtitles 7 cachoeiras em 7 dias
+        h3.explore__subtitles(data-title)
         .explore__location
           svg.explore__icon
             use(xlink:href="#icon-location")
-          p.explore__city Mariana / MG
+          p.explore__city(data-city)
+    #image.explore__card([data-card])
+      .explore__linear
+        h3.explore__subtitles(data-title)
+        .explore__location
+          svg.explore__icon
+            use(xlink:href="#icon-location")
+          p.explore__city(data-city)
+    #image.explore__card([data-card])
+      .explore__linear
+        h3.explore__subtitles(data-title)
+        .explore__location
+          svg.explore__icon
+            use(xlink:href="#icon-location")
+          p.explore__city(data-city)
