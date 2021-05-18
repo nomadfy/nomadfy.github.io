@@ -1,13 +1,25 @@
 import { data } from "./data/explore.json";
 
-const destinationTitle = document.querySelector("[data-title]");
-const destinationCity = document.querySelector("[data-city]");
-const destinationCard = document.querySelector("[data-card]");
+const container = document.querySelector(".explore__components");
 
-const writeIn = (id) => {
-  destinationTitle.innerHTML = data[1].title;
-  destinationCity.innerHTML = data[1].city;
-  console.log("aaaaaaaa")
-}
+const buildTemplateHtml = (data) => {
+  return `
+    <div class="explore__card ${data.imageClass}">
+      <div class="explore__linear">
+        <h3 class="explore__subtitles" data-title="">${data.title}</h3>
+        <div class="explore__location">
+          <svg class="explore__icon">
+            <use xlink:href="#icon-location"></use>
+          </svg>
+          <p class="explore__city" data-city="">${data.city}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+};
 
-window.onload = writeIn
+data.forEach((item) => {
+  const template = buildTemplateHtml(item);
+  container.innerHTML = container.innerHTML + template;
+});

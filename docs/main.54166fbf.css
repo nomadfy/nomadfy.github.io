@@ -400,8 +400,16 @@ strong {
   border-radius: 8px;
   margin-right: 20px;
   position: relative;
-  background-image: url(/roteiro-mariana.dadf1e0d.png);
   z-index: 3;
+}
+.explore__card--image1 {
+  background-image: url(/roteiro-mariana.dadf1e0d.png);
+}
+.explore__card--image2 {
+  background-image: url(/roteiro-rio-de-janeiro.1744a50b.png);
+}
+.explore__card--image3 {
+  background-image: url(/roteiro-sao-paulo.f7d0ca56.png);
 }
 .explore__linear {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);

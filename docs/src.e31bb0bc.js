@@ -119,40 +119,35 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"data/explore.json":[function(require,module,exports) {
 module.exports = {
-  "data": {
-    "1": {
-      "card": "(/assets/explore/roteiro-mariana.png)",
-      "title": "7 cachoeiras em 7 dias",
-      "city": "Mariana / MG"
-    },
-    "2": {
-      "card": "/assets/explore/roteiro-sao-paulo.png",
-      "title": "O melhor da capital em 5 dias",
-      "city": "São Paulo / SP"
-    },
-    "3": {
-      "card": "/assets/explore/roteiro-rio-de-janeiro.png",
-      "title": "Final de semana com a família",
-      "city": "Rio de Janeiro / RJ"
-    }
-  }
+  "data": [{
+    "imageClass": "explore__card--image1",
+    "title": "7 cachoeiras em 7 dias",
+    "city": "Mariana / MG"
+  }, {
+    "imageClass": "explore__card--image2",
+    "title": "O melhor da capital em 5 dias",
+    "city": "São Paulo / SP"
+  }, {
+    "imageClass": "explore__card--image3",
+    "title": "Final de semana com a família",
+    "city": "Rio de Janeiro / RJ"
+  }]
 };
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _explore = require("./data/explore.json");
 
-var destinationTitle = document.querySelector("[data-title]");
-var destinationCity = document.querySelector("[data-city]");
-var destinationCard = document.querySelector("[data-card]");
+var container = document.querySelector(".explore__components");
 
-var writeIn = function writeIn(id) {
-  destinationTitle.innerHTML = _explore.data[1].title;
-  destinationCity.innerHTML = _explore.data[1].city;
-  console.log("aaaaaaaa");
+var buildTemplateHtml = function buildTemplateHtml(data) {
+  return "\n    <div class=\"explore__card ".concat(data.imageClass, "\">\n      <div class=\"explore__linear\">\n        <h3 class=\"explore__subtitles\" data-title=\"\">").concat(data.title, "</h3>\n        <div class=\"explore__location\">\n          <svg class=\"explore__icon\">\n            <use xlink:href=\"#icon-location\"></use>\n          </svg>\n          <p class=\"explore__city\" data-city=\"\">").concat(data.city, "</p>\n          </div>\n        </div>\n      </div>\n    </div>\n  ");
 };
 
-window.onload = writeIn;
+_explore.data.forEach(function (item) {
+  var template = buildTemplateHtml(item);
+  container.innerHTML = container.innerHTML + template;
+});
 },{"./data/explore.json":"data/explore.json"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -181,7 +176,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44013" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62884" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

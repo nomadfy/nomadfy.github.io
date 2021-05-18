@@ -1,24 +1,19 @@
 { 
-  "data": {
-    "1": 
+  "data": [
     {
-      "card" :"(/assets/explore/roteiro-mariana.png)",
+      "imageClass": "explore__card--image1",
       "title": "7 cachoeiras em 7 dias",
       "city": "Mariana / MG"
     },
-
-    "2": 
     {
-      "card" : "/assets/explore/roteiro-sao-paulo.png",
+      "imageClass": "explore__card--image2",
       "title": "O melhor da capital em 5 dias",
       "city": "São Paulo / SP"
     },
-
-    "3": 
     {
-      "card" : "/assets/explore/roteiro-rio-de-janeiro.png",
+      "imageClass": "explore__card--image3",
       "title": "Final de semana com a família",
       "city": "Rio de Janeiro / RJ"
     }
-  }
+  ]
 }
