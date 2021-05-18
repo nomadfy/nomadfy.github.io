@@ -22,20 +22,8 @@
     max-height: 300px;
     border-radius: 8px;
     margin-right: 20px;
-    position: relative;
-    z-index: 3;
-  }
-
-  &__card--image1 {
-    background-image: url(/assets/explore/roteiro-mariana.png);
-  }
-
-  &__card--image2 {
-    background-image: url(/assets/explore/roteiro-rio-de-janeiro.png);
-  }
-
-  &__card--image3 {
-    background-image: url(/assets/explore/roteiro-sao-paulo.png);
+    position: absolute;
+    z-index: 0;
   }
 
   &__linear {
@@ -49,6 +37,10 @@
     margin-top: 125px;
     border-radius: 8px;
     z-index: 2;
+  }
+
+  &__linear:not(:last-of-type) {
+    margin-right: 20px;
   }
 
   &__location {

@@ -1,17 +1,17 @@
 { 
   "data": [
     {
-      "imageClass": "explore__card--image1",
+      "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/roteiro-mariana.png?raw=true",
       "title": "7 cachoeiras em 7 dias",
       "city": "Mariana / MG"
     },
     {
-      "imageClass": "explore__card--image2",
+      "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/roteiro-rio-de-janeiro.png?raw=true",
       "title": "O melhor da capital em 5 dias",
       "city": "São Paulo / SP"
     },
     {
-      "imageClass": "explore__card--image3",
+      "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/roteiro-sao-paulo.png?raw=true",
       "title": "Final de semana com a família",
       "city": "Rio de Janeiro / RJ"
     }

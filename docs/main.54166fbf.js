@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"/Users/chrfreitas/Documents/nomadfy.github.io/src/assets/bg.png":[["bg.19f8c1d4.png","assets/bg.png"],"assets/bg.png"],"/Users/chrfreitas/Documents/nomadfy.github.io/src/assets/explore/roteiro-mariana.png":[["roteiro-mariana.dadf1e0d.png","assets/explore/roteiro-mariana.png"],"assets/explore/roteiro-mariana.png"],"/Users/chrfreitas/Documents/nomadfy.github.io/src/assets/explore/roteiro-rio-de-janeiro.png":[["roteiro-rio-de-janeiro.1744a50b.png","assets/explore/roteiro-rio-de-janeiro.png"],"assets/explore/roteiro-rio-de-janeiro.png"],"/Users/chrfreitas/Documents/nomadfy.github.io/src/assets/explore/roteiro-sao-paulo.png":[["roteiro-sao-paulo.f7d0ca56.png","assets/explore/roteiro-sao-paulo.png"],"assets/explore/roteiro-sao-paulo.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"/home/pinho/projects/nomadfy.github.io/src/assets/bg.png":[["bg.19f8c1d4.png","assets/bg.png"],"assets/bg.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62884" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43427" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

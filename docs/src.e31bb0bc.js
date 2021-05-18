@@ -120,15 +120,15 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"data/explore.json":[function(require,module,exports) {
 module.exports = {
   "data": [{
-    "imageClass": "explore__card--image1",
+    "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/roteiro-mariana.png?raw=true",
     "title": "7 cachoeiras em 7 dias",
     "city": "Mariana / MG"
   }, {
-    "imageClass": "explore__card--image2",
+    "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/roteiro-rio-de-janeiro.png?raw=true",
     "title": "O melhor da capital em 5 dias",
     "city": "São Paulo / SP"
   }, {
-    "imageClass": "explore__card--image3",
+    "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/roteiro-sao-paulo.png?raw=true",
     "title": "Final de semana com a família",
     "city": "Rio de Janeiro / RJ"
   }]
@@ -141,7 +141,7 @@ var _explore = require("./data/explore.json");
 var container = document.querySelector(".explore__components");
 
 var buildTemplateHtml = function buildTemplateHtml(data) {
-  return "\n    <div class=\"explore__card ".concat(data.imageClass, "\">\n      <div class=\"explore__linear\">\n        <h3 class=\"explore__subtitles\" data-title=\"\">").concat(data.title, "</h3>\n        <div class=\"explore__location\">\n          <svg class=\"explore__icon\">\n            <use xlink:href=\"#icon-location\"></use>\n          </svg>\n          <p class=\"explore__city\" data-city=\"\">").concat(data.city, "</p>\n          </div>\n        </div>\n      </div>\n    </div>\n  ");
+  return "\n  <div class=\"explore__linear\">\n    <img class=\"explore__card\" src=\"".concat(data.image, "\"\">\n    <h3 class=\"explore__subtitles\">").concat(data.title, "</h3>\n      <div class=\"explore__location\">\n        <svg class=\"explore__icon\">\n          <use xlink:href=\"#icon-location\"></use>\n        </svg>\n        <p class=\"explore__city\" data-city=\"\">").concat(data.city, "</p>\n      </div>\n    </div>\n  </div>\n  ");
 };
 
 _explore.data.forEach(function (item) {
@@ -176,7 +176,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62884" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43427" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
