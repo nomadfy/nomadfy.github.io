@@ -433,6 +433,9 @@ strong {
   border-radius: 8px;
   z-index: 1;
 }
+.explore__linear:not(:last-of-type) {
+  margin-right: 20px;
+}
 .explore__location {
   display: flex;
   flex-direction: row;

@@ -58,6 +58,10 @@
     z-index: 1;
   }
 
+  &__linear:not(:last-of-type) {
+    margin-right: 20px;
+  }
+
   &__location {
     display: flex;
     flex-direction: row;
