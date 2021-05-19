@@ -21,17 +21,34 @@
   &__card {
     display: flex;
     flex-direction: column;
+    border-radius: 8px;
     height: 350px;
     justify-content: flex-end;
     margin: 0 auto;
     min-width: 250px;
     position: relative;
     width: 15.5%;
-    z-index: 3;
+    z-index: 1;
+    overflow: hidden;
+    transition: 2s;
   }
 
   &__card:not(:last-of-type) {
     margin-right: 20px;
+  }
+
+  &__card:hover {
+
+     *.explore__subtitles, .explore__location {
+      transform: scale(1.05);
+      transform: translateY(-100px) ;
+      font-size: 30px;
+    }
+
+    > *:not(.explore__linear) {
+      transform: scale(1.2);
+      filter: blur(1px);
+    }
   }
   
   &__image {
@@ -41,29 +58,38 @@
     position: absolute;
     width: 100%;
     z-index: 1;
+    transition: 2s;
   }
-
+  
   &__linear {
+    visibility: visible;
     background-position: bottom;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
     border-radius: 8px;
     position: relative;
     z-index: 1;
+    transition: 2s;
   }
 
   &__location {
     display: flex;
     flex-direction: row;
     margin: 5px 15px 10px;
-    z-index: 2;
+    z-index: 1;
+    transition: 2s;
   }
 
   &__subtitles {
+    display: flex;
+    position: relative;
     color: $white;
     font-size: 24px;
+    max-width: 80%;
+    margin: 0 auto;
     font-weight: bold;
     line-height: 28px;
-    z-index: 2;
+    z-index: 1;
+    transition: 2s;
   }
   
   &__subtitles--guide {
@@ -78,7 +104,7 @@
     margin-right: 10px;
     min-height: 16px;
     min-width: 15px;
-    z-index: 2;
+    z-index: 1;
   }
 
   &__city {
@@ -86,6 +112,6 @@
     font-size: 15px;
     font-weight: 700;
     margin: 2px 0 -5px;
-    z-index: 2;
+    z-index: 1;
   }
 }
