@@ -380,7 +380,7 @@ strong {
 .explore {
   display: flex;
   flex-direction: column;
-  min-height: 800px;
+  min-height: 850px;
   margin: 2em;
 }
 .explore__title {
@@ -393,61 +393,75 @@ strong {
   width: 100%;
   margin: 24px auto;
 }
-.explore__card {
+.explore__image {
   display: flex;
-  width: 200px;
+  width: 250px;
   max-height: 300px;
   border-radius: 8px;
   margin-right: 20px;
-  position: relative;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  background-size: 150px;
+  background-position: bottom;
+  z-index: 1;
+}
+@media screen and (min-width: 1606px) {
+  .explore__image {
+    width: 250px;
+    max-height: 300px;
+  }
+}
+.explore__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 125px;
   z-index: 3;
 }
-.explore__card--image1 {
-  background-image: url(/roteiro-mariana.dadf1e0d.png);
+@media screen and (min-width: 1606px) {
+  .explore__card {
+    width: 250px;
+    height: 150px;
+  }
 }
-.explore__card--image2 {
-  background-image: url(/roteiro-rio-de-janeiro.1744a50b.png);
-}
-.explore__card--image3 {
-  background-image: url(/roteiro-sao-paulo.f7d0ca56.png);
+.explore__card:not(:last-of-type) {
+  margin-right: auto;
 }
 .explore__linear {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
-  background-size: 150px;
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  height: 150px;
-  justify-content: flex-end;
-  margin-top: 125px;
+  background-position: bottom;
   border-radius: 8px;
-  z-index: 2;
+  z-index: 1;
 }
 .explore__location {
   display: flex;
   flex-direction: row;
   margin: 5px 15px 10px;
-  z-index: 1;
+  z-index: 2;
 }
 .explore__subtitles {
   color: #FFFFFF;
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 8px;
+  z-index: 2;
+}
+.explore__subtitles--guide {
   margin: 0 15px;
-  z-index: 1;
+}
+.explore__subtitles--dest {
+  margin: 15px;
 }
 .explore__icon {
   width: 12px;
   height: 16px;
   margin-right: 10px;
-  z-index: 1;
+  z-index: 2;
 }
 .explore__city {
   font-size: 14px;
-  margin-top: 2px;
+  margin: 2px 0 -10px;
   color: #FFFFFF;
-  z-index: 1;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=/main.54166fbf.css.map */

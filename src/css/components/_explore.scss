@@ -1,7 +1,7 @@
 .explore {
   display: flex;
   flex-direction: column;
-  min-height: 800px;
+  min-height: 850px;
   margin: 2em;
 
   &__title {
@@ -16,68 +16,81 @@
     margin: 24px auto;
   }
 
-  &__card {
+  &__image {
     display: flex;
-    width: 200px;
+    width: 250px;
     max-height: 300px;
     border-radius: 8px;
     margin-right: 20px;
-    position: relative;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    background-size: 150px;
+    background-position: bottom;
+    z-index: 1;
+
+    @media screen and (min-width: 1606px) {
+      width: 250px;
+      max-height: 300px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 125px;
     z-index: 3;
-  }
 
-  &__card--image1 {
-    background-image: url(/assets/explore/roteiro-mariana.png);
-  }
+    @media screen and (min-width: 1606px) {
+      width: 250px;
+      height: 150px;
+    }
+  } 
 
-  &__card--image2 {
-    background-image: url(/assets/explore/roteiro-rio-de-janeiro.png);
-  }
-
-  &__card--image3 {
-    background-image: url(/assets/explore/roteiro-sao-paulo.png);
+  &__card:not(:last-of-type) {
+    margin-right: auto;
   }
 
   &__linear {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
-    background-size: 150px;
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    height: 150px;
-    justify-content: flex-end;
-    margin-top: 125px;
+    background-position: bottom;
     border-radius: 8px;
-    z-index: 2;
+    z-index: 1;
   }
 
   &__location {
     display: flex;
     flex-direction: row;
     margin: 5px 15px 10px;
-    z-index: 1;
+    z-index: 2;
   }
 
   &__subtitles {
     color: $white;
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 8px;
+    z-index: 2;
+  }
+  
+  &__subtitles--guide {
     margin: 0 15px;
-    z-index: 1;
+  }
+
+  &__subtitles--dest {
+    margin: 15px;
   }
 
   &__icon {
     width: 12px;
     height: 16px;
     margin-right: 10px;
-    z-index: 1;
+    z-index: 2;
   }
 
   &__city {
     font-size: 14px;
-    margin-top: 2px;
+    margin: 2px 0 -10px;
     color: $white;
-    z-index: 1;
+    z-index: 2;
   }
 }

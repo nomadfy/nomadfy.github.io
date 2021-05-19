@@ -119,18 +119,49 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"data/explore.json":[function(require,module,exports) {
 module.exports = {
-  "data": [{
-    "imageClass": "explore__card--image1",
+  "guide": [{
+    "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/roteiro-mariana.png?raw=true",
     "title": "7 cachoeiras em 7 dias",
     "city": "Mariana / MG"
   }, {
-    "imageClass": "explore__card--image2",
+    "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/roteiro-rio-de-janeiro.png?raw=true",
     "title": "O melhor da capital em 5 dias",
     "city": "São Paulo / SP"
   }, {
-    "imageClass": "explore__card--image3",
+    "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/roteiro-sao-paulo.png?raw=true",
     "title": "Final de semana com a família",
     "city": "Rio de Janeiro / RJ"
+  }, {
+    "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/roteiro-salvador.png?raw=true",
+    "title": "Pra quem gosta de história e arte",
+    "city": "Salvador / BA"
+  }, {
+    "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/roteiro-manaus.png?raw=true",
+    "title": "Se conectando com a natureza",
+    "city": "Manaus / AM"
+  }, {
+    "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/destinos-gramado.png?raw=true",
+    "title": "Final de semana romântico",
+    "city": "Gramado / RS"
+  }],
+  "destinations": [{
+    "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/destinos-sao-paulo.png?raw=true",
+    "city": "São Paulo / SP"
+  }, {
+    "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/destinos-rio-de-janeiro.png?raw=true",
+    "city": "Rio de Janeiro / RJ"
+  }, {
+    "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/destinos-maragogi.png?raw=true",
+    "city": "Maragogi / AL"
+  }, {
+    "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/destinos-fortaleza.png?raw=true",
+    "city": "Fortaleza / CE"
+  }, {
+    "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/destinos-gramado.png?raw=true",
+    "city": "Gramados / RS"
+  }, {
+    "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/destinos-florianopolis.png?raw=true",
+    "city": "Florianópolis / SC"
   }]
 };
 },{}],"index.js":[function(require,module,exports) {
@@ -138,17 +169,28 @@ module.exports = {
 
 var _explore = require("./data/explore.json");
 
-var container = document.querySelector(".explore__components");
+var containerGuide = document.querySelector(".explore__components");
+var containerDest = document.querySelector(".explore__components--destination");
 
-var buildTemplateHtml = function buildTemplateHtml(data) {
-  return "\n    <div class=\"explore__card ".concat(data.imageClass, "\">\n      <div class=\"explore__linear\">\n        <h3 class=\"explore__subtitles\" data-title=\"\">").concat(data.title, "</h3>\n        <div class=\"explore__location\">\n          <svg class=\"explore__icon\">\n            <use xlink:href=\"#icon-location\"></use>\n          </svg>\n          <p class=\"explore__city\" data-city=\"\">").concat(data.city, "</p>\n          </div>\n        </div>\n      </div>\n    </div>\n  ");
+var buildGuide = function buildGuide(guide) {
+  return "\n  <div class=\"explore__card\">\n    <img class=\"explore__image\" src=\"".concat(guide.image, "\">\n    <div class=\"explore__linear\">\n      <h3 class=\"explore__subtitles explore__subtitles--guide\">").concat(guide.title, "</h3>\n      <div class=\"explore__location\">\n        <svg class=\"explore__icon\">\n          <use xlink:href=\"#icon-location\"></use>\n        </svg>\n        <h6 class=\"explore__city\" data-city=\"\">").concat(guide.city, "</p>\n      </div>\n    </div>\n  </div>\n  ");
 };
 
-_explore.data.forEach(function (item) {
-  var template = buildTemplateHtml(item);
-  container.innerHTML = container.innerHTML + template;
+var buildDestination = function buildDestination(destinations) {
+  return "\n  <div class=\"explore__card\">\n    <img class=\"explore__image\" src=\"".concat(destinations.image, "\">\n    <div class=\"explore__linear\">\n      <h3 class=\"explore__subtitles explore__subtitles--dest\">").concat(destinations.city, "</h3>\n    </div>\n  </div>\n");
+};
+
+_explore.destinations.forEach(function (item) {
+  var destination = buildDestination(item);
+  containerDest.innerHTML = containerDest.innerHTML + destination;
 });
-},{"./data/explore.json":"data/explore.json"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+_explore.guide.forEach(function (item) {
+  var guide = buildGuide(item);
+  var destination = buildDestination(item);
+  containerGuide.innerHTML = containerGuide.innerHTML + guide;
+});
+},{"./data/explore.json":"data/explore.json"}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -176,7 +218,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62884" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46341" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -352,5 +394,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/src.e31bb0bc.js.map
