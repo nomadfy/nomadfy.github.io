@@ -5,29 +5,29 @@ const containerDest = document.querySelector(".explore__components--destination"
 
 const buildGuide = (guide) => {
   return `
-  <div class="explore__card">
+  <a class="explore__card" href="#">
     <img class="explore__image" src="${guide.image}">
     <div class="explore__linear">
-      <h3 class="explore__subtitles explore__subtitles--guide">${guide.title}</h3>
+      <h2 class="explore__subtitles explore__subtitles--guide">${guide.title}</h3>
       <div class="explore__location">
         <svg class="explore__icon">
           <use xlink:href="#icon-location"></use>
         </svg>
-        <h6 class="explore__city" data-city="">${guide.city}</p>
+        <h3 class="explore__city" data-city="">${guide.city}</p>
       </div>
     </div>
-  </div>
+  </a>
   `;
 };
 
 const buildDestination = (destinations) => {
   return `
-  <div class="explore__card">
+  <a class="explore__card" href="#">
     <img class="explore__image" src="${destinations.image}">
     <div class="explore__linear">
       <h3 class="explore__subtitles explore__subtitles--dest">${destinations.city}</h3>
     </div>
-  </div>
+  </a>
 `;
 };
 
