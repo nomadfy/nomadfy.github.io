@@ -5,12 +5,12 @@
   align-items: center;
   opacity: .75;
   background-color: $white;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
 
   &__overlay {
-    position: absolute;
+    position: fixed;
     display: inline-block;
     justify-content: space-between;
     display: flex;
