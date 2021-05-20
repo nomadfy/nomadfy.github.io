@@ -37,5 +37,13 @@ svg {
 }
 
 span {
-  color: white;
+  color: $white;
+}
+
+strong {
+  color: $black;
+}
+
+a {
+  text-decoration: none;
 }

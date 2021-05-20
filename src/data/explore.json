@@ -1,0 +1,61 @@
+{ 
+  "guide": [
+    {
+      "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/roteiro-mariana.png?raw=true",
+      "title": "7 cachoeiras em 7 dias",
+      "city": "Mariana / MG"
+    },
+    {
+      "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/roteiro-rio-de-janeiro.png?raw=true",
+      "title": "O melhor da capital em 5 dias",
+      "city": "São Paulo / SP"
+    },
+    {
+      "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/roteiro-sao-paulo.png?raw=true",
+      "title": "Final de semana com a família",
+      "city": "Rio de Janeiro / RJ"
+    },
+    {
+      "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/roteiro-salvador.png?raw=true",
+      "title": "Pra quem gosta de história e arte",
+      "city": "Salvador / BA"
+    },
+    {
+      "image": "https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/roteiro-manaus.png?raw=true",
+      "title": "Se conectando com a natureza",
+      "city": "Manaus / AM"
+    },
+    {
+      "image": "https://raw.githubusercontent.com/nomadfy/nomadfy.github.io/pinho/explore-section/src/assets/explore/roteiro-gramado.png",
+      "title": "Final de semana romântico",
+      "city": "Gramado / RS"
+    }
+  ],
+
+  "destinations": [
+    {
+      "image":"https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/destinos-sao-paulo.png?raw=true",
+      "city": "São Paulo / SP"
+    },
+    {
+      "image":"https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/destinos-rio-de-janeiro.png?raw=true",
+      "city": "Rio de Janeiro / RJ"
+    },
+    {
+      "image":"https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/destinos-maragogi.png?raw=true",
+      "city": "Maragogi / AL"
+    },
+    {
+      "image":"https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/destinos-fortaleza.png?raw=true",
+      "city": "Fortaleza / CE"
+    },
+    {
+      "image":"https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/destinos-gramado.png?raw=true",
+      "city": "Gramados / RS"
+    },
+    {
+      "image":"https://github.com/nomadfy/nomadfy.github.io/blob/pinho/explore-section/src/assets/explore/destinos-florianopolis.png?raw=true",
+      "city": "Florianópolis / SC"
+    }
+  ]
+}

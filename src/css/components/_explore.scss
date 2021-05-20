@@ -1,0 +1,117 @@
+.explore {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+  min-height: 850px;
+
+  &__title {
+    font-size: 32px;
+    color: $gray3;
+  }
+
+  &__components {
+    display: flex;
+    flex-direction: row;
+    height: 365px;
+    margin: auto;
+    overflow-x: auto;
+    width: 100%;
+  }
+  
+  &__card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    height: 350px;
+    justify-content: flex-end;
+    margin: 0 auto;
+    min-width: 250px;
+    position: relative;
+    width: 15.5%;
+    z-index: 1;
+    overflow: hidden;
+    transition: .75s;
+  }
+
+  &__card:not(:last-of-type) {
+    margin-right: 20px;
+  }
+
+  &__card:hover {
+
+    .explore__subtitles, 
+    .explore__location {
+      transform: scale(1.02);
+      transform: translateY(-10px);
+    }
+
+    > *:not(.explore__linear) {
+      transform: scale(1.01);
+      filter: blur(1px);
+    }
+  }
+  
+  &__image {
+    border-radius: 8px;
+    display: flex;
+    max-height: 350px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    transition: .75s;
+  }
+  
+  &__linear {
+    visibility: visible;
+    background-position: bottom;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    transition: .75s;
+  }
+
+  &__location {
+    display: flex;
+    flex-direction: row;
+    margin: 5px 15px 10px;
+    z-index: 1;
+    transition: .75s;
+  }
+
+  &__subtitles {
+    display: flex;
+    position: relative;
+    color: $white;
+    font-size: 24px;
+    max-width: 80%;
+    margin: 0 auto;
+    font-weight: bold;
+    line-height: 28px;
+    z-index: 1;
+    transition: .75s;
+  }
+  
+  &__subtitles--guide {
+    margin: 0 15px;
+  }
+
+  &__subtitles--dest {
+    margin: 15px;
+  }
+
+  &__icon {
+    margin-right: 10px;
+    min-height: 16px;
+    min-width: 15px;
+    z-index: 1;
+  }
+
+  &__city {
+    color: $white;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 2px 0 -5px;
+    z-index: 1;
+  }
+}
