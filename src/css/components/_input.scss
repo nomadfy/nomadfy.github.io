@@ -6,8 +6,15 @@
     border-radius: 25px;
     border: none;
     opacity: 0.8;
-    width: 600px;
-    padding: 0 0 0 50px !important;
+    max-width: 600px;
     color: $black;
+
+    @media screen and (min-width: 375px) {
+      padding: 0 0 0 50px !important;
+    }
+
+    @media screen and (max-width: 374px) {
+      padding: 0 0 0 20px !important;
+    }
   }
 }

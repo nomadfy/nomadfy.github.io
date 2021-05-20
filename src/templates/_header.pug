@@ -1,11 +1,27 @@
 header 
   nav.navbar 
   .navbar__overlay
-    .navbar__logo 
+    a.navbar__logo(href="/")
       img(src="/assets/logo.png", alt="")
+    .navbar__items
+      a.navbar__icon(href="https://www.facebook.com" target="_blank")
+        svg
+          use(xlink:href="#icon-facebook")
+      a.navbar__icon(href="https://www.instagram.com/" target="_blank" )
+        svg
+          use(xlink:href="#icon-instagram")
+      a.navbar__icon(href="https://www.telegram.org/?setln=pt-br" target="_blank")
+        svg
+          use(xlink:href="#icon-telegram")
+      a.navbar__icon(href="https://www.tiktok.com/pt-BR/" target="_blank")
+        svg
+          use(xlink:href="#icon-tiktok")
+      a.navbar__icon(href="https://twitter.com/login?lang=pt" target="_blank")
+        svg
+          use(xlink:href="#icon-twitter")
     .button__block
       a.button.button--login ENTRAR
-
+      
   .header
     .header__hero
       .header__text

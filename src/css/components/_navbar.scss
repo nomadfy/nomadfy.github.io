@@ -3,8 +3,8 @@
   justify-content: space-between;
   padding: 2em 0;
   align-items: center;
-  opacity: 0.7;
-  background-color: #FFFFFF;
+  opacity: .75;
+  background-color: $white;
   position: absolute;
   left: 0;
   right: 0;
@@ -15,7 +15,30 @@
     justify-content: space-between;
     display: flex;
     align-items: center;
-    padding: 0.35em 2em;
     min-width: 100%;
+    
+    @media screen and (min-width: 375px) {
+      padding: .35em 2em;
+    }
+
+    @media screen and (max-width: 374px) {
+      padding: .35em 1em;
+    }
+  }
+
+  &__logo {
+    margin-right: 30px;
+  }
+
+  &__items {
+    display: none;
+    align-items: center;
+  }
+  
+  &__icon {
+    display: flex;
+    min-width: 30px;
+    min-height: 20px;
+    margin-right: 30px;
   }
 }
