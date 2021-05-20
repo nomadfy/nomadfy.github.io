@@ -30,7 +30,7 @@
     width: 15.5%;
     z-index: 1;
     overflow: hidden;
-    transition: 2s;
+    transition: .75s;
   }
 
   &__card:not(:last-of-type) {
@@ -39,14 +39,14 @@
 
   &__card:hover {
 
-     *.explore__subtitles, .explore__location {
-      transform: scale(1.05);
-      transform: translateY(-100px) ;
-      font-size: 30px;
+    .explore__subtitles, 
+    .explore__location {
+      transform: scale(1.02);
+      transform: translateY(-10px);
     }
 
     > *:not(.explore__linear) {
-      transform: scale(1.2);
+      transform: scale(1.01);
       filter: blur(1px);
     }
   }
@@ -58,7 +58,7 @@
     position: absolute;
     width: 100%;
     z-index: 1;
-    transition: 2s;
+    transition: .75s;
   }
   
   &__linear {
@@ -68,7 +68,7 @@
     border-radius: 8px;
     position: relative;
     z-index: 1;
-    transition: 2s;
+    transition: .75s;
   }
 
   &__location {
@@ -76,7 +76,7 @@
     flex-direction: row;
     margin: 5px 15px 10px;
     z-index: 1;
-    transition: 2s;
+    transition: .75s;
   }
 
   &__subtitles {
@@ -89,7 +89,7 @@
     font-weight: bold;
     line-height: 28px;
     z-index: 1;
-    transition: 2s;
+    transition: .75s;
   }
   
   &__subtitles--guide {
