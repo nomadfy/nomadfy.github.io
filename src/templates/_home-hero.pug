@@ -1,7 +1,9 @@
-.hero
-  .hero__hero
+section.hero
+  .hero__section
     .hero__text
-      h1.hero__title ENCONTRE OU MONTE O
+      h1.hero__title Encontre ou monte o
         br
-        | ROTEIRO IDEAL DA SUA VIAGEM!
-    input.input.input__hero(type="text" placeholder="Qual será o seu destino?")
+        | roteiro ideal da sua viagem!
+    input.input.hero__input(type="text", required)
+    button.hero__search
+    span.hero__placeholder Qual será o seu destino?

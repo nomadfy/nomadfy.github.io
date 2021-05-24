@@ -11,9 +11,10 @@
   }
 
   &__title {
-    font-size: 32px;
     color: $gray3;
+    font-size: 32px;
     margin-right: 20px;
+    text-transform: uppercase;
   }
 
   &__button--text {
@@ -24,25 +25,25 @@
   &__components {
     display: flex;
     flex-direction: row;
-    height: 365px;
+    height: 370px;
     margin: auto;
     overflow-x: auto;
     width: 100%;
   }
   
   &__card {
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
-    border-radius: 8px;
     height: 350px;
     justify-content: flex-end;
     margin: 0 auto;
     min-width: 250px;
+    overflow: hidden;
     position: relative;
+    transition: .75s;
     width: 15.5%;
     z-index: 2;
-    overflow: hidden;
-    transition: .75s;
   }
 
   &__card:not(:last-of-type) {
@@ -68,41 +69,41 @@
     display: flex;
     max-height: 350px;
     position: absolute;
+    transition: .75s;
     width: 100%;
     z-index: 1;
-    transition: .75s;
   }
   
   &__linear {
-    visibility: visible;
     background-position: bottom;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
     border-radius: 8px;
     position: relative;
-    z-index: 7;
     transition: .75s;
+    visibility: visible;
+    z-index: 7;
   }
 
   &__location {
     display: flex;
     flex-direction: row;
     margin: 5px 15px 10px;
-    z-index: 6;
     transition: .75s;
+    z-index: 6;
   }
 
   &__subtitles {
-    display: flex;
-    position: relative;
     color: $white;
+    display: flex;
     font-size: 24px;
-    max-width: 80%;
-    margin: 0 auto;
     font-weight: bold;
     line-height: 28px;
-    z-index: 5;
-    transition: .75s;
+    margin: 0 auto;
+    max-width: 80%;
+    position: relative;
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    transition: .75s;
+    z-index: 5;
   }
   
   &__subtitles--guide {
