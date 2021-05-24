@@ -34,7 +34,7 @@
     display: block;
     height: 55px;
     opacity: .75;
-    padding: 0 10px 0 50px !important;
+    padding: 0 10px 0 60px !important;
     position: relative;
 
     @media screen and (min-width: 375px) {
@@ -87,15 +87,15 @@
     pointer-events: none;
     position: relative;
 
-    @media screen and (min-width: 471px) {
+    @media screen and (min-width: 481px) {
       bottom: 96px;
       font-size: 24px;
       margin: 0 0 0 55px;
     }
 
-    @media screen and (max-width: 470px) {
-      bottom: 90px;
-      font-size: 16px; 
+    @media screen and (max-width: 480px) {
+      bottom: 91px;
+      font-size: 16px;
       margin: 0 0 0 50px;
     }
   }
