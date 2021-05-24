@@ -117,42 +117,80 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"favicon/manifest.json":[function(require,module,exports) {
+})({"data/explore.json":[function(require,module,exports) {
 module.exports = {
-  "name": "App",
-  "icons": [{
-    "src": "\/android-icon-36x36.png",
-    "sizes": "36x36",
-    "type": "image\/png",
-    "density": "0.75"
+  "guide": [{
+    "image": "roteiro-mariana.png",
+    "title": "7 cachoeiras em 7 dias",
+    "city": "Mariana / MG"
   }, {
-    "src": "\/android-icon-48x48.png",
-    "sizes": "48x48",
-    "type": "image\/png",
-    "density": "1.0"
+    "image": "roteiro-sao-paulo.png",
+    "title": "O melhor da capital em 5 dias",
+    "city": "São Paulo / SP"
   }, {
-    "src": "\/android-icon-72x72.png",
-    "sizes": "72x72",
-    "type": "image\/png",
-    "density": "1.5"
+    "image": "roteiro-rio-de-janeiro.png",
+    "title": "Final de semana com a família",
+    "city": "Rio de Janeiro / RJ"
   }, {
-    "src": "\/android-icon-96x96.png",
-    "sizes": "96x96",
-    "type": "image\/png",
-    "density": "2.0"
+    "image": "roteiro-salvador.png",
+    "title": "Pra quem gosta de história e arte",
+    "city": "Salvador / BA"
   }, {
-    "src": "\/android-icon-144x144.png",
-    "sizes": "144x144",
-    "type": "image\/png",
-    "density": "3.0"
+    "image": "roteiro-manaus.png",
+    "title": "Se conectando com a natureza",
+    "city": "Manaus / AM"
   }, {
-    "src": "\/android-icon-192x192.png",
-    "sizes": "192x192",
-    "type": "image\/png",
-    "density": "4.0"
+    "image": "roteiro-gramado.png",
+    "title": "Final de semana romântico",
+    "city": "Gramado / RS"
+  }],
+  "destinations": [{
+    "image": "destinos-sao-paulo.png",
+    "city": "São Paulo / SP"
+  }, {
+    "image": "destinos-rio-de-janeiro.png",
+    "city": "Rio de Janeiro / RJ"
+  }, {
+    "image": "destinos-maragogi.png",
+    "city": "Maragogi / AL"
+  }, {
+    "image": "destinos-fortaleza.png",
+    "city": "Fortaleza / CE"
+  }, {
+    "image": "destinos-gramado.png",
+    "city": "Gramados / RS"
+  }, {
+    "image": "destinos-florianopolis.png",
+    "city": "Florianópolis / SC"
   }]
 };
-},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"index.js":[function(require,module,exports) {
+"use strict";
+
+var _explore = require("./data/explore.json");
+
+var containerGuide = document.querySelector(".explore__components");
+var containerDest = document.querySelector(".explore__components--destination");
+
+var buildGuide = function buildGuide(guide) {
+  return "\n  <a class=\"explore__card\" href=\"#\">\n    <img class=\"explore__image\" src=\"".concat(guide.image, "\">\n    <div class=\"explore__linear\">\n      <h2 class=\"explore__subtitles explore__subtitles--guide\">").concat(guide.title, "</h3>\n      <div class=\"explore__location\">\n        <svg class=\"explore__icon\">\n          <use xlink:href=\"#icon-location\"></use>\n        </svg>\n        <h3 class=\"explore__city\" data-city=\"\">").concat(guide.city, "</p>\n      </div>\n    </div>\n  </a>\n  ");
+};
+
+var buildDestination = function buildDestination(destinations) {
+  return "\n  <a class=\"explore__card\" href=\"#\">\n    <img class=\"explore__image\" src=\"".concat(destinations.image, "\">\n    <div class=\"explore__linear\">\n      <h3 class=\"explore__subtitles explore__subtitles--dest\">").concat(destinations.city, "</h3>\n    </div>\n  </a>\n");
+};
+
+_explore.destinations.forEach(function (item) {
+  var destination = buildDestination(item);
+  containerDest.innerHTML = containerDest.innerHTML + destination;
+});
+
+_explore.guide.forEach(function (item) {
+  var guide = buildGuide(item);
+  var destination = buildDestination(item);
+  containerGuide.innerHTML = containerGuide.innerHTML + guide;
+});
+},{"./data/explore.json":"data/explore.json"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -356,5 +394,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","favicon/manifest.json"], null)
-//# sourceMappingURL=/favicon/manifest.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+//# sourceMappingURL=/src.e31bb0bc.js.map

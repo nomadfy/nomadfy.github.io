@@ -42,5 +42,4 @@ guide.forEach((item) => {
   const destination = buildDestination(item);
 
   containerGuide.innerHTML = containerGuide.innerHTML + guide;
-
 });

@@ -28,7 +28,9 @@ h6{
 p,
 .button,
 input,
-span {
+span,
+a,
+button {
   font-family: 'Roboto', sans-serif;
   font-weight: normal;
   line-height: 1.1;
@@ -47,6 +49,7 @@ strong {
   color: $black;
 }
 
-a {
+a, button {
   text-decoration: none;
+  cursor: pointer;
 }
