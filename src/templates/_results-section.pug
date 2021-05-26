@@ -1,4 +1,4 @@
-section.results
+main.results
   nav.results__container
     .results__header
       a.results__text--header(href="#") Brasil
@@ -7,18 +7,18 @@ section.results
       a.results__text--header(href="#") Santa Catarina
       svg.results__icon--arrow
         use(xlink:href="#icon-arrow-right")
-      button.button--round.results__button--header
+      button.button--round.results__button--header.hover__max
     h1.results__city Florianopolis
     nav.results__nav
-      button.results__button--nav Roteiros
-      button.results__button--nav  Pontos turísticos
+      a#roteiros.results__button--nav(href="#roteiros") Roteiros
+      a#pontosTuristicos.results__button--nav(href="#pontosTuristicos") Pontos turísticos
       hr.results__underline.results__underline--dark
     .results__items.results__column
       .results__content.results__row
         img.results__image(src="./assets/result-test.png")
         .results__about.results__column
           p.results__title Jurere Internacional 
-          .results__avaliation.results__row
+          .results__rating.results__row
             svg.results__icon--star(width='12' height='12' viewbox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg')
               path(d='M11.9894 4.63484C11.9641 4.55709 11.8969 4.50038 11.8159 4.48857L7.93022 3.92387L6.19252 0.402937C6.15643 0.329477 6.08168 0.283081 6.00006 0.283081C5.91844 0.283081 5.84347 0.329477 5.8076 0.402937L4.06969 3.92409L0.184033 4.48878C0.103055 4.5006 0.0360388 4.55709 0.0104781 4.63506C-0.0146531 4.7126 0.00618213 4.79809 0.0648214 4.85501L2.87671 7.59581L2.21278 11.466C2.19903 11.5465 2.23211 11.628 2.29805 11.6761C2.36443 11.7246 2.45228 11.7308 2.52423 11.6924L6.00006 9.86534L9.47546 11.6924C9.50682 11.7089 9.5414 11.7171 9.57555 11.7171C9.62002 11.7171 9.66426 11.7033 9.70185 11.6761C9.76801 11.628 9.80109 11.5465 9.78713 11.466L9.12341 7.59602L11.9353 4.85501C11.9937 4.79766 12.0148 4.71239 11.9894 4.63484Z' fill='#444444')
             p.results__grade.results__grade--bold 4.8
@@ -26,14 +26,31 @@ section.results
           .results__types.results__row 
             p.results__text--types natureza
             p.results__text--types lazer
-          .results__options.results__row
-            p (Já adicionado ao roteiro)
+          //- #jaAdicionado.results__options.results__row
+          //-   p (Já adicionado ao roteiro)
+          //-   .results__options--buttons.results__row
+          //-     button#infos.results__button.hover__max
+          //-       svg 
+          //-         use(xlink:href="#icon-info")
+          //-     button#addOption.results__button.hover__max
+          //-       svg
+          //-         use(xlink:href="#icon-plus")
+          #naoAdicionado.results__options.results__row
             .results__options--buttons.results__row
-              button.results__button
-                svg 
-                  use(xlink:href="#icon-info")
-              button.results__button
-                svg
-                  use(xlink:href="#icon-plus")
+              button.results__button.hover__max
+                svg.results__icon--three
+                  use(xlink:href="#icon-three-lines")
+              
+              .results__column
+                button#listOption.results__button.hover__max
+                  svg.results__icon--three
+                    use(xlink:href="#icon-three-lines")
+                ul#optionDropDown.dropdown__option
+                  a.dropdown__item
+                    li Utilizar 
+                  a.dropdown__item 
+                    li Salvar
+                  a.dropdown__item
+                    li Compartilhar
     hr.results__underline.results__underline--shine
   iframe.results__map(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31753918.49138118!2d-69.64872607287624!3d-13.705681771544725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9c59c7ebcc28cf%3A0x295a1506f2293e63!2sBrasil!5e0!3m2!1spt-BR!2sbr!4v1621868031749!5m2!1spt-BR!2sbr' style='border:0;' allowfullscreen='' loading='lazy')

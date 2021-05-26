@@ -8,6 +8,11 @@
   top: 0;
 }
 
+.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
 .has-margin-right {
   margin-left: 0;
   margin-right: 10px !important

@@ -1,0 +1,11 @@
+.hover {
+  
+  &__min:hover {
+      transform: scale(1.02);
+  }
+
+  &__max:hover {
+    transform: scale(1.05);
+  }
+
+}

@@ -1,0 +1,26 @@
+.dropdown {
+
+  &__option {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    color: $gray3;
+    font-size: 16px;
+    height: 130px;
+    top: 20px;
+    right: -70px;
+    width: 200px;
+  }
+
+  &__item {
+    list-style: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.667 3.667H6.334v2.666H3.667v1.334h2.667v2.666h1.333V7.667h2.667V6.333H7.667V3.667zM7 .333A6.67 6.67 0 0 0 .333 7 6.669 6.669 0 0 0 7 13.667 6.669 6.669 0 0 0 13.667 7 6.67 6.67 0 0 0 7 .333zm0 12A5.34 5.34 0 0 1 1.667 7 5.34 5.34 0 0 1 7 1.667 5.34 5.34 0 0 1 12.334 7 5.34 5.34 0 0 1 7 12.333z' fill='%23444'/%3E%3C/svg%3E");
+  }
+
+  &__item:not(:last-of-type) {
+    margin-bottom: 26px;
+  }
+}
