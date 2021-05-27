@@ -1,10 +1,10 @@
 doctype html
-html#results(lang="en")
+html(lang="en")
   include ./templates/_head.pug
-  body
+  body#results
     include ./templates/_header.pug
     include ./templates/_results-section.pug
-    include ./templates/_results-dropdown.pug
+    include ./templates/_results-modal.pug
     include ./assets/icons.svg
+    script(src='./results.js' defer)
     
-

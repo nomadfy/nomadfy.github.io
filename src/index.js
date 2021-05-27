@@ -1,5 +1,5 @@
 import { guide, destinations } from "./data/explore.json";
-
+  
 const containerGuide = document.querySelector(".explore__components");
 const containerDest = document.querySelector(".explore__components--destination");
 
@@ -42,17 +42,4 @@ guide.forEach((item) => {
   const destination = buildDestination(item);
 
   containerGuide.innerHTML = containerGuide.innerHTML + guide;
-})
-
-import { dropDown } from "./js/dropdown.js"
-
-document.querySelector('#listButton').addEventListener('click', dropDown);
-
-window.addEventListener('click', function(event) {
-  if (!event.target.matches('#listButton')) {
-    var dropdown = document.getElementById('optionDropDown');
-    if (dropdown.classList.contains('is-visible')) {
-      dropdown.classList.remove('is-visible');
-    }
-  }
 })

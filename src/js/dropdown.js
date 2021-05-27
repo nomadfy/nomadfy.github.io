@@ -1,3 +1,3 @@
-export function dropDown() {
-  document.getElementById('optionDropDown').classList.toggle('is-visible');
+export function dropDownOptions() {
+  document.getElementById('optionItem').classList.toggle('is-visible');
 }

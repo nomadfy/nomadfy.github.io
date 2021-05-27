@@ -10,10 +10,14 @@
     border-radius: 8px;
     color: $gray3;
     font-size: 16px;
-    height: 130px;
+    max-height: 175px;
+    min-height: 130px;
     top: 20px;
     right: -70px;
     width: 200px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
   }
 
   &__item {

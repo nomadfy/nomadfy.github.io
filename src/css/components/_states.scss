@@ -17,3 +17,27 @@
   margin-left: 0;
   margin-right: 10px !important
 }
+
+.has-margin-left {
+  margin-left: 10px;
+}
+
+.in-horizontal-end {
+  display: flex;
+  justify-self: flex-end;
+}
+
+.in-vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+.in-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.in-column {
+  display: flex;
+  flex-direction: column;
+}
