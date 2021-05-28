@@ -27,3 +27,8 @@
   color: $gray2;
   margin-left: 2px;
 }
+
+select:focus, textarea:focus, input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}

@@ -6,10 +6,18 @@
     width: 15px !important;
     height: 15px !important;
   }
+
+  &__three {
+    width: 14px;
+    height: 10px;
+    pointer-events: none;
+  }
+
+  &__star {
+    position: relative;
+    width: 12px;
+    height: 12px;
+  }
 }
 
-.icon--three {
-  width: 18px;
-  height: 13px;
-  pointer-events: none;
-}
+

@@ -22,6 +22,30 @@
   margin-left: 10px;
 }
 
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.has-margin-top {
+  margin-top: 10px;
+}
+
+.has-margin-bottom {
+  margin-bottom: 10px;
+}
+
+.no-margin-top {
+  margin-top: 0;
+}
+
+.negative-margin-top {
+  margin-top: -7px;
+}
+
+.negative-margin-bottom {
+  margin-bottom: -7px;
+}
+
 .in-horizontal-end {
   display: flex;
   justify-self: flex-end;
@@ -35,9 +59,20 @@
 .in-row {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 .in-column {
   display: flex;
   flex-direction: column;
+}
+
+.is-absolute-right {
+  position: absolute;
+  right: 2em;
+}
+
+.is-absolute-left {
+  position: absolute;
+  left: 2em;
 }
