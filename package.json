@@ -6,8 +6,8 @@
   "author": "Matheus Costa <matheusagcosta@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel src/index.pug --out-dir docs",
-    "build": "rm -rf docs && parcel build src/index.pug --out-dir docs --public-url ./"
+    "dev": "parcel src/index.pug src/details/index.pug --out-dir docs",
+    "build": "rm -rf docs && parcel build src/index.pug src/details/index.pug --out-dir docs --public-url ./"
   },
   "devDependencies": {
     "browser-sync": "^2.26.14",
