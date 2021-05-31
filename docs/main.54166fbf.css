@@ -732,7 +732,7 @@ select:focus, textarea:focus, input:focus {
 .details__text--header {
   color: #444444;
   font-size: 14px;
-  margin-top: -1px;
+  font-weight: normal;
 }
 .details__icon--arrow {
   display: flex;
