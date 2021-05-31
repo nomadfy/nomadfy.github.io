@@ -1,6 +1,6 @@
 section.modal.in-column
   header.modal__header
-    p.results__text--header Título do roteiro
+    p.details__text--header Título do roteiro
     input.modal__input(placeholder="Dê um nome ao seu roteiro")
     span.modal__input--value 30/48
   .in-row
@@ -14,16 +14,16 @@ section.modal.in-column
         option(value="5") 5
       p de 5
     .in-column
-      button#editButton.button__three.hover__around.modal__days--button
-        svg.icon__three
-          use(xlink:href="#icon-three-lines")
-      ul#editDropdown.dropdown.dropdown__margin
-        a.dropdown__item.dropdown__item--calendar
-          li Editar diárias
-        a.dropdown__item.dropdown__item--reorder
-          li Reordenar
-        a.dropdown__item.dropdown__item--delete
-          li Excluir roteiro
+      button#editButton.modal__button--margin.button__menu
+        svg.icon__menu
+          use(xlink:href="#icon-menu-lines")
+      ul#editDropdown.dropdown.dropdown--margin
+        li.dropdown__item
+          a.dropdown__item--text.dropdown__item--calendar(href="#") Editar diárias
+        li.dropdown__item
+          a.dropdown__item--text.dropdown__item--reorder(href="#") Reordenar
+        li.dropdown__item
+          a.dropdown__item--text.dropdown__item--red.dropdown__item--delete(href="#") Excluir roteiro
   hr.underline.underline--shine
   ul.in-column
     //- Code for each item
@@ -32,29 +32,29 @@ section.modal.in-column
       //- Dinamic Hours ->
       span.modal__hour 8:00 às 10:00
       .in-column.is-absolute-right
-        button#detailsButton.button__three.hover__around
-          svg.icon__three
-            use(xlink:href="#icon-three-lines")
-        ul#detailsDropdown.dropdown.dropdown__margin
-          a.dropdown__item.dropdown__item--details
-            li Ver detalhes
-          a.dropdown__item.dropdown__item--reorder
-            li Reordenar
-          a.dropdown__item.dropdown__item--hour
-            li Alterar horário
-          a.dropdown__item.dropdown__item--calendar
-            li Alterar data
-          a.dropdown__item.dropdown__item--delete
-            li Remover ponto
+        button#detailsButton.button__menu
+          svg.icon__menu
+            use(xlink:href="#icon-menu-lines")
+        ul#detailsDropdown.dropdown.dropdown--margin
+          li.dropdown__item
+            a.dropdown__item--text.dropdown__item--details(href="#") Ver detalhes
+          li.dropdown__item
+            a.dropdown__item--text.dropdown__item--reorder(href="#") Reordenar
+          li.dropdown__item
+            a.dropdown__item--text.dropdown__item--hour(href="#") Alterar horário
+          li.dropdown__item
+            a.dropdown__item--text.dropdown__item--calendar(href="#") Alterar data
+          li.dropdown__item
+            a.dropdown__item--text.dropdown__item--red.dropdown__item--delete(href="#") Remover ponto
       p.modal__local Jurere Internacional
       //- Dinamic Grades ->
-      .results__rating.results__about.in-row
+      .details__rating.details__rating--text.in-row
         svg.icon__star
           use(xlink:href="#icon-star")
-        p.results__grade.results__grade--bold 4.8
-        p.results__grade (1.024 avaliações)
+        p.details__grade.details__grade--bold 4.8
+        p.details__grade (1.024 avaliações)
       //- Dinamic Color ->
-      .in-row.modal__end
-        p.results__category natureza
-        p.results__category lazer
+      .in-row.modal__category
+        p.category__item natureza
+        p.category__item lazer
   hr.underline.underline--shine

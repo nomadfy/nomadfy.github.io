@@ -68,7 +68,7 @@
     }
   }
 
-  &__three {
+  &__menu {
     align-items: center;
     background-color: transparent;
     border: none;
@@ -79,7 +79,7 @@
     width: 30px;
   }
 
-  &__three:hover {
+  &__menu:hover {
     background-color: $gray1;
     border-radius: 25px;
     background-size: 25px;
