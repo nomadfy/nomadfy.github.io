@@ -1,0 +1,16 @@
+.underline {
+  border: 1px solid;
+  width: 100%;
+  z-index: 500;
+
+  &--dark {
+    border-color: $gray2;
+    background-color: $gray2;
+  }
+
+  &--shine {
+    border-color: $gray1;
+    background-color: $gray1;
+  }
+}
+

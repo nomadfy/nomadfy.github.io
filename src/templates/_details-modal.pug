@@ -19,11 +19,11 @@ section.modal.in-column
           use(xlink:href="#icon-menu-lines")
       ul#editDropdown.dropdown.dropdown--margin
         li.dropdown__item
-          a.dropdown__item--text.dropdown__item--calendar(href="#") Editar diárias
+          a.dropdown__link--text.dropdown__link--calendar(href="#") Editar diárias
         li.dropdown__item
-          a.dropdown__item--text.dropdown__item--reorder(href="#") Reordenar
+          a.dropdown__link--text.dropdown__link--reorder(href="#") Reordenar
         li.dropdown__item
-          a.dropdown__item--text.dropdown__item--red.dropdown__item--delete(href="#") Excluir roteiro
+          a.dropdown__link--text.dropdown__link--red.dropdown__link--delete(href="#") Excluir roteiro
   hr.underline.underline--shine
   ul.in-column
     //- Code for each item
@@ -37,15 +37,15 @@ section.modal.in-column
             use(xlink:href="#icon-menu-lines")
         ul#detailsDropdown.dropdown.dropdown--margin
           li.dropdown__item
-            a.dropdown__item--text.dropdown__item--details(href="#") Ver detalhes
+            a.dropdown__link--text.dropdown__link--details(href="#") Ver detalhes
           li.dropdown__item
-            a.dropdown__item--text.dropdown__item--reorder(href="#") Reordenar
+            a.dropdown__link--text.dropdown__link--reorder(href="#") Reordenar
           li.dropdown__item
-            a.dropdown__item--text.dropdown__item--hour(href="#") Alterar horário
+            a.dropdown__link--text.dropdown__link--hour(href="#") Alterar horário
           li.dropdown__item
-            a.dropdown__item--text.dropdown__item--calendar(href="#") Alterar data
+            a.dropdown__link--text.dropdown__link--calendar(href="#") Alterar data
           li.dropdown__item
-            a.dropdown__item--text.dropdown__item--red.dropdown__item--delete(href="#") Remover ponto
+            a.dropdown__link--text.dropdown__link--red.dropdown__link--delete(href="#") Remover ponto
       p.modal__local Jurere Internacional
       //- Dinamic Grades ->
       .details__rating.details__rating--text.in-row
@@ -55,6 +55,6 @@ section.modal.in-column
         p.details__grade (1.024 avaliações)
       //- Dinamic Color ->
       .in-row.modal__category
-        p.category__item natureza
-        p.category__item lazer
+        p.tag natureza
+        p.tag lazer
   hr.underline.underline--shine

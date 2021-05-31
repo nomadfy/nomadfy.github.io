@@ -9,8 +9,8 @@ main.details
       svg.details__icon--arrow
         use(xlink:href="#icon-arrow-right")
       button.button--round.details__button--header
-    //- Dinamic City ->
-    h1.details__city Florianopolis
+      //- Dinamic City ->
+      p.details__city Florianopolis
     nav.details__nav
       a#roteiros.details__button--nav(href="#roteiros") Roteiros
       a#pontosTuristicos.details__button--nav(href="#pontosTuristicos") Pontos turísticos
@@ -29,9 +29,9 @@ main.details
             p.details__grade.details__grade--bold 4.8
             p.details__grade (1.024 avaliações)
           //- Dinamic Colors ->
-          .details__types.in-row 
-            p.category__item natureza
-            p.category__item lazer
+          .in-row 
+            p.tag natureza
+            p.tag lazer
 
           //- If already add on guide ->
 
@@ -56,11 +56,11 @@ main.details
                     use(xlink:href="#icon-menu-lines")
                 ul#optionItem.dropdown.dropdown__option
                   li.dropdown__item 
-                    a.dropdown__item--text.dropdown__item--plus.dropdown__item--icon(href="#") Utilizar 
+                    a.dropdown__link--text.dropdown__link--plus.dropdown__link--icon(href="#") Utilizar 
                   li.dropdown__item 
-                    a.dropdown__item--text.dropdown__item--plus(href="#") Salvar
+                    a.dropdown__link--text.dropdown__link--plus(href="#") Salvar
                   li.dropdown__item 
-                    a.dropdown__item--text.dropdown__item--plus(href="#") Compartilhar
+                    a.dropdown__link--text.dropdown__link--plus(href="#") Compartilhar
     hr.underline.underline--shine
   iframe.details__map(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31753918.49138118!2d-69.64872607287624!3d-13.705681771544725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9c59c7ebcc28cf%3A0x295a1506f2293e63!2sBrasil!5e0!3m2!1spt-BR!2sbr!4v1621868031749!5m2!1spt-BR!2sbr' style='border:0;' allowfullscreen='' loading='lazy')
   include ../templates/_details-modal.pug
