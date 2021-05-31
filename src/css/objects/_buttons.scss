@@ -22,6 +22,10 @@
     }
   }
 
+  &--login:hover {
+    @include hover-scale-min;
+  }
+
   &--round {
     border-radius: 50%;
     background-color: $white;
@@ -69,10 +73,10 @@
     background-color: transparent;
     border: none;
     display: flex;
-    height: 25px;
+    height: 30px;
     justify-content: center;
     padding: 0;
-    width: 25px;
+    width: 30px;
   }
 
   &__three:hover {

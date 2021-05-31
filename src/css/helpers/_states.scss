@@ -13,42 +13,9 @@
   opacity: 1;
 }
 
-.has-margin-right {
-  margin-left: 0;
-  margin-right: 10px !important
-}
-
-.has-margin-left {
-  margin-left: 10px;
-}
-
-.no-margin-bottom {
-  margin-bottom: 0;
-}
-
-.has-margin-top {
-  margin-top: 10px;
-}
-
-.has-margin-bottom {
-  margin-bottom: 10px;
-}
-
-.no-margin-top {
-  margin-top: 0;
-}
-
-.negative-margin-top {
-  margin-top: -7px;
-}
-
-.negative-margin-bottom {
-  margin-bottom: -7px;
-}
-
 .in-horizontal-end {
   display: flex;
-  justify-self: flex-end;
+  justify-content: flex-end;
 }
 
 .in-vertical-center {

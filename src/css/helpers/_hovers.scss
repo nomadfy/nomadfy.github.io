@@ -1,0 +1,7 @@
+@mixin hover-scale-min {
+  transform: scale(1.02) !important;
+}
+
+@mixin hover-scale-max {
+  transform: scale(1.05) !important;
+}

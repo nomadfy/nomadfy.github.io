@@ -8,8 +8,8 @@
   }
 
   &__three {
-    width: 14px;
-    height: 10px;
+    width: 18px;
+    height: 12px;
     pointer-events: none;
   }
 
@@ -17,6 +17,8 @@
     position: relative;
     width: 12px;
     height: 12px;
+    margin-top: -6px;
+    margin-right: 10px;
   }
 }
 
