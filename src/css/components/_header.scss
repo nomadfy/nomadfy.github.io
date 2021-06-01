@@ -29,6 +29,16 @@
     }
   }
 
+  &__input {
+    bottom: 0;
+    display: flex;
+    left: 265px;
+    margin: auto 0;
+    position: absolute;
+    top: 0;
+  }
+  
+
   &__logo {
     margin-right: 30px;
     transition: .3s;

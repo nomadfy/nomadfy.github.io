@@ -16,36 +16,41 @@ section.modal.in-column
     .in-column
       button#editButton.modal__button--margin.button__menu
         svg.icon__menu
-          use(xlink:href="#icon-menu-lines")
-      ul#editDropdown.dropdown.dropdown--margin
-        li.dropdown__item
-          a.dropdown__link--text.dropdown__link--calendar(href="#") Editar diárias
-        li.dropdown__item
-          a.dropdown__link--text.dropdown__link--reorder(href="#") Reordenar
-        li.dropdown__item
-          a.dropdown__link--text.dropdown__link--red.dropdown__link--delete(href="#") Excluir roteiro
+          use(xlink:href="#icon-menu")
+      #editDropdown.dropdown.dropdown--margin
+        .dropdown__item
+          a.dropdown__text.dropdown__link--details(href="#") Detalhes
+        .dropdown__item
+          a.dropdown__text.dropdown__link--calendar(href="#") Editar diárias
+        .dropdown__item
+          a.dropdown__text.dropdown__link--reorder(href="#") Reordenar
+        .dropdown__item
+          a.dropdown__text.dropdown__text--red.dropdown__link--dump(href="#") Excluir roteiro
+  
   hr.underline.underline--shine
-  ul.in-column
+  ul.modal__list.in-column
     //- Code for each item
-    li.in-column
+    li.modal__list--item.in-column
+      //- Dinamic Number ->
+      p.modal__list--number 1
       .in-row
       //- Dinamic Hours ->
       span.modal__hour 8:00 às 10:00
       .in-column.is-absolute-right
         button#detailsButton.button__menu
           svg.icon__menu
-            use(xlink:href="#icon-menu-lines")
-        ul#detailsDropdown.dropdown.dropdown--margin
-          li.dropdown__item
-            a.dropdown__link--text.dropdown__link--details(href="#") Ver detalhes
-          li.dropdown__item
-            a.dropdown__link--text.dropdown__link--reorder(href="#") Reordenar
-          li.dropdown__item
-            a.dropdown__link--text.dropdown__link--hour(href="#") Alterar horário
-          li.dropdown__item
-            a.dropdown__link--text.dropdown__link--calendar(href="#") Alterar data
-          li.dropdown__item
-            a.dropdown__link--text.dropdown__link--red.dropdown__link--delete(href="#") Remover ponto
+            use(xlink:href="#icon-menu")
+        #detailsDropdown.dropdown.dropdown--margin
+          .dropdown__item
+            a.dropdown__text.dropdown__link--details(href="#") Detalhes
+          .dropdown__item
+            a.dropdown__text.dropdown__link--reorder(href="#") Reordenar
+          .dropdown__item
+            a.dropdown__text.dropdown__link--hour(href="#") Alterar horário
+          .dropdown__item
+            a.dropdown__text.dropdown__link--calendar(href="#") Alterar data
+          .dropdown__item
+            a.dropdown__text.dropdown__text--red.dropdown__link--delete(href="#") Remover ponto
       p.modal__local Jurere Internacional
       //- Dinamic Grades ->
       .details__rating.details__rating--text.in-row
@@ -57,4 +62,37 @@ section.modal.in-column
       .in-row.modal__category
         p.tag natureza
         p.tag lazer
-  hr.underline.underline--shine
+      hr.underline.underline--shine
+    li.modal__list--item.in-column
+      //- Dinamic Number ->
+      p.modal__list--number 2
+      .in-row
+      //- Dinamic Hours ->
+      span.modal__hour 8:00 às 10:00
+      .in-column.is-absolute-right
+        button#detailsButton.button__menu
+          svg.icon__menu
+            use(xlink:href="#icon-menu")
+        #detailsDropdown.dropdown.dropdown--margin
+          .dropdown__item
+            a.dropdown__text.dropdown__link--details(href="#") Detalhes
+          .dropdown__item
+            a.dropdown__text.dropdown__link--reorder(href="#") Reordenar
+          .dropdown__item
+            a.dropdown__text.dropdown__link--hour(href="#") Alterar horário
+          .dropdown__item
+            a.dropdown__text.dropdown__link--calendar(href="#") Alterar data
+          .dropdown__item
+            a.dropdown__text.dropdown__text--red.dropdown__link--delete(href="#") Remover ponto
+      p.modal__local Jurere Internacional
+      //- Dinamic Grades ->
+      .details__rating.details__rating--text.in-row
+        svg.icon__star
+          use(xlink:href="#icon-star")
+        p.details__grade.details__grade--bold 4.8
+        p.details__grade (1.024 avaliações)
+      //- Dinamic Color ->
+      .in-row.modal__category
+        p.tag natureza
+        p.tag lazer
+      hr.underline.underline--shine
