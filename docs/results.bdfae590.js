@@ -117,42 +117,63 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"favicon/manifest.json":[function(require,module,exports) {
-module.exports = {
-  "name": "App",
-  "icons": [{
-    "src": "\/android-icon-36x36.png",
-    "sizes": "36x36",
-    "type": "image\/png",
-    "density": "0.75"
-  }, {
-    "src": "\/android-icon-48x48.png",
-    "sizes": "48x48",
-    "type": "image\/png",
-    "density": "1.0"
-  }, {
-    "src": "\/android-icon-72x72.png",
-    "sizes": "72x72",
-    "type": "image\/png",
-    "density": "1.5"
-  }, {
-    "src": "\/android-icon-96x96.png",
-    "sizes": "96x96",
-    "type": "image\/png",
-    "density": "2.0"
-  }, {
-    "src": "\/android-icon-144x144.png",
-    "sizes": "144x144",
-    "type": "image\/png",
-    "density": "3.0"
-  }, {
-    "src": "\/android-icon-192x192.png",
-    "sizes": "192x192",
-    "type": "image\/png",
-    "density": "4.0"
-  }]
-};
-},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+})({"js/dropdown.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.dropDownOptions = dropDownOptions;
+exports.dropDownEdit = dropDownEdit;
+exports.dropDownDetails = dropDownDetails;
+
+function dropDownOptions() {
+  document.getElementById('optionItem').classList.toggle('is-visible');
+}
+
+function dropDownEdit() {
+  document.getElementById('editDropdown').classList.toggle('is-visible');
+}
+
+function dropDownDetails() {
+  document.getElementById('detailsDropdown').classList.toggle('is-visible');
+}
+},{}],"results.js":[function(require,module,exports) {
+"use strict";
+
+var _dropdown = require("./js/dropdown.js");
+
+document.querySelector('#optionsButton').addEventListener('click', _dropdown.dropDownOptions);
+window.addEventListener('click', function (event) {
+  if (!event.target.matches('#optionsButton')) {
+    var visible = document.getElementById('optionItem');
+
+    if (visible.classList.contains('is-visible')) {
+      visible.classList.remove('is-visible');
+    }
+  }
+});
+document.querySelector('#editButton').addEventListener('click', _dropdown.dropDownEdit);
+window.addEventListener('click', function (event) {
+  if (!event.target.matches('#editButton')) {
+    var visible = document.getElementById('editDropdown');
+
+    if (visible.classList.contains('is-visible')) {
+      visible.classList.remove('is-visible');
+    }
+  }
+});
+document.querySelector('#detailsButton').addEventListener('click', _dropdown.dropDownDetails);
+window.addEventListener('click', function (event) {
+  if (!event.target.matches('#detailsButton')) {
+    var visible = document.getElementById('detailsDropdown');
+
+    if (visible.classList.contains('is-visible')) {
+      visible.classList.remove('is-visible');
+    }
+  }
+});
+},{"./js/dropdown.js":"js/dropdown.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -180,7 +201,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43071" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45757" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -356,5 +377,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","favicon/manifest.json"], null)
-//# sourceMappingURL=/favicon/manifest.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","results.js"], null)
+//# sourceMappingURL=/results.bdfae590.js.map

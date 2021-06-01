@@ -1,8 +1,7 @@
-header 
-  nav.header 
+header.header
   .header__overlay
-    a.header__logo.button__hover(href="/")
-      img(src="/assets/logo.png", alt="")
+    a.header__logo(href="/")
+      img(src="/assets/logo.png", alt="logo")
     .header__items
       a.navbar__icon(href="https://www.facebook.com" target="_blank")
         svg
@@ -20,4 +19,4 @@ header
         svg
           use(xlink:href="#icon-twitter")
     .button__block
-      a.button.button__hover.button--login ENTRAR      
+      a.button.button--login(href="/details/index.pug") ENTRAR

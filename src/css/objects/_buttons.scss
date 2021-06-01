@@ -22,9 +22,11 @@
     }
   }
 
+  &--login:hover {
+    @include hover-scale-min;
+  }
+
   &--round {
-    height: 50px;
-    width: 50px;
     border-radius: 50%;
     background-color: $white;
     opacity: 0.6;
@@ -41,19 +43,13 @@
     align-items: center;
   }
 
-  &__centralized {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   &__explore {
-    display: none;
     align-items: center;
     align-self: center;
-    color: $orange;
-    border: 1px solid $gray2;
     border-radius: 8px;
+    border: 1px solid $gray2;
+    color: $orange;
+    display: none;
     font-size: 14px;
     transition: .3s;
 
@@ -65,15 +61,27 @@
     }
 
     @media screen and (max-width: 650px) {
-      min-height: 32px;
       max-height: 65px;
       max-width: 190px;
+      min-height: 32px;
       padding: 5px 15px;
     }
   }
 
-  &__hover:hover {
-    transform: scaleX(1.02);
+  &__menu {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    padding: 0;
+    width: 30px;
   }
 
+  &__menu:hover {
+    background-color: $gray1;
+    border-radius: 25px;
+    background-size: 25px;
+  }
 }

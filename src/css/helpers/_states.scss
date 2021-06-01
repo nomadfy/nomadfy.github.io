@@ -1,0 +1,45 @@
+.is-centered {
+  margin: 0px auto;
+}
+
+.is-relative {
+  position: relative;
+  right: 10%;
+  top: 0;
+}
+
+.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.in-horizontal-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.in-vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+.in-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.in-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.is-absolute-right {
+  position: absolute;
+  right: 2em;
+}
+
+.is-absolute-left {
+  position: absolute;
+  left: 2em;
+}
