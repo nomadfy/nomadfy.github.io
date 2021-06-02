@@ -32,12 +32,6 @@
     width: 100%;
   }
   
-  &__text--header {
-    color: $gray3;
-    font-size: 14px;
-    font-weight: normal;
-  }
-  
   &__icon--arrow {
     display: flex;
     height: 20px;
@@ -57,7 +51,7 @@
     background-position: center;
     background-size: 12px 10px;
   }
-
+  
   &__button--header:hover {
     @include hover-scale-max;
   }
@@ -82,11 +76,11 @@
     border-bottom: 3px solid $white;
     border-radius: 8px 8px 0 0 ;
   }
-
+  
   &__button--nav:first-of-type {
     margin-left: 10px;
   }
-
+  
   &__image {
     max-width: 144px;
     height: 120px;
@@ -98,43 +92,50 @@
     margin-top: 15px;
     margin-bottom: 25px;
   }
-
-  &__rating--text {
-    font-size: 12px;
-    color: $gray3;
-    min-width: 300px;
-  }
-
+  
+  
   &__title {
     font-size: 16px;
     margin-top: 0;
   }
-
+  
   &__grade {
     margin-top: -6px;
   }
-
+  
   &__grade--bold {
     font-weight: bold;
     margin-right: 8px;
   }
-
+  
+  &__text--header {
+    color: $gray3;
+    font-size: 16px;
+    font-weight: normal;
+  }
+  
   &__text--types:not(:last-of-type) {
     margin-right: 10px;
   }
-
+  
   &__button--info {
     position: absolute;
     right: 5em;
     margin-top: -20px;
   }
-
+  
   &__button--menu {
     position: absolute;
     right: 3em;
     margin-top: -20px;
   }
 
+  &__rating--text {
+    font-size: 12px;
+    color: $gray3;
+    min-width: 300px;
+  }
+  
   &__text--options {
     position: absolute;
     left: 190px;
@@ -149,5 +150,11 @@
   &__text--guide::before {
     content: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.334 2h-.667V.667h-1.333V2H3.667V.667H2.334V2h-.667C.933 2 .333 2.6.333 3.333V14c0 .733.6 1.333 1.334 1.333h10.666c.734 0 1.334-.6 1.334-1.333V3.333c0-.733-.6-1.333-1.333-1.333zm0 12H1.667V6.667h10.667V14zm0-8.667H1.667v-2h10.667v2z' fill='%23444'/%3E%3C/svg%3E");
     margin-right: 5px;
+  }
+
+  &__text--add {
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
   }
 }

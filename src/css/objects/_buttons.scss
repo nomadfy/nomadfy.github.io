@@ -6,12 +6,15 @@
     border: 2px solid $orange;
   }
 
-  &--login {
-    border-radius: 15px;
-    padding: 10px;
+  &__orange {
     background-color: $orange;
     color: $white;
     transition: .2s;
+  }
+
+  &__orange--login {
+    padding: 15px 24px;
+    border-radius: 15px;
 
     @media screen and (min-width: 375px) {
       width: 120px;
@@ -22,7 +25,12 @@
     }
   }
 
-  &--login:hover {
+  &__orange--save {
+    border-radius: 8px;
+    padding: 5px 16px;
+  }
+
+  &__orange:hover {
     @include hover-scale-min;
   }
 

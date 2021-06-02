@@ -39,7 +39,7 @@ destinations.forEach((item) => {
 
 guide.forEach((item) => {
   const guide = buildGuide(item);
-  const destination = buildDestination(item);
 
   containerGuide.innerHTML = containerGuide.innerHTML + guide;
 })
+

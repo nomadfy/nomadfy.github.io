@@ -117,7 +117,54 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/dropdown.js":[function(require,module,exports) {
+})({"data/explore.json":[function(require,module,exports) {
+module.exports = {
+  "guide": [{
+    "image": "roteiro-mariana.png",
+    "title": "7 cachoeiras em 7 dias",
+    "city": "Mariana / MG"
+  }, {
+    "image": "roteiro-sao-paulo.png",
+    "title": "O melhor da capital em 5 dias",
+    "city": "São Paulo / SP"
+  }, {
+    "image": "roteiro-rio-de-janeiro.png",
+    "title": "Final de semana com a família",
+    "city": "Rio de Janeiro / RJ"
+  }, {
+    "image": "roteiro-salvador.png",
+    "title": "Pra quem gosta de história e arte",
+    "city": "Salvador / BA"
+  }, {
+    "image": "roteiro-manaus.png",
+    "title": "Se conectando com a natureza",
+    "city": "Manaus / AM"
+  }, {
+    "image": "roteiro-gramado.png",
+    "title": "Final de semana romântico",
+    "city": "Gramado / RS"
+  }],
+  "destinations": [{
+    "image": "destinos-sao-paulo.png",
+    "city": "São Paulo / SP"
+  }, {
+    "image": "destinos-rio-de-janeiro.png",
+    "city": "Rio de Janeiro / RJ"
+  }, {
+    "image": "destinos-maragogi.png",
+    "city": "Maragogi / AL"
+  }, {
+    "image": "destinos-fortaleza.png",
+    "city": "Fortaleza / CE"
+  }, {
+    "image": "destinos-gramado.png",
+    "city": "Gramados / RS"
+  }, {
+    "image": "destinos-florianopolis.png",
+    "city": "Florianópolis / SC"
+  }]
+};
+},{}],"js/dropdown.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -138,10 +185,25 @@ function dropDownEdit() {
 function dropDownDetails() {
   document.getElementById('detailsDropdown').classList.toggle('is-visible');
 }
+},{}],"js/popup.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.popUpInfo = popUpInfo;
+
+function popUpInfo() {
+  document.getElementById('infoPopUp').classList.toggle('is-visible');
+}
 },{}],"details.js":[function(require,module,exports) {
 "use strict";
 
+var _explore = require("./data/explore.json");
+
 var _dropdown = require("./js/dropdown.js");
+
+var _popup = require("./js/popup.js");
 
 document.querySelector('#optionsButton').addEventListener('click', _dropdown.dropDownOptions);
 window.addEventListener('click', function (event) {
@@ -173,7 +235,47 @@ window.addEventListener('click', function (event) {
     }
   }
 });
-},{"./js/dropdown.js":"js/dropdown.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+document.querySelector('#infoButton').addEventListener('click', _popup.popUpInfo);
+window.addEventListener('click', function (event) {
+  if (!event.target.matches('#closeArea')) {
+    var visible = document.getElementById('#info');
+
+    if (visible.classList.contains('is-visible')) {
+      visible.classList.remove('is-visible');
+    }
+  }
+});
+document.querySelector('#closeArea').addEventListener('click', _popup.popUpInfo);
+window.addEventListener('click', function (event) {
+  if (!event.target.matches('#closeArea')) {
+    var visible = document.getElementById('#info');
+
+    if (visible.classList.contains('is-visible')) {
+      visible.classList.remove('is-visible');
+    }
+  }
+});
+document.querySelector('#close').addEventListener('click', _popup.popUpInfo);
+window.addEventListener('click', function (event) {
+  if (!event.target.matches('#close')) {
+    var visible = document.getElementById('#info');
+
+    if (visible.classList.contains('is-visible')) {
+      visible.classList.remove('is-visible');
+    }
+  }
+});
+var containerInfo = document.querySelector(".info__gallery");
+
+var buildInfo = function buildInfo(destinations) {
+  return "\n  <img class=\"info__images\" src=\"".concat(destinations.image, "\">\n  ");
+};
+
+_explore.destinations.forEach(function (item) {
+  var info = buildInfo(item);
+  containerInfo.innerHTML = containerInfo.innerHTML + info;
+});
+},{"./data/explore.json":"data/explore.json","./js/dropdown.js":"js/dropdown.js","./js/popup.js":"js/popup.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -201,7 +303,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35033" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "32997" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
