@@ -265,6 +265,10 @@ a, button {
   cursor: pointer;
 }
 
+li {
+  list-style: none;
+}
+
 .button {
   display: inline-block;
   cursor: pointer;
@@ -272,30 +276,30 @@ a, button {
 .button:not(.button--borderless) {
   border: 2px solid #FF6117;
 }
-.button__orange {
+.button--orange {
   background-color: #FF6117;
   color: #FFFFFF;
   transition: 0.2s;
 }
-.button__orange--login {
-  padding: 15px 24px;
+.button--login {
+  padding: 15px 0;
   border-radius: 15px;
 }
 @media screen and (min-width: 375px) {
-  .button__orange--login {
+  .button--login {
     width: 120px;
   }
 }
 @media screen and (max-width: 374px) {
-  .button__orange--login {
+  .button--login {
     width: 90px;
   }
 }
-.button__orange--save {
+.button--save {
   border-radius: 8px;
   padding: 5px 16px;
 }
-.button__orange:hover {
+.button--orange:hover {
   transform: scale(1.02) !important;
 }
 .button--round {
@@ -1050,17 +1054,27 @@ select:focus, textarea:focus, input:focus {
 }
 .info__modal {
   position: absolute;
+  display: flex;
   border-radius: 8px;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  width: 800px;
   height: 580px;
   margin: auto;
   padding: 24px 2em;
   background-color: white;
   z-index: 9999;
+}
+@media screen and (min-width: 820px) {
+  .info__modal {
+    max-width: 800px;
+  }
+}
+@media screen and (max-width: 819px) {
+  .info__modal {
+    width: 90%;
+  }
 }
 .info__title {
   font-size: 32px;

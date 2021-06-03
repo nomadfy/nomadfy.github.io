@@ -17,14 +17,14 @@ section.modal.in-column
       button#editButton.modal__button--margin.button__menu
         svg.icon__menu
           use(xlink:href="#icon-menu")
-      #editDropdown.dropdown.dropdown--margin
-        .dropdown__item
+      ul#editDropdown.dropdown.dropdown--margin
+        li.dropdown__item
           a.dropdown__text.dropdown__link--details(href="#") Detalhes
-        .dropdown__item
+        li.dropdown__item
           a.dropdown__text.dropdown__link--calendar(href="#") Editar diárias
-        .dropdown__item
+        li.dropdown__item
           a.dropdown__text.dropdown__link--reorder(href="#") Reordenar
-        .dropdown__item
+        li.dropdown__item
           a.dropdown__text.dropdown__text--red.dropdown__link--dump(href="#") Excluir roteiro
   
   hr.underline.underline--shine
@@ -40,16 +40,16 @@ section.modal.in-column
         button#detailsButton.button__menu
           svg.icon__menu
             use(xlink:href="#icon-menu")
-        #detailsDropdown.dropdown.dropdown--margin
-          .dropdown__item
+        ul#detailsDropdown.dropdown.dropdown--margin
+          li.dropdown__item
             a.dropdown__text.dropdown__link--details(href="#") Detalhes
-          .dropdown__item
+          li.dropdown__item
             a.dropdown__text.dropdown__link--reorder(href="#") Reordenar
-          .dropdown__item
+          li.dropdown__item
             a.dropdown__text.dropdown__link--hour(href="#") Alterar horário
-          .dropdown__item
+          li.dropdown__item
             a.dropdown__text.dropdown__link--calendar(href="#") Alterar data
-          .dropdown__item
+          li.dropdown__item
             a.dropdown__text.dropdown__text--red.dropdown__link--delete(href="#") Remover ponto
       p.modal__local Jurere Internacional
       //- Dinamic Grades ->
@@ -73,16 +73,16 @@ section.modal.in-column
         button#detailsButton.button__menu
           svg.icon__menu
             use(xlink:href="#icon-menu")
-        #detailsDropdown.dropdown.dropdown--margin
-          .dropdown__item
+        ul#detailsDropdown.dropdown.dropdown--margin
+          li.dropdown__item
             a.dropdown__text.dropdown__link--details(href="#") Detalhes
-          .dropdown__item
+          li.dropdown__item
             a.dropdown__text.dropdown__link--reorder(href="#") Reordenar
-          .dropdown__item
+          li.dropdown__item
             a.dropdown__text.dropdown__link--hour(href="#") Alterar horário
-          .dropdown__item
+          li.dropdown__item
             a.dropdown__text.dropdown__link--calendar(href="#") Alterar data
-          .dropdown__item
+          li.dropdown__item
             a.dropdown__text.dropdown__text--red.dropdown__link--delete(href="#") Remover ponto
       p.modal__local Jurere Internacional
       //- Dinamic Grades ->
@@ -97,4 +97,4 @@ section.modal.in-column
         p.tag lazer
       hr.underline.underline--shine
   footer.modal__footer
-    button#save.button.button__orange.button__orange--save Salvar
+    button#save.button.button--orange.button--save Salvar
