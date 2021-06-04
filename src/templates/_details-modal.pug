@@ -14,7 +14,7 @@ section.modal.in-column
         option(value="5") 5
       p de 5
     .in-column
-      button#editButton.modal__button--margin.button__menu
+      button#editButton.modal__button--margin.button__menu.button--right
         svg.icon__menu
           use(xlink:href="#icon-menu")
       ul#editDropdown.dropdown.dropdown--margin
@@ -28,18 +28,18 @@ section.modal.in-column
           a.dropdown__text.dropdown__text--red.dropdown__link--dump(href="#") Excluir roteiro
   
   hr.underline.underline--shine
+  
   ul.modal__list.in-column
     //- Code for each item
     li.modal__list--item.in-column
       //- Dinamic Number ->
-      p.modal__list--number 1
-      .in-row
-      //- Dinamic Hours ->
-      span.modal__hour 8:00 às 10:00
-      .in-column.is-absolute-right
-        button#detailsButton.button__menu
+      .in-row.modal__list--time
+        //- Dinamic Hours ->
+        span.modal__hour 8:00 às 10:00
+        button#detailsButton.button__menu.button--right.button--modal
           svg.icon__menu
             use(xlink:href="#icon-menu")
+      .in-column
         ul#detailsDropdown.dropdown.dropdown--margin
           li.dropdown__item
             a.dropdown__text.dropdown__link--details(href="#") Detalhes
@@ -63,16 +63,17 @@ section.modal.in-column
         p.tag natureza
         p.tag lazer
       hr.underline.underline--shine
+
+      //- Code for each item
     li.modal__list--item.in-column
       //- Dinamic Number ->
-      p.modal__list--number 2
-      .in-row
-      //- Dinamic Hours ->
-      span.modal__hour 8:00 às 10:00
-      .in-column.is-absolute-right
-        button#detailsButton.button__menu
+      .in-row.modal__list--time
+        //- Dinamic Hours ->
+        span.modal__hour 8:00 às 10:00
+        button#detailsButton.button__menu.button--right.button--modal
           svg.icon__menu
             use(xlink:href="#icon-menu")
+      .in-column
         ul#detailsDropdown.dropdown.dropdown--margin
           li.dropdown__item
             a.dropdown__text.dropdown__link--details(href="#") Detalhes
@@ -96,5 +97,143 @@ section.modal.in-column
         p.tag natureza
         p.tag lazer
       hr.underline.underline--shine
+      
+      //- Code for each item
+    li.modal__list--item.in-column
+      //- Dinamic Number ->
+      .in-row.modal__list--time
+        //- Dinamic Hours ->
+        span.modal__hour 8:00 às 10:00
+        button#detailsButton.button__menu.button--right.button--modal
+          svg.icon__menu
+            use(xlink:href="#icon-menu")
+      .in-column
+        ul#detailsDropdown.dropdown.dropdown--margin
+          li.dropdown__item
+            a.dropdown__text.dropdown__link--details(href="#") Detalhes
+          li.dropdown__item
+            a.dropdown__text.dropdown__link--reorder(href="#") Reordenar
+          li.dropdown__item
+            a.dropdown__text.dropdown__link--hour(href="#") Alterar horário
+          li.dropdown__item
+            a.dropdown__text.dropdown__link--calendar(href="#") Alterar data
+          li.dropdown__item
+            a.dropdown__text.dropdown__text--red.dropdown__link--delete(href="#") Remover ponto
+      p.modal__local Jurere Internacional
+      //- Dinamic Grades ->
+      .details__rating.details__rating--text.in-row
+        svg.icon__star
+          use(xlink:href="#icon-star")
+        p.details__grade.details__grade--bold 4.8
+        p.details__grade (1.024 avaliações)
+      //- Dinamic Color ->
+      .in-row.modal__category
+        p.tag natureza
+        p.tag lazer
+      hr.underline.underline--shine
+      
+      //- Code for each item
+    li.modal__list--item.in-column
+      //- Dinamic Number ->
+      .in-row.modal__list--time
+        //- Dinamic Hours ->
+        span.modal__hour 8:00 às 10:00
+        button#detailsButton.button__menu.button--right.button--modal
+          svg.icon__menu
+            use(xlink:href="#icon-menu")
+      .in-column
+        ul#detailsDropdown.dropdown.dropdown--margin
+          li.dropdown__item
+            a.dropdown__text.dropdown__link--details(href="#") Detalhes
+          li.dropdown__item
+            a.dropdown__text.dropdown__link--reorder(href="#") Reordenar
+          li.dropdown__item
+            a.dropdown__text.dropdown__link--hour(href="#") Alterar horário
+          li.dropdown__item
+            a.dropdown__text.dropdown__link--calendar(href="#") Alterar data
+          li.dropdown__item
+            a.dropdown__text.dropdown__text--red.dropdown__link--delete(href="#") Remover ponto
+      p.modal__local Jurere Internacional
+      //- Dinamic Grades ->
+      .details__rating.details__rating--text.in-row
+        svg.icon__star
+          use(xlink:href="#icon-star")
+        p.details__grade.details__grade--bold 4.8
+        p.details__grade (1.024 avaliações)
+      //- Dinamic Color ->
+      .in-row.modal__category
+        p.tag natureza
+        p.tag lazer
+      hr.underline.underline--shine
+      
+      //- Code for each item
+    li.modal__list--item.in-column
+      //- Dinamic Number ->
+      .in-row.modal__list--time
+        //- Dinamic Hours ->
+        span.modal__hour 8:00 às 10:00
+        button#detailsButton.button__menu.button--right.button--modal
+          svg.icon__menu
+            use(xlink:href="#icon-menu")
+      .in-column
+        ul#detailsDropdown.dropdown.dropdown--margin
+          li.dropdown__item
+            a.dropdown__text.dropdown__link--details(href="#") Detalhes
+          li.dropdown__item
+            a.dropdown__text.dropdown__link--reorder(href="#") Reordenar
+          li.dropdown__item
+            a.dropdown__text.dropdown__link--hour(href="#") Alterar horário
+          li.dropdown__item
+            a.dropdown__text.dropdown__link--calendar(href="#") Alterar data
+          li.dropdown__item
+            a.dropdown__text.dropdown__text--red.dropdown__link--delete(href="#") Remover ponto
+      p.modal__local Jurere Internacional
+      //- Dinamic Grades ->
+      .details__rating.details__rating--text.in-row
+        svg.icon__star
+          use(xlink:href="#icon-star")
+        p.details__grade.details__grade--bold 4.8
+        p.details__grade (1.024 avaliações)
+      //- Dinamic Color ->
+      .in-row.modal__category
+        p.tag natureza
+        p.tag lazer
+      hr.underline.underline--shine
+      
+      //- Code for each item
+    li.modal__list--item.in-column
+      //- Dinamic Number ->
+      .in-row.modal__list--time
+        //- Dinamic Hours ->
+        span.modal__hour 8:00 às 10:00
+        button#detailsButton.button__menu.button--right.button--modal
+          svg.icon__menu
+            use(xlink:href="#icon-menu")
+      .in-column
+        ul#detailsDropdown.dropdown.dropdown--margin
+          li.dropdown__item
+            a.dropdown__text.dropdown__link--details(href="#") Detalhes
+          li.dropdown__item
+            a.dropdown__text.dropdown__link--reorder(href="#") Reordenar
+          li.dropdown__item
+            a.dropdown__text.dropdown__link--hour(href="#") Alterar horário
+          li.dropdown__item
+            a.dropdown__text.dropdown__link--calendar(href="#") Alterar data
+          li.dropdown__item
+            a.dropdown__text.dropdown__text--red.dropdown__link--delete(href="#") Remover ponto
+      p.modal__local Jurere Internacional
+      //- Dinamic Grades ->
+      .details__rating.details__rating--text.in-row
+        svg.icon__star
+          use(xlink:href="#icon-star")
+        p.details__grade.details__grade--bold 4.8
+        p.details__grade (1.024 avaliações)
+      //- Dinamic Color ->
+      .in-row.modal__category
+        p.tag natureza
+        p.tag lazer
+      hr.underline.underline--shine
+      
+      
   footer.modal__footer
     button#save.button.button--orange.button--save Salvar
