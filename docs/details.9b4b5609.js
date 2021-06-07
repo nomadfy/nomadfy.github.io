@@ -196,6 +196,28 @@ exports.popUpInfo = popUpInfo;
 function popUpInfo() {
   document.getElementById('infoPopUp').classList.toggle('is-visible');
 }
+},{}],"data/details.json":[function(require,module,exports) {
+module.exports = {
+  "details": [{
+    "id": "1",
+    "hour": "8:00 às 10:00",
+    "local": "Jurere Internacional",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)"
+  }, {
+    "id": "2",
+    "hour": "8:00 às 15:00",
+    "local": "Rio De Janeiro",
+    "gradeBold": "4",
+    "grade": "(1.500 avaliações)"
+  }, {
+    "id": "3",
+    "hour": "8:00 às 11:00",
+    "local": "São Paulo",
+    "gradeBold": "4.2",
+    "grade": "(1.230 avaliações)"
+  }]
+};
 },{}],"details.js":[function(require,module,exports) {
 "use strict";
 
@@ -204,6 +226,8 @@ var _explore = require("./data/explore.json");
 var _dropdown = require("./js/dropdown.js");
 
 var _popup = require("./js/popup.js");
+
+var _details = require("./data/details.json");
 
 document.querySelector('#optionsButton').addEventListener('click', _dropdown.dropDownOptions);
 window.addEventListener('click', function (event) {
@@ -219,16 +243,6 @@ document.querySelector('#editButton').addEventListener('click', _dropdown.dropDo
 window.addEventListener('click', function (event) {
   if (!event.target.matches('#editButton')) {
     var visible = document.getElementById('editDropdown');
-
-    if (visible.classList.contains('is-visible')) {
-      visible.classList.remove('is-visible');
-    }
-  }
-});
-document.querySelector('#detailsButton').addEventListener('click', _dropdown.dropDownDetails);
-window.addEventListener('click', function (event) {
-  if (!event.target.matches('#detailsButton')) {
-    var visible = document.getElementById('detailsDropdown');
 
     if (visible.classList.contains('is-visible')) {
       visible.classList.remove('is-visible');
@@ -275,7 +289,18 @@ _explore.destinations.forEach(function (item) {
   var info = buildInfo(item);
   containerInfo.innerHTML = containerInfo.innerHTML + info;
 });
-},{"./data/explore.json":"data/explore.json","./js/dropdown.js":"js/dropdown.js","./js/popup.js":"js/popup.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+var modalContainer = document.querySelector(".modal__list");
+
+var buildModal = function buildModal(details) {
+  return "\n    <li class=\"modal__list--item in-column\">\n      <div class=\"in-row modal__list--time\">\n        <span class=\"modal__hour\">".concat(details.hour, "</span>\n        <button class=\"button__menu button--right button--modal\" onclick=\"buttonDropDown").concat(details.id, "\">\n          <svg class=\"icon__menu\">\n            <use xlink:href=\"#icon-menu\"></use>\n          </svg>\n        </button>\n      </div>\n      <div class=\"in-column\">\n        <ul class=\"dropdown\" data-Dropdown").concat(details.id, "\">\n          <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--details\" href=\"#\">Detalhes</a></li>\n          <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--reorder\" href=\"#\">Reordenar</a></li>\n          <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--hour\" href=\"#\">Alterar hor\xE1rio</a></li>\n          <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--calendar\" href=\"#\">Alterar data</a></li>\n          <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__text--red dropdown__link--delete\" href=\"#\">Remover ponto</a></li>\n        </ul>\n      </div>\n      <p class=\"modal__local\">").concat(details.local, "</p>\n      <div class=\"details__rating details__rating--text in-row\">    \n        <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-star\"></use>\n        </svg>\n        <p class=\"details__grade details__grade--bold\">").concat(details.gradeBold, "</p>\n        <p class=\"details__grade\">").concat(details.grade, "</p>\n      </div>\n      <div class=\"in-row modal__category\">\n        <p class=\"tag\">natureza</p>\n        <p class=\"tag\">lazer</p>\n      </div>\n      <hr class=\"underline underline--shine underline__modal--margin\" />\n    </li>\n  ");
+};
+
+_details.details.forEach(function (item) {
+  var detailsItems = buildModal(item);
+  modalContainer.innerHTML = modalContainer.innerHTML + detailsItems;
+});
+},{"./data/explore.json":"data/explore.json","./js/dropdown.js":"js/dropdown.js","./js/popup.js":"js/popup.js","./data/details.json":"data/details.json"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -303,7 +328,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42967" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34185" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
