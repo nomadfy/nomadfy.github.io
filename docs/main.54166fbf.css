@@ -429,6 +429,7 @@ select:focus, textarea:focus, input:focus {
 }
 
 .tag {
+  position: relative;
   border: 2px solid #02AD00;
   padding: 2px 8px;
   font-size: 12px;
@@ -439,7 +440,7 @@ select:focus, textarea:focus, input:focus {
   cursor: default;
 }
 .tag__margin {
-  margin: -9px 5px 9px 10px;
+  margin: -9px 5px 9px 5px;
 }
 
 .underline {
@@ -747,7 +748,6 @@ select:focus, textarea:focus, input:focus {
   height: calc(100% - 85px);
   bottom: 0;
   margin: 0;
-  overflow-y: hidden;
 }
 .details__container {
   position: relative;
@@ -757,6 +757,8 @@ select:focus, textarea:focus, input:focus {
   padding: 1.5em 2em;
   background-color: white;
   z-index: 2;
+  overflow-y: hidden;
+  overflow-x: hidden;
   border-right: solid 1px #CCCCCC;
 }
 .details__map {
@@ -884,6 +886,7 @@ select:focus, textarea:focus, input:focus {
   min-width: 300px;
   padding: 2em 10px 2em 20px;
   position: relative;
+  overflow-y: hidden;
 }
 .modal__input {
   background-color: #FFFFFF;
@@ -964,6 +967,7 @@ select:focus, textarea:focus, input:focus {
   width: 24px;
   position: relative;
   left: -30px;
+  margin-top: 5px;
   z-index: 1;
 }
 .modal__list--item:first-of-type:after {
@@ -975,6 +979,7 @@ select:focus, textarea:focus, input:focus {
   background-color: transparent;
   border: 1px dashed #888888;
   z-index: 0;
+  margin-top: 5px;
 }
 .modal__list--item:not(:first-of-type) {
   margin-top: 10px;
@@ -1114,9 +1119,19 @@ select:focus, textarea:focus, input:focus {
   }
 }
 .info__title {
-  font-size: 32px;
   color: #444444;
   margin: 0 0 8px;
+}
+@media screen and (min-width: 481px) {
+  .info__title {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .info__title {
+    font-size: 28px;
+    max-width: 200px;
+  }
 }
 .info__text {
   margin-top: 25px;
@@ -1183,6 +1198,11 @@ select:focus, textarea:focus, input:focus {
 .in-column {
   display: flex;
   flex-direction: column;
+}
+
+.is-absolute-right {
+  position: absolute;
+  right: 2em;
 }
 
 .is-absolute-left {

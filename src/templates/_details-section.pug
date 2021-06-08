@@ -15,7 +15,6 @@ main.details
       a#pontosTuristicos.details__button--nav(href="#pontosTuristicos") Pontos turísticos
       hr.underline.underline--dark
       //- Code for each item ->
-    #dinamicItem
       .details__items.in-column
         .details__content.in-row
           img.details__image(src="../assets/result-test.png")
@@ -34,39 +33,36 @@ main.details
               p.tag lazer
         
         //- Roteiros ->
-
-        #Roteiros
-          .details__options.in-row
-            p.details__text--options.details__text--guide 3 dias
-            .in-column.details__button--info
-              button#infoButton.button__menu.has-margin-right
-                svg.icon__info
-                  use(xlink:href="#icon-info")
-            .in-column.details__button--menu
-              button#optionsButton.button__menu.has-margin-right
-                svg.icon__menu
-                  use(xlink:href="#icon-menu")
-              ul#optionItem.dropdown.dropdown__option
-                li.dropdown__item
-                  a.dropdown__text.dropdown__link--check(href="#") Usar
-                li.dropdown__item
-                  a.dropdown__text.dropdown__link--save(href="#") Salvar
-                li.dropdown__item
-                  a.dropdown__text.dropdown__link--share(href="#") Compartilhar
+        .details__options.in-row
+          p.details__text--options.details__text--guide 3 dias
+          .in-column.details__button--info
+            button#infoButton.button__menu.has-margin-right
+              svg.icon__info
+                use(xlink:href="#icon-info")
+          .in-column.details__button--menu
+            button#optionsButton.button__menu.has-margin-right
+              svg.icon__menu
+                use(xlink:href="#icon-menu")
+            ul#optionItem.dropdown.dropdown__option
+              li.dropdown__item
+                a.dropdown__text.dropdown__link--check(href="#") Usar
+              li.dropdown__item
+                a.dropdown__text.dropdown__link--save(href="#") Salvar
+              li.dropdown__item
+                a.dropdown__text.dropdown__link--share(href="#") Compartilhar
           
         //- Pontos Turisticos ->
 
-        //- #pontosTuristicos
-          //- .details__options.in-row
-          //-   p.details__text--options.details__text--add (Já adicionado ao roteiro)
-          //-   .in-column.details__button--info
-          //-     button#infos.button__menu.has-margin-right
-          //-       svg.icon__info
-          //-         use(xlink:href="#icon-info")
-          //-   .in-column.details__button--menu
-          //-     button#addOption.button__menu.has-margin-right
-          //-       svg.icon__checked
-          //-         use(xlink:href="#icon-checked")
+        //- .details__options.in-row
+        //-   p.details__text--options.details__text--add (Já adicionado ao roteiro)
+        //-   .in-column.details__button--info
+        //-     button#infos.button__menu.has-margin-right
+        //-       svg.icon__info
+        //-         use(xlink:href="#icon-info")
+        //-   .in-column.details__button--menu
+        //-     button#addOption.button__menu.has-margin-right
+        //-       svg.icon__checked
+        //-         use(xlink:href="#icon-checked")
     hr.underline.underline--shine
   iframe.details__map(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31753918.49138118!2d-69.64872607287624!3d-13.705681771544725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9c59c7ebcc28cf%3A0x295a1506f2293e63!2sBrasil!5e0!3m2!1spt-BR!2sbr!4v1621868031749!5m2!1spt-BR!2sbr' style='border:0;' allowfullscreen='' loading='lazy')
   include ../templates/_details-modal.pug

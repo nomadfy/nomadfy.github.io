@@ -1,5 +1,5 @@
 import { destinations } from "./data/explore.json";
-import { dropDownOptions, dropDownEdit, dropDownDetails,} from "./js/dropdown.js";
+import { dropDownOptions, dropDownEdit, detailsDropDown} from "./js/dropdown.js";
 import { popUpInfo } from "./js/popup.js"
 import { details } from "./data/details.json"
 
@@ -79,14 +79,14 @@ const buildModal = (details) => {
     <li class="modal__list--item in-column">
       <div class="in-row modal__list--time">
         <span class="modal__hour">${details.hour}</span>
-        <button class="button__menu button--right button--modal" onclick="buttonDropDown${details.id}">
+        <button class="button__menu button--right button--modal" onclick="openDropDown(${details.id})">
           <svg class="icon__menu">
             <use xlink:href="#icon-menu"></use>
           </svg>
         </button>
       </div>
       <div class="in-column">
-        <ul class="dropdown" data-Dropdown${details.id}">
+        <ul class="dropdown" data-value="${details.id}">
           <li class="dropdown__item"><a class="dropdown__text dropdown__link--details" href="#">Detalhes</a></li>
           <li class="dropdown__item"><a class="dropdown__text dropdown__link--reorder" href="#">Reordenar</a></li>
           <li class="dropdown__item"><a class="dropdown__text dropdown__link--hour" href="#">Alterar horário</a></li>
@@ -117,3 +117,8 @@ details.forEach((item) => {
   modalContainer.innerHTML = modalContainer.innerHTML + detailsItems
 })
 
+const openDropDown = (id) => {
+  document.querySelector(`[data-value="${id}"]`).classList.toggle('is-visible');
+}
+
+window.openDropDown = openDropDown

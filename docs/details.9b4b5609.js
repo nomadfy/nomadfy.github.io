@@ -172,7 +172,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.dropDownOptions = dropDownOptions;
 exports.dropDownEdit = dropDownEdit;
-exports.dropDownDetails = dropDownDetails;
+exports.detailsDropDown = detailsDropDown;
 
 function dropDownOptions() {
   document.getElementById('optionItem').classList.toggle('is-visible');
@@ -182,8 +182,8 @@ function dropDownEdit() {
   document.getElementById('editDropdown').classList.toggle('is-visible');
 }
 
-function dropDownDetails() {
-  document.getElementById('detailsDropdown').classList.toggle('is-visible');
+function detailsDropDown() {
+  document.querySelector("[data-value=\"".concat(id, "\"]")).classList.toggle('is-visible');
 }
 },{}],"js/popup.js":[function(require,module,exports) {
 "use strict";
@@ -293,13 +293,19 @@ _explore.destinations.forEach(function (item) {
 var modalContainer = document.querySelector(".modal__list");
 
 var buildModal = function buildModal(details) {
-  return "\n    <li class=\"modal__list--item in-column\">\n      <div class=\"in-row modal__list--time\">\n        <span class=\"modal__hour\">".concat(details.hour, "</span>\n        <button class=\"button__menu button--right button--modal\" onclick=\"buttonDropDown").concat(details.id, "\">\n          <svg class=\"icon__menu\">\n            <use xlink:href=\"#icon-menu\"></use>\n          </svg>\n        </button>\n      </div>\n      <div class=\"in-column\">\n        <ul class=\"dropdown\" data-Dropdown").concat(details.id, "\">\n          <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--details\" href=\"#\">Detalhes</a></li>\n          <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--reorder\" href=\"#\">Reordenar</a></li>\n          <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--hour\" href=\"#\">Alterar hor\xE1rio</a></li>\n          <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--calendar\" href=\"#\">Alterar data</a></li>\n          <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__text--red dropdown__link--delete\" href=\"#\">Remover ponto</a></li>\n        </ul>\n      </div>\n      <p class=\"modal__local\">").concat(details.local, "</p>\n      <div class=\"details__rating details__rating--text in-row\">    \n        <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-star\"></use>\n        </svg>\n        <p class=\"details__grade details__grade--bold\">").concat(details.gradeBold, "</p>\n        <p class=\"details__grade\">").concat(details.grade, "</p>\n      </div>\n      <div class=\"in-row modal__category\">\n        <p class=\"tag\">natureza</p>\n        <p class=\"tag\">lazer</p>\n      </div>\n      <hr class=\"underline underline--shine underline__modal--margin\" />\n    </li>\n  ");
+  return "\n    <li class=\"modal__list--item in-column\">\n      <div class=\"in-row modal__list--time\">\n        <span class=\"modal__hour\">".concat(details.hour, "</span>\n        <button class=\"button__menu button--right button--modal\" onclick=\"openDropDown(").concat(details.id, ")\">\n          <svg class=\"icon__menu\">\n            <use xlink:href=\"#icon-menu\"></use>\n          </svg>\n        </button>\n      </div>\n      <div class=\"in-column\">\n        <ul class=\"dropdown\" data-value=\"").concat(details.id, "\">\n          <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--details\" href=\"#\">Detalhes</a></li>\n          <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--reorder\" href=\"#\">Reordenar</a></li>\n          <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--hour\" href=\"#\">Alterar hor\xE1rio</a></li>\n          <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--calendar\" href=\"#\">Alterar data</a></li>\n          <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__text--red dropdown__link--delete\" href=\"#\">Remover ponto</a></li>\n        </ul>\n      </div>\n      <p class=\"modal__local\">").concat(details.local, "</p>\n      <div class=\"details__rating details__rating--text in-row\">    \n        <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-star\"></use>\n        </svg>\n        <p class=\"details__grade details__grade--bold\">").concat(details.gradeBold, "</p>\n        <p class=\"details__grade\">").concat(details.grade, "</p>\n      </div>\n      <div class=\"in-row modal__category\">\n        <p class=\"tag\">natureza</p>\n        <p class=\"tag\">lazer</p>\n      </div>\n      <hr class=\"underline underline--shine underline__modal--margin\" />\n    </li>\n  ");
 };
 
 _details.details.forEach(function (item) {
   var detailsItems = buildModal(item);
   modalContainer.innerHTML = modalContainer.innerHTML + detailsItems;
 });
+
+var openDropDown = function openDropDown(id) {
+  document.querySelector("[data-value=\"".concat(id, "\"]")).classList.toggle('is-visible');
+};
+
+window.openDropDown = openDropDown;
 },{"./data/explore.json":"data/explore.json","./js/dropdown.js":"js/dropdown.js","./js/popup.js":"js/popup.js","./data/details.json":"data/details.json"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -328,7 +334,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34185" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38467" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
