@@ -94,7 +94,13 @@
   }
 
   &--right {
-    margin-right: 20px;
+    position: absolute;
+    right: 20px;
+  }
+
+  &--margin {
+    margin-top: 5px;
+    margin-right: 12px;
   }
 
   &--modal {

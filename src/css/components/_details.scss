@@ -12,10 +12,10 @@
     height: 100%;
     width: 475px;
     min-width: 450px;
-    padding: 1.5em 2em;
+    padding: 20px 2em;
     background-color: white;
     z-index: 2;
-    overflow-y: hidden;
+    overflow-y: auto;
     overflow-x: hidden;
     border-right: solid 1px $gray1;
   }
@@ -33,6 +33,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+  
+  &__text--header {
+    color: $gray3;
+    font-size: 14px;
+    font-weight: normal;
   }
   
   &__icon--arrow {
@@ -85,7 +93,7 @@
   }
   
   &__image {
-    max-width: 144px;
+    min-width: 145px;
     height: 120px;
     border-radius: 8px;
     margin-right: 15px;
@@ -109,12 +117,6 @@
   &__grade--bold {
     font-weight: bold;
     margin-right: 8px;
-  }
-  
-  &__text--header {
-    color: $gray3;
-    font-size: 16px;
-    font-weight: normal;
   }
   
   &__text--types:not(:last-of-type) {

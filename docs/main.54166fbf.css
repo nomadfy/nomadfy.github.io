@@ -357,7 +357,12 @@ li {
   background-size: 25px;
 }
 .button--right {
-  margin-right: 20px;
+  position: absolute;
+  right: 20px;
+}
+.button--margin {
+  margin-top: 5px;
+  margin-right: 12px;
 }
 .button--modal {
   margin-top: -10px;
@@ -754,10 +759,10 @@ select:focus, textarea:focus, input:focus {
   height: 100%;
   width: 475px;
   min-width: 450px;
-  padding: 1.5em 2em;
+  padding: 20px 2em;
   background-color: white;
   z-index: 2;
-  overflow-y: hidden;
+  overflow-y: auto;
   overflow-x: hidden;
   border-right: solid 1px #CCCCCC;
 }
@@ -773,6 +778,13 @@ select:focus, textarea:focus, input:focus {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+.details__text--header {
+  color: #444444;
+  font-size: 14px;
+  font-weight: normal;
 }
 .details__icon--arrow {
   display: flex;
@@ -817,7 +829,7 @@ select:focus, textarea:focus, input:focus {
   margin-left: 10px;
 }
 .details__image {
-  max-width: 144px;
+  min-width: 145px;
   height: 120px;
   border-radius: 8px;
   margin-right: 15px;
@@ -836,11 +848,6 @@ select:focus, textarea:focus, input:focus {
 .details__grade--bold {
   font-weight: bold;
   margin-right: 8px;
-}
-.details__text--header {
-  color: #444444;
-  font-size: 16px;
-  font-weight: normal;
 }
 .details__text--types:not(:last-of-type) {
   margin-right: 10px;
@@ -884,9 +891,10 @@ select:focus, textarea:focus, input:focus {
   height: 100%;
   width: 350px;
   min-width: 300px;
-  padding: 2em 10px 2em 20px;
+  padding: 20px 0 2em 20px;
   position: relative;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 .modal__input {
   background-color: #FFFFFF;
@@ -897,7 +905,7 @@ select:focus, textarea:focus, input:focus {
   margin-top: -8px;
   opacity: 0.75;
   padding: 8px 16px;
-  width: 100%;
+  width: 85%;
 }
 .modal__input--value {
   color: #888888;
@@ -907,12 +915,7 @@ select:focus, textarea:focus, input:focus {
 .modal__days {
   color: #888888;
   font-size: 16px;
-  width: 100%;
-  margin-right: -5px;
   margin-bottom: -10px;
-}
-.modal__button--margin {
-  margin-top: 10px;
 }
 .modal__select {
   appearance: none;
@@ -946,7 +949,7 @@ select:focus, textarea:focus, input:focus {
   justify-content: space-between;
   align-items: flex-start;
   margin-top: -15px;
-  width: 100%;
+  margin-bottom: 8px;
 }
 .modal__list--item:not(:first-child) {
   counter-increment: part;
@@ -1009,7 +1012,7 @@ select:focus, textarea:focus, input:focus {
   left: 0;
   position: absolute;
   width: 100%;
-  z-index: 990;
+  z-index: 999;
 }
 
 .dropdown {
@@ -1017,6 +1020,7 @@ select:focus, textarea:focus, input:focus {
   display: flex;
   flex-direction: column;
   right: 0;
+  margin-top: 15px;
   min-height: 130px;
   padding: 1em 1em 1em 1em;
   min-width: 170px;
