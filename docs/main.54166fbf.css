@@ -889,12 +889,12 @@ select:focus, textarea:focus, input:focus {
 .modal {
   background-color: #EEEEEE;
   height: 100%;
-  width: 350px;
   min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: hidden;
   padding: 20px 0 2em 20px;
   position: relative;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  width: 350px;
 }
 .modal__input {
   background-color: #FFFFFF;
@@ -943,7 +943,7 @@ select:focus, textarea:focus, input:focus {
   overflow-x: hidden;
   color: #444444;
 }
-.modal__list--time {
+.modal__time {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -951,13 +951,13 @@ select:focus, textarea:focus, input:focus {
   margin-top: -15px;
   margin-bottom: 8px;
 }
-.modal__list--item:not(:first-child) {
+.modal__item:not(:first-child) {
   counter-increment: part;
 }
-.modal__list--item {
+.modal__item {
   margin-left: -10px;
 }
-.modal__list--item::before {
+.modal__item::before {
   align-items: center;
   border-radius: 25px;
   background-color: #FFFFFF;
@@ -973,7 +973,7 @@ select:focus, textarea:focus, input:focus {
   margin-top: 5px;
   z-index: 1;
 }
-.modal__list--item:first-of-type:after {
+.modal__item:first-of-type:after {
   position: absolute;
   content: "";
   width: 1px;
@@ -984,7 +984,7 @@ select:focus, textarea:focus, input:focus {
   z-index: 0;
   margin-top: 5px;
 }
-.modal__list--item:not(:first-of-type) {
+.modal__item:not(:first-of-type) {
   margin-top: 10px;
 }
 .modal__hour {

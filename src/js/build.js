@@ -1,7 +1,7 @@
 export const buildModal = (modal) => {
   return `
-    <li class="modal__list--item in-column">
-      <div class="in-row modal__list--time">
+    <li class="modal__item in-column">
+      <div class="in-row modal__time">
         <span class="modal__hour">${modal.hour}</span>
         <button class="button__menu button--right button--modal" onclick="openDropDown(${modal.id})">
           <svg class="icon__menu">

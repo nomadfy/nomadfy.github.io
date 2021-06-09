@@ -1,12 +1,12 @@
 .modal {
   background-color: $gray0;
   height: 100%;
-  width: 350px;
   min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: hidden;
   padding: 20px 0 2em 20px;
   position: relative;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  width: 350px;
 
   &__input {
     background-color: $white;
@@ -60,7 +60,7 @@
     color: $gray3;
   }
 
-  &__list--time {
+  &__time {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -69,15 +69,15 @@
     margin-bottom: 8px;
   }
 
-  &__list--item:not(:first-child){
+  &__item:not(:first-child){
     counter-increment: part;
   }
 
-  &__list--item {
+  &__item {
     margin-left: -10px;
   }
 
-  &__list--item::before {
+  &__item::before {
     align-items: center;
     border-radius: 25px;
     background-color: $white;
@@ -94,7 +94,7 @@
     z-index: 1;
   }
 
-  &__list--item:first-of-type:after {
+  &__item:first-of-type:after {
     position: absolute;
     content: '';
     width: 1px;
@@ -106,7 +106,7 @@
     margin-top: 5px;
   }
 
-  &__list--item:not(:first-of-type) {
+  &__item:not(:first-of-type) {
     margin-top: 10px;
   }
 
