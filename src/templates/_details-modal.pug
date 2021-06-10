@@ -1,32 +1,32 @@
 section.modal.in-column
-  header.modal__header
+  header.modal--padding
     p.details__text--header Título do roteiro
     input.modal__input(placeholder="Dê um nome ao seu roteiro")
     span.modal__input--value 30/48
-  .in-row
-    .modal__days.in-row.in-vertical-center
-      p Dia 
-      select.modal__select(name="choice")
-        option(value="1") 1
-        option(value="2") 2
-        option(value="3") 3
-        option(value="4") 4
-        option(value="5") 5
-      p de 5
-    .in-column
-      button#editButton.button__menu.button--right.button--margin
-        svg.icon__menu
-          use(xlink:href="#icon-menu")
-      ul#editDropdown.dropdown.dropdown--margin
-        li.dropdown__item
-          a.dropdown__text.dropdown__link--details(href="#") Detalhes
-        li.dropdown__item
-          a.dropdown__text.dropdown__link--calendar(href="#") Editar diárias
-        li.dropdown__item
-          a.dropdown__text.dropdown__link--reorder(href="#") Reordenar
-        li.dropdown__item
-          a.dropdown__text.dropdown__text--red.dropdown__link--dump(href="#") Excluir roteiro
-  hr.underline.underline--shine
+    .in-row.modal__header
+      .modal__days.in-row.in-vertical-center
+        p Dia 
+        select.modal__select(name="choice")
+          option(value="1") 1
+          option(value="2") 2
+          option(value="3") 3
+          option(value="4") 4
+          option(value="5") 5
+        p de 5
+      .in-column
+        button#optionsButton.button__menu.button--margin
+          svg.icon__menu
+            use(xlink:href="#icon-menu")
+        ul#editDropdown.dropdown.dropdown--margin
+          li.dropdown__item
+            a.dropdown__text.dropdown__link--details(href="#") Detalhes
+          li.dropdown__item
+            a.dropdown__text.dropdown__link--calendar(href="#") Editar diárias
+          li.dropdown__item
+            a.dropdown__text.dropdown__link--reorder(href="#") Reordenar
+          li.dropdown__item
+            a.dropdown__text.dropdown__text--red.dropdown__link--dump(href="#") Excluir roteiro
+    hr.underline.underline--shine
   ul.modal__list.in-column
   footer.modal__footer
     button#save.button.button--orange.button--save Salvar

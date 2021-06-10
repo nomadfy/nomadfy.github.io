@@ -2,11 +2,7 @@ export function dropDownOptions() {
   document.getElementById('optionItem').classList.toggle('is-visible');
 }
 
-export function dropDownEdit() {
-  document.getElementById('editDropdown').classList.toggle('is-visible');
-}
-
-export const openDropDown = (id) => {
+export const openModalDD = (id) => {
   document.querySelector(`[data-value="${id}"]`).classList.toggle('is-visible');
 }
 

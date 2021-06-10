@@ -1,5 +1,5 @@
 import { destinations } from "./data/explore.json";
-import { dropDownOptions, dropDownEdit, openDropDown, openDetailsDD, closeDropDown } from "./js/dropdown.js";
+import { dropDownOptions, openModalDD, openDetailsDD, closeDropDown } from "./js/dropdown.js";
 import { popUpInfo } from "./js/popup.js"
 import { modal } from "./data/modal.json"
 import { details } from "./data/details.json"
@@ -30,30 +30,20 @@ details.forEach((item) => {
 
 // Buttons
 
-document.querySelector('#optionsButton').addEventListener('click', dropDownOptions);
-window.addEventListener('click', function(event) {
-  if (!event.target.matches('#optionsButton')) {
-    var visible = document.getElementById('optionItem');
-    if (visible.classList.contains('is-visible')) {
-      visible.classList.remove('is-visible');
-    }
-  }
-})
-
-document.querySelector('#editButton').addEventListener('click', dropDownEdit);
-window.addEventListener('click', function(event) {
-  if (!event.target.matches('#editButton')) {
-    var visible = document.getElementById('editDropdown');
-    if (visible.classList.contains('is-visible')) {
-      visible.classList.remove('is-visible');
-    }
-  }
-})
-
 document.querySelector('#infoButton').addEventListener('click', popUpInfo);
 window.addEventListener('click', function(event) {
   if (!event.target.matches('#closeArea')) {
     var visible = document.getElementById('#info');
+    if (visible.classList.contains('is-visible')) {
+      visible.classList.remove('is-visible');
+    }
+  }
+})
+
+document.querySelector('#optionsButton').addEventListener('click', dropDownOptions);
+window.addEventListener('click', function(event) {
+  if (!event.target.matches('#optionsButton')) {
+    var visible = document.getElementById('optionItem');
     if (visible.classList.contains('is-visible')) {
       visible.classList.remove('is-visible');
     }
@@ -82,6 +72,6 @@ window.addEventListener('click', function(event) {
 
 // Exec Functions
 
-window.openDropDown = openDropDown
+window.openModalDD = openModalDD
 window.openDetailsDD = openDetailsDD
 window.closeDropDown = closeDropDown

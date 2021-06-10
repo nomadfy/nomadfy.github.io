@@ -3,7 +3,7 @@ export const buildModal = (modal) => {
     <li class="modal__item in-column">
       <div class="in-row modal__time">
         <span class="modal__hour">${modal.hour}</span>
-        <button class="button__menu button--right button--modal" onclick="openDropDown(${modal.id})">
+        <button class="button__menu button--right button--modal" onclick="openModalDD(${modal.id})">
           <svg class="icon__menu">
             <use xlink:href="#icon-menu"></use>
           </svg>
@@ -61,27 +61,27 @@ export const buildDetails = (details) => {
           </div>
       </div>
     </div>
-      <div class="details__options in-row">
-          <p class="details__text--options details__text--guide">3 dias</p>
-          <div class="in-column details__button--info">
-            <button class="button__menu has-margin-right" id="infoButton">
-              <svg class="icon__info">
-                <use xlink:href="#icon-info"></use>
-                </svg>
-              </button>
-            </div>
-          <div class="in-column details__button--menu"> 
-            <button class="button__menu has-margin-right" onclick="openDetailsDD(${details.id})">
-              <svg class="icon__menu">
-                <use xlink:href="#icon-menu"></use>
+    <div class="details__options in-row">
+        <p class="details__text--options details__text--guide">3 dias</p>
+        <div class="in-column details__button--info">
+          <button class="button__menu has-margin-right" id="infoButton">
+            <svg class="icon__info">
+              <use xlink:href="#icon-info"></use>
               </svg>
             </button>
-            <ul class="dropdown dropdown__option" data-details="${details.id}">
-              <li class="dropdown__item"><a class="dropdown__text dropdown__link--check" href="#">Usar</a></li>
-              <li class="dropdown__item"><a class="dropdown__text dropdown__link--save" href="#">Salvar</a></li>
-              <li class="dropdown__item"><a class="dropdown__text dropdown__link--share" href="#">Compartilhar</a></li>
-            </ul>
           </div>
+        <div class="in-column details__button--menu"> 
+          <button class="button__menu has-margin-right" onclick="openDetailsDD(${details.id})">
+            <svg class="icon__menu">
+              <use xlink:href="#icon-menu"></use>
+            </svg>
+          </button>
+          <ul class="dropdown dropdown__option" data-details="${details.id}">
+            <li class="dropdown__item"><a class="dropdown__text dropdown__link--check" href="#">Usar</a></li>
+            <li class="dropdown__item"><a class="dropdown__text dropdown__link--save" href="#">Salvar</a></li>
+            <li class="dropdown__item"><a class="dropdown__text dropdown__link--share" href="#">Compartilhar</a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <hr class="underline underline--shine" />
