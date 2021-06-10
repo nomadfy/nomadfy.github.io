@@ -68,19 +68,19 @@
     counter-reset: part 1;
     overflow-y: auto;
     width: 100%;
-    overflow-x: hidden;
     color: $gray3;
     padding-right: 5px;
+    scrollbar-width: none;
+    
   }
 
   &__time {
     position: relative;
     display: flex;
     justify-content:flex-end;
-    width: 100%;
     margin-top: -15px;
     margin-bottom: 8px;
-
+    padding-right: 12px;
   }
 
   &__item:not(:first-child){
@@ -88,8 +88,9 @@
   }
 
   &__item {
+    max-width: 280px;
     margin-left: -10px;
-    padding-right: 10px;
+    margin-right: 10px;
   }
 
   &__item::before {
