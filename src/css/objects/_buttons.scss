@@ -6,12 +6,15 @@
     border: 2px solid $orange;
   }
 
-  &--login {
-    border-radius: 15px;
-    padding: 10px;
+  &--orange {
     background-color: $orange;
     color: $white;
     transition: .2s;
+  }
+
+  &--login {
+    padding: 15px 0;
+    border-radius: 15px;
 
     @media screen and (min-width: 375px) {
       width: 120px;
@@ -22,7 +25,12 @@
     }
   }
 
-  &--login:hover {
+  &--save {
+    border-radius: 8px;
+    padding: 5px 16px;
+  }
+
+  &--orange:hover {
     @include hover-scale-min;
   }
 
@@ -83,5 +91,16 @@
     background-color: $gray1;
     border-radius: 25px;
     background-size: 25px;
+  }
+
+
+  &--margin {
+    margin-top: 5px;
+    margin-right: 2px;
+  }
+
+  &--modal {
+    margin-top: -10px;
+    z-index: 993;
   }
 }

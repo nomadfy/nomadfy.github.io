@@ -1,32 +1,6 @@
 .input {
   padding: 0 0 0 15px;
 }
-.header__input {
-  position: absolute;
-  display: flex;
-  left: 265px;
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
-}
-
-.modal__input {
-  display: flex;
-  border-radius: 8px;
-  width: 100%;
-  opacity: .75;
-  height: 32px;
-  background-color: $white;
-  border: 1px solid $gray2;
-  padding: 8px 16px;
-  margin-top: -8px;
-}
-
-.modal__input--value {
-  font-size: 10px;
-  color: $gray2;
-  margin-left: 2px;
-}
 
 select:focus, textarea:focus, input:focus {
   box-shadow: 0 0 0 0;

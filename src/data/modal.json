@@ -1,0 +1,100 @@
+{
+  "modal": [
+    {
+      "id": "1",
+      "hour": "8:00 às 10:00",
+      "local": "Jurere Internacional",
+      "gradeBold": "4.8",
+      "grade" : "(1.024 avaliações)",
+      "image": "roteiro-sao-paulo.png"
+    },
+    {
+      "id": "2",
+      "hour": "8:00 às 15:00",
+      "local": "Rio De Janeiro",
+      "gradeBold": "4",
+      "grade" : "(1.500 avaliações)",
+      "image": "roteiro-sao-paulo.png"
+    },
+    {
+      "id": "3",
+      "hour": "8:00 às 11:00",
+      "local": "São Paulo",
+      "gradeBold": "4.2",
+      "grade" : "(1.230 avaliações)",
+      "image": "roteiro-sao-paulo.png"
+    },
+    {
+      "id": "4",
+      "hour": "8:00 às 10:00",
+      "local": "Jurere Internacional",
+      "gradeBold": "4.8",
+      "grade" : "(1.024 avaliações)",
+      "image": "roteiro-sao-paulo.png"
+    },
+    {
+      "id": "5",
+      "hour": "8:00 às 15:00",
+      "local": "Rio De Janeiro",
+      "gradeBold": "4",
+      "grade" : "(1.500 avaliações)",
+      "image": "roteiro-sao-paulo.png"
+    },
+    {
+      "id": "6",
+      "hour": "8:00 às 11:00",
+      "local": "São Paulo",
+      "gradeBold": "4.2",
+      "grade" : "(1.230 avaliações)",
+      "image": "roteiro-sao-paulo.png"
+    },
+    {
+      "id": "7",
+      "hour": "8:00 às 10:00",
+      "local": "Jurere Internacional",
+      "gradeBold": "4.8",
+      "grade" : "(1.024 avaliações)",
+      "image": "roteiro-sao-paulo.png"
+    },
+    {
+      "id": "8",
+      "hour": "8:00 às 15:00",
+      "local": "Rio De Janeiro",
+      "gradeBold": "4",
+      "grade" : "(1.500 avaliações)",
+      "image": "roteiro-sao-paulo.png"
+    },
+    {
+      "id": "9",
+      "hour": "8:00 às 11:00",
+      "local": "São Paulo",
+      "gradeBold": "4.2",
+      "grade" : "(1.230 avaliações)",
+      "image": "roteiro-sao-paulo.png"
+    },
+    {
+      "id": "10",
+      "hour": "8:00 às 10:00",
+      "local": "Jurere Internacional",
+      "gradeBold": "4.8",
+      "grade" : "(1.024 avaliações)",
+      "image": "roteiro-sao-paulo.png"
+    },
+    {
+      "id": "11",
+      "hour": "8:00 às 15:00",
+      "local": "Rio De Janeiro",
+      "gradeBold": "4",
+      "grade" : "(1.500 avaliações)",
+      "image": "roteiro-sao-paulo.png"
+    },
+    {
+      "id": "12",
+      "hour": "8:00 às 11:00",
+      "local": "São Paulo",
+      "gradeBold": "4.2",
+      "grade" : "(1.230 avaliações)",
+      "image": "roteiro-sao-paulo.png"
+    }
+  ]
+}

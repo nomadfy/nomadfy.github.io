@@ -1,7 +1,7 @@
 .underline {
   border: 1px solid;
   width: 100%;
-  z-index: 500;
+  z-index: 1;
 
   &--dark {
     border-color: $gray2;
@@ -11,6 +11,15 @@
   &--shine {
     border-color: $gray1;
     background-color: $gray1;
+  }
+
+  &__info--margin {
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+
+  &__modal--margin {
+    margin-bottom: 0px;
   }
 }
 

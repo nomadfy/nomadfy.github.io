@@ -23,10 +23,14 @@
   align-items: center;
 }
 
+.in-vertical-end {
+  display: flex;
+  align-items: flex-end;
+}
+
 .in-row {
   display: flex;
   flex-direction: row;
-  width: 100%;
 }
 
 .in-column {

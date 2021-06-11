@@ -1,7 +1,46 @@
-import { dropDownOptions, dropDownEdit, dropDownDetails } from "./js/dropdown.js"
+import { destinations } from "./data/explore.json";
+import { dropDownOptions, openModalDD, openDetailsDD, closeDropDown } from "./js/dropdown.js";
+import { popUpInfo } from "./js/popup.js"
+import { modal } from "./data/modal.json"
+import { details } from "./data/details.json"
+import { buildModal, buildInfo, buildDetails } from "./js/build.js"
+
+// HTML Builders
+
+const containerInfo = document.querySelector(".info__gallery")
+destinations.forEach((item) => {
+  const info = buildInfo(item);
+  
+  containerInfo.innerHTML = containerInfo.innerHTML + info
+})
+
+const modalContainer = document.querySelector(".modal__list")
+modal.forEach((item) => {
+  const modalItems = buildModal(item);
+  
+  modalContainer.innerHTML = modalContainer.innerHTML + modalItems
+})
+
+const detailsContainer = document.querySelector(".details__grid")
+details.forEach((item) => {
+  const detailsItems = buildDetails(item);
+
+  detailsContainer.innerHTML = detailsContainer.innerHTML + detailsItems
+})
+
+// Buttons
+
+document.querySelector('#infoButton').addEventListener('click', popUpInfo);
+window.addEventListener('click', function(event) {
+  if (!event.target.matches('#closeArea')) {
+    var visible = document.getElementById('#info');
+    if (visible.classList.contains('is-visible')) {
+      visible.classList.remove('is-visible');
+    }
+  }
+})
 
 document.querySelector('#optionsButton').addEventListener('click', dropDownOptions);
-
 window.addEventListener('click', function(event) {
   if (!event.target.matches('#optionsButton')) {
     var visible = document.getElementById('optionItem');
@@ -11,25 +50,28 @@ window.addEventListener('click', function(event) {
   }
 })
 
-document.querySelector('#editButton').addEventListener('click', dropDownEdit);
-
+document.querySelector('#closeArea').addEventListener('click', popUpInfo);
 window.addEventListener('click', function(event) {
-  if (!event.target.matches('#editButton')) {
-    var visible = document.getElementById('editDropdown');
+  if (!event.target.matches('#closeArea')) {
+    var visible = document.getElementById('#info');
     if (visible.classList.contains('is-visible')) {
       visible.classList.remove('is-visible');
     }
   }
 })
 
-document.querySelector('#detailsButton').addEventListener('click', dropDownDetails);
-
+document.querySelector('#close').addEventListener('click', popUpInfo);
 window.addEventListener('click', function(event) {
-  if (!event.target.matches('#detailsButton')) {
-    var visible = document.getElementById('detailsDropdown');
+  if (!event.target.matches('#close')) {
+    var visible = document.getElementById('#info');
     if (visible.classList.contains('is-visible')) {
       visible.classList.remove('is-visible');
     }
   }
 })
 
+// Exec Functions
+
+window.openModalDD = openModalDD
+window.openDetailsDD = openDetailsDD
+window.closeDropDown = closeDropDown
