@@ -1,17 +1,23 @@
-import { destinations } from "./data/explore.json";
-import { dropDownOptions, openModalDD, openDetailsDD, closeDropDown } from "./js/dropdown.js";
-import { popUpInfo } from "./js/popup.js"
+import { dropDownOptions, openModalDD, openDetailsDD, openInfo } from "./js/dropdown.js";
 import { modal } from "./data/modal.json"
 import { details } from "./data/details.json"
-import { buildModal, buildInfo, buildDetails } from "./js/build.js"
+import { info } from "./data/info.json"
+import { buildModal, buildDetails, buildInfo, buildInfoImages } from "./js/build.js"
 
 // HTML Builders
 
-const containerInfo = document.querySelector(".info__gallery")
-destinations.forEach((item) => {
-  const info = buildInfo(item);
+const infoContainer = document.querySelector("#info")
+info.forEach((item) => {
+  const infoItems = buildInfo(item);
+
+  infoContainer.innerHTML = infoContainer.innerHTML + infoItems
+})
+
+const infoGallery = document.querySelector(".info__gallery")
+details.forEach((item) => {
+  const infoImages = buildInfoImages(item);
   
-  containerInfo.innerHTML = containerInfo.innerHTML + info
+  infoGallery.innerHTML = infoGallery.innerHTML + infoImages
 })
 
 const modalContainer = document.querySelector(".modal__list")
@@ -30,48 +36,38 @@ details.forEach((item) => {
 
 // Buttons
 
-document.querySelector('#infoButton').addEventListener('click', popUpInfo);
-window.addEventListener('click', function(event) {
-  if (!event.target.matches('#closeArea')) {
-    var visible = document.getElementById('#info');
-    if (visible.classList.contains('is-visible')) {
-      visible.classList.remove('is-visible');
-    }
-  }
-})
-
 document.querySelector('#optionsButton').addEventListener('click', dropDownOptions);
 window.addEventListener('click', function(event) {
   if (!event.target.matches('#optionsButton')) {
-    var visible = document.getElementById('optionItem');
+    var visible = document.getElementById('editDropDown');
     if (visible.classList.contains('is-visible')) {
       visible.classList.remove('is-visible');
     }
   }
 })
 
-document.querySelector('#closeArea').addEventListener('click', popUpInfo);
-window.addEventListener('click', function(event) {
-  if (!event.target.matches('#closeArea')) {
-    var visible = document.getElementById('#info');
-    if (visible.classList.contains('is-visible')) {
-      visible.classList.remove('is-visible');
-    }
-  }
-})
+// document.querySelector(`data-closeArea="${info.id}"`).addEventListener('click', openInfo);
+// window.addEventListener('click', function(event) {
+//   if (!event.target.matches(`data-closeArea="${info.id}"`)) {
+//     var visible = document.querySelector(`[data-info="${info.id}"]`);
+//     if (visible.classList.contains('is-visible')) {
+//       visible.classList.remove('is-visible');
+//     }
+//   }
+// })
 
-document.querySelector('#close').addEventListener('click', popUpInfo);
-window.addEventListener('click', function(event) {
-  if (!event.target.matches('#close')) {
-    var visible = document.getElementById('#info');
-    if (visible.classList.contains('is-visible')) {
-      visible.classList.remove('is-visible');
-    }
-  }
-})
+// document.querySelector(`data-close="${info.id}"`).addEventListener('click', openInfo);
+// window.addEventListener('click', function(event) {
+//   if (!event.target.matches(`data-close="${info.id}"`)) {
+//     var visible = document.querySelector(`[data-info="${info.id}"]`);
+//     if (visible.classList.contains('is-visible')) {
+//       visible.classList.remove('is-visible');
+//     }
+//   }
+// })
 
 // Exec Functions
 
 window.openModalDD = openModalDD
 window.openDetailsDD = openDetailsDD
-window.closeDropDown = closeDropDown
+window.openInfo = openInfo

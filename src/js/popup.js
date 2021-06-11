@@ -1,3 +1,3 @@
-export function popUpInfo () {
-  document.getElementById('infoPopUp').classList.toggle('is-visible');
+export const openInfo = (id) => {
+  document.querySelector(`[data-info="${info.id}"]`).classList.toggle('is-visible');
 }

@@ -117,64 +117,17 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"data/explore.json":[function(require,module,exports) {
-module.exports = {
-  "guide": [{
-    "image": "roteiro-mariana.png",
-    "title": "7 cachoeiras em 7 dias",
-    "city": "Mariana / MG"
-  }, {
-    "image": "roteiro-sao-paulo.png",
-    "title": "O melhor da capital em 5 dias",
-    "city": "São Paulo / SP"
-  }, {
-    "image": "roteiro-rio-de-janeiro.png",
-    "title": "Final de semana com a família",
-    "city": "Rio de Janeiro / RJ"
-  }, {
-    "image": "roteiro-salvador.png",
-    "title": "Pra quem gosta de história e arte",
-    "city": "Salvador / BA"
-  }, {
-    "image": "roteiro-manaus.png",
-    "title": "Se conectando com a natureza",
-    "city": "Manaus / AM"
-  }, {
-    "image": "roteiro-gramado.png",
-    "title": "Final de semana romântico",
-    "city": "Gramado / RS"
-  }],
-  "destinations": [{
-    "image": "destinos-sao-paulo.png",
-    "city": "São Paulo / SP"
-  }, {
-    "image": "destinos-rio-de-janeiro.png",
-    "city": "Rio de Janeiro / RJ"
-  }, {
-    "image": "destinos-maragogi.png",
-    "city": "Maragogi / AL"
-  }, {
-    "image": "destinos-fortaleza.png",
-    "city": "Fortaleza / CE"
-  }, {
-    "image": "destinos-gramado.png",
-    "city": "Gramados / RS"
-  }, {
-    "image": "destinos-florianopolis.png",
-    "city": "Florianópolis / SC"
-  }]
-};
-},{}],"js/dropdown.js":[function(require,module,exports) {
+})({"js/dropdown.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.dropDownOptions = dropDownOptions;
-exports.openDetailsDD = exports.openModalDD = void 0;
+exports.openInfo = exports.openDetailsDD = exports.openModalDD = void 0;
 
 function dropDownOptions() {
-  document.getElementById('optionItem').classList.toggle('is-visible');
+  document.getElementById('editDropDown').classList.toggle('is-visible');
 }
 
 var openModalDD = function openModalDD(id) {
@@ -184,30 +137,16 @@ var openModalDD = function openModalDD(id) {
 exports.openModalDD = openModalDD;
 
 var openDetailsDD = function openDetailsDD(id) {
-  var t = document.querySelector("[data-details=\"".concat(id, "\"]"));
-  t.classList.toggle('is-visible');
-
-  if (t.classList.contains('is-visible')) {
-    window.addEventListener('click', function (event) {
-      if (!event.target.matches(t)) {
-        t.classList.remove('is-visible');
-      }
-    });
-  }
+  var t = document.querySelector("[data-details=\"".concat(id, "\"]")).classList.toggle('is-visible');
 };
 
 exports.openDetailsDD = openDetailsDD;
-},{}],"js/popup.js":[function(require,module,exports) {
-"use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.popUpInfo = popUpInfo;
+var openInfo = function openInfo(id) {
+  document.querySelector("[data-info=\"".concat(id, "\"]")).classList.toggle('is-visible');
+};
 
-function popUpInfo() {
-  document.getElementById('infoPopUp').classList.toggle('is-visible');
-}
+exports.openInfo = openInfo;
 },{}],"data/modal.json":[function(require,module,exports) {
 module.exports = {
   "modal": [{
@@ -384,13 +323,101 @@ module.exports = {
     "image": "roteiro-sao-paulo.png"
   }]
 };
+},{}],"data/info.json":[function(require,module,exports) {
+module.exports = {
+  "info": [{
+    "id": "1",
+    "content": "1 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }, {
+    "id": "2",
+    "content": "2 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }, {
+    "id": "3",
+    "content": "3 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }, {
+    "id": "4",
+    "content": "4 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }, {
+    "id": "5",
+    "content": "5 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }, {
+    "id": "6",
+    "content": "6 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }, {
+    "id": "7",
+    "content": "7 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }, {
+    "id": "8",
+    "content": "8 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }, {
+    "id": "9",
+    "content": "9 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }, {
+    "id": "10",
+    "content": "10 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }, {
+    "id": "11",
+    "content": "11 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }, {
+    "id": "12",
+    "content": "12 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }]
+};
 },{}],"js/build.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.buildDetails = exports.buildInfo = exports.buildModal = void 0;
+exports.buildInfoImages = exports.buildInfo = exports.buildDetails = exports.buildModal = void 0;
 
 var buildModal = function buildModal(modal) {
   return "\n    <li class=\"modal__item in-column\">\n      <div class=\"in-row modal__time\">\n        <span class=\"modal__hour\">".concat(modal.hour, "</span>\n        <button class=\"button__menu button--right button--modal\" onclick=\"openModalDD(").concat(modal.id, ")\">\n          <svg class=\"icon__menu\">\n            <use xlink:href=\"#icon-menu\"></use>\n          </svg>\n        </button>\n        <div class=\"in-column\">\n          <ul class=\"dropdown\" data-value=\"").concat(modal.id, "\">\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--details\" href=\"#\">Detalhes</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--reorder\" href=\"#\">Reordenar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--hour\" href=\"#\">Alterar hor\xE1rio</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--calendar\" href=\"#\">Alterar data</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__text--red dropdown__link--delete\" href=\"#\">Remover ponto</a></li>\n          </ul>\n        </div>\n      </div>\n      <p class=\"modal__local\">").concat(modal.local, "</p>\n      <div class=\"details__rating details__rating--text in-row\">    \n        <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-star\"></use>\n        </svg>\n        <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n        <p class=\"details__grade\">").concat(modal.grade, "</p>\n      </div>\n      <div class=\"in-row modal__category\">\n        <p class=\"tag\">natureza</p>\n        <p class=\"tag\">lazer</p>\n      </div>\n      <hr class=\"underline underline--shine underline__modal--margin\" />\n    </li>\n  ");
@@ -398,38 +425,49 @@ var buildModal = function buildModal(modal) {
 
 exports.buildModal = buildModal;
 
-var buildInfo = function buildInfo(destinations) {
-  return "\n  <img class=\"info__images\" src=\"".concat(destinations.image, "\">\n  ");
+var buildDetails = function buildDetails(details) {
+  return "\n  <div class=\"details__items in-column\">\n    <div class=\"details__content in-row\">\n      <img class=\"details__image\" src=\"".concat(details.image, "\"/>\n      <div class=\"details__rating--text in-column\">\n          <p class=\"details__title\">").concat(details.local, "</p>\n          <div class=\"details__rating in-row\">\n            <svg class=\"icon__star\">\n              <use xlink:href=\"#icon-star\"></use>\n            </svg>\n            <p class=\"details__grade details__grade--bold\">").concat(details.gradeBold, "</p>\n            <p class=\"details__grade\">").concat(details.grade, "</p>\n          </div>\n          <div class=\"in-row\">\n              <p class=\"tag\">natureza</p>\n              <p class=\"tag\">lazer</p>\n          </div>\n      </div>\n    </div>\n    <div class=\"details__options in-row\">\n        <p class=\"details__text--options details__text--guide\">3 dias</p>\n        <div class=\"in-column details__button--info\">\n          <button class=\"button__menu has-margin-right\" onclick=\"openInfo(").concat(details.id, ")\">\n            <svg class=\"icon__info\">\n              <use xlink:href=\"#icon-info\"></use>\n              </svg>\n            </button>\n          </div>\n        <div class=\"in-column details__button--menu\"> \n          <button class=\"button__menu has-margin-right\" onclick=\"openDetailsDD(").concat(details.id, ")\">\n            <svg class=\"icon__menu\">\n              <use xlink:href=\"#icon-menu\"></use>\n            </svg>\n          </button>\n          <ul class=\"dropdown dropdown__option\" data-details=\"").concat(details.id, "\">\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--check\" href=\"#\">Usar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--save\" href=\"#\">Salvar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--share\" href=\"#\">Compartilhar</a></li>\n          </ul>\n        </div>\n      </div>\n    </div>\n    <hr class=\"underline underline--shine\" />\n  ");
+};
+
+exports.buildDetails = buildDetails;
+
+var buildInfo = function buildInfo(info) {
+  return "\n  <div class=\"info\" data-info=\"".concat(info.id, "\">\n    <div class=\"info__close\" data-closeArea=\"").concat(info.id, "\"></div>\n    <div class=\"info__modal in-column\">\n      <div class=\"in-row\">\n          <p class=\"info__title\">").concat(info.local, "</p>\n          <button class=\"icon__close is-absolute-right\" data-close=\"").concat(info.id, "\"></button>\n      </div>\n      <hr class=\"underline underline--shine underline__info--margin\" />\n      <div class=\"details__rating details__rating--text in-row\">\n        <svg class=\"icon__star\">\n          <use xlink:href=\"#icon-star\"></use>\n        </svg>\n        <p class=\"details__grade details__grade--bold\">").concat(info.gradeBold, "</p>\n        <p class=\"details__grade\">").concat(info.grade, "</p>\n        <p class=\"tag tag__margin\">natureza</p>\n        <p class=\"tag tag__margin\">lazer</p>\n      </div>\n      <p class=\"info__text\">").concat(info.content, "</p> \n      <a class=\"info__link\" href=\"#\">Clique para ver a descri\xE7\xE3o completa...</a>\n      <div class=\"info__gallery in-row\"></div>\n      <div class=\"info__footer in-row\">\n        <button class=\"icon__arrow icon__arrow--left\"></button>\n        <button class=\"icon__arrow icon__arrow--right\"></button>\n      </div>\n    </div>\n  </div>\n  ");
 };
 
 exports.buildInfo = buildInfo;
 
-var buildDetails = function buildDetails(details) {
-  return "\n  <div class=\"details__items in-column\">\n    <div class=\"details__content in-row\">\n      <img class=\"details__image\" src=\"".concat(details.image, "\"/>\n      <div class=\"details__rating--text in-column\">\n          <p class=\"details__title\">").concat(details.local, "</p>\n          <div class=\"details__rating in-row\">\n            <svg class=\"icon__star\">\n              <use xlink:href=\"#icon-star\"></use>\n            </svg>\n            <p class=\"details__grade details__grade--bold\">").concat(details.gradeBold, "</p>\n            <p class=\"details__grade\">").concat(details.grade, "</p>\n          </div>\n          <div class=\"in-row\">\n              <p class=\"tag\">natureza</p>\n              <p class=\"tag\">lazer</p>\n          </div>\n      </div>\n    </div>\n    <div class=\"details__options in-row\">\n        <p class=\"details__text--options details__text--guide\">3 dias</p>\n        <div class=\"in-column details__button--info\">\n          <button class=\"button__menu has-margin-right\" id=\"infoButton\">\n            <svg class=\"icon__info\">\n              <use xlink:href=\"#icon-info\"></use>\n              </svg>\n            </button>\n          </div>\n        <div class=\"in-column details__button--menu\"> \n          <button class=\"button__menu has-margin-right\" onclick=\"openDetailsDD(").concat(details.id, ")\">\n            <svg class=\"icon__menu\">\n              <use xlink:href=\"#icon-menu\"></use>\n            </svg>\n          </button>\n          <ul class=\"dropdown dropdown__option\" data-details=\"").concat(details.id, "\">\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--check\" href=\"#\">Usar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--save\" href=\"#\">Salvar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--share\" href=\"#\">Compartilhar</a></li>\n          </ul>\n        </div>\n      </div>\n    </div>\n    <hr class=\"underline underline--shine\" />\n  ");
+var buildInfoImages = function buildInfoImages(details) {
+  return "\n  <img class=\"info__images\" src=\"".concat(details.image, "\">\n  ");
 };
 
-exports.buildDetails = buildDetails;
+exports.buildInfoImages = buildInfoImages;
 },{}],"details.js":[function(require,module,exports) {
 "use strict";
 
-var _explore = require("./data/explore.json");
-
 var _dropdown = require("./js/dropdown.js");
-
-var _popup = require("./js/popup.js");
 
 var _modal = require("./data/modal.json");
 
 var _details = require("./data/details.json");
 
+var _info = require("./data/info.json");
+
 var _build = require("./js/build.js");
 
 // HTML Builders
-var containerInfo = document.querySelector(".info__gallery");
+var infoContainer = document.querySelector("#info");
 
-_explore.destinations.forEach(function (item) {
-  var info = (0, _build.buildInfo)(item);
-  containerInfo.innerHTML = containerInfo.innerHTML + info;
+_info.info.forEach(function (item) {
+  var infoItems = (0, _build.buildInfo)(item);
+  infoContainer.innerHTML = infoContainer.innerHTML + infoItems;
+});
+
+var infoGallery = document.querySelector(".info__gallery");
+
+_details.details.forEach(function (item) {
+  var infoImages = (0, _build.buildInfoImages)(item);
+  infoGallery.innerHTML = infoGallery.innerHTML + infoImages;
 });
 
 var modalContainer = document.querySelector(".modal__list");
@@ -447,51 +485,39 @@ _details.details.forEach(function (item) {
 }); // Buttons
 
 
-document.querySelector('#infoButton').addEventListener('click', _popup.popUpInfo);
-window.addEventListener('click', function (event) {
-  if (!event.target.matches('#closeArea')) {
-    var visible = document.getElementById('#info');
-
-    if (visible.classList.contains('is-visible')) {
-      visible.classList.remove('is-visible');
-    }
-  }
-});
 document.querySelector('#optionsButton').addEventListener('click', _dropdown.dropDownOptions);
 window.addEventListener('click', function (event) {
   if (!event.target.matches('#optionsButton')) {
-    var visible = document.getElementById('optionItem');
+    var visible = document.getElementById('editDropDown');
 
     if (visible.classList.contains('is-visible')) {
       visible.classList.remove('is-visible');
     }
   }
-});
-document.querySelector('#closeArea').addEventListener('click', _popup.popUpInfo);
-window.addEventListener('click', function (event) {
-  if (!event.target.matches('#closeArea')) {
-    var visible = document.getElementById('#info');
-
-    if (visible.classList.contains('is-visible')) {
-      visible.classList.remove('is-visible');
-    }
-  }
-});
-document.querySelector('#close').addEventListener('click', _popup.popUpInfo);
-window.addEventListener('click', function (event) {
-  if (!event.target.matches('#close')) {
-    var visible = document.getElementById('#info');
-
-    if (visible.classList.contains('is-visible')) {
-      visible.classList.remove('is-visible');
-    }
-  }
-}); // Exec Functions
+}); // document.querySelector(`data-closeArea="${info.id}"`).addEventListener('click', openInfo);
+// window.addEventListener('click', function(event) {
+//   if (!event.target.matches(`data-closeArea="${info.id}"`)) {
+//     var visible = document.querySelector(`[data-info="${info.id}"]`);
+//     if (visible.classList.contains('is-visible')) {
+//       visible.classList.remove('is-visible');
+//     }
+//   }
+// })
+// document.querySelector(`data-close="${info.id}"`).addEventListener('click', openInfo);
+// window.addEventListener('click', function(event) {
+//   if (!event.target.matches(`data-close="${info.id}"`)) {
+//     var visible = document.querySelector(`[data-info="${info.id}"]`);
+//     if (visible.classList.contains('is-visible')) {
+//       visible.classList.remove('is-visible');
+//     }
+//   }
+// })
+// Exec Functions
 
 window.openModalDD = _dropdown.openModalDD;
 window.openDetailsDD = _dropdown.openDetailsDD;
-window.closeDropDown = _dropdown.closeDropDown;
-},{"./data/explore.json":"data/explore.json","./js/dropdown.js":"js/dropdown.js","./js/popup.js":"js/popup.js","./data/modal.json":"data/modal.json","./data/details.json":"data/details.json","./js/build.js":"js/build.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+window.openInfo = _dropdown.openInfo;
+},{"./js/dropdown.js":"js/dropdown.js","./data/modal.json":"data/modal.json","./data/details.json":"data/details.json","./data/info.json":"data/info.json","./js/build.js":"js/build.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -519,7 +545,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37991" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42975" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

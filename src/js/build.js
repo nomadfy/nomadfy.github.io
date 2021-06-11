@@ -35,12 +35,6 @@ export const buildModal = (modal) => {
   `
 }
 
-export const buildInfo = (destinations) => {
-  return `
-  <img class="info__images" src="${destinations.image}">
-  `
-}
-
 export const buildDetails = (details) => {
   return `
   <div class="details__items in-column">
@@ -64,7 +58,7 @@ export const buildDetails = (details) => {
     <div class="details__options in-row">
         <p class="details__text--options details__text--guide">3 dias</p>
         <div class="in-column details__button--info">
-          <button class="button__menu has-margin-right" id="infoButton">
+          <button class="button__menu has-margin-right" onclick="openInfo(${details.id})">
             <svg class="icon__info">
               <use xlink:href="#icon-info"></use>
               </svg>
@@ -85,5 +79,42 @@ export const buildDetails = (details) => {
       </div>
     </div>
     <hr class="underline underline--shine" />
+  `
+}
+
+export const buildInfo = (info) => {
+  return`
+  <div class="info" data-info="${info.id}">
+    <div class="info__close" data-closeArea="${info.id}"></div>
+    <div class="info__modal in-column">
+      <div class="in-row">
+          <p class="info__title">${info.local}</p>
+          <button class="icon__close is-absolute-right" data-close="${info.id}"></button>
+      </div>
+      <hr class="underline underline--shine underline__info--margin" />
+      <div class="details__rating details__rating--text in-row">
+        <svg class="icon__star">
+          <use xlink:href="#icon-star"></use>
+        </svg>
+        <p class="details__grade details__grade--bold">${info.gradeBold}</p>
+        <p class="details__grade">${info.grade}</p>
+        <p class="tag tag__margin">natureza</p>
+        <p class="tag tag__margin">lazer</p>
+      </div>
+      <p class="info__text">${info.content}</p> 
+      <a class="info__link" href="#">Clique para ver a descrição completa...</a>
+      <div class="info__gallery in-row"></div>
+      <div class="info__footer in-row">
+        <button class="icon__arrow icon__arrow--left"></button>
+        <button class="icon__arrow icon__arrow--right"></button>
+      </div>
+    </div>
+  </div>
+  `
+}
+
+export const buildInfoImages = (details) => {
+  return `
+  <img class="info__images" src="${details.image}">
   `
 }

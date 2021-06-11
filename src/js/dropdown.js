@@ -1,5 +1,5 @@
 export function dropDownOptions() {
-  document.getElementById('optionItem').classList.toggle('is-visible');
+  document.getElementById('editDropDown').classList.toggle('is-visible');
 }
 
 export const openModalDD = (id) => {
@@ -7,15 +7,9 @@ export const openModalDD = (id) => {
 }
 
 export const openDetailsDD = (id) => {
-  var t = document.querySelector(`[data-details="${id}"]`);
-  t.classList.toggle('is-visible')
-  if (t.classList.contains('is-visible')){
-    window.addEventListener('click', function(event) {
-      if (!event.target.matches(t)) {
-        t.classList.remove('is-visible')
-        }
-    })
-  }
+  var t = document.querySelector(`[data-details="${id}"]`).classList.toggle('is-visible');
 }
 
-
+export const openInfo = (id) => {
+  document.querySelector(`[data-info="${id}"]`).classList.toggle('is-visible');
+}
