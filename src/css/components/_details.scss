@@ -82,7 +82,7 @@
     z-index: 1;
   }
   
-  &__button--nav:target {
+  &__button--nav.is-active {
     border: 2px solid $gray2;
     border-bottom: 3px solid $white;
     border-radius: 8px 8px 0 0 ;

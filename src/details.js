@@ -1,35 +1,37 @@
-import { openMainDropdown, openUserDropdown, openRoadmapDropdown, openModalinfo } from "./js/dropdown.js";
-import { modal } from "./data/modal.json"
-import { details } from "./data/details.json"
-import { info } from "./data/info.json"
-import { buildModal, buildDetails, buildInfo, buildInfoImages } from "./js/build.js"
+import { timeline } from "./data/timeline.json";
+import { details } from "./data/details.json";
+import { modal } from "./data/modal.json";
+import { openMainDropdown, openUserDropdown, openRoadmapDropdown } from "./js/dropdown.js";
+import { openModalinfo, buildModal, buildModalImages } from "./js/modal.js";
+import { buildTimeline } from "./js/timeline.js";
+import { buildDetailsList } from "./js/list.js";
 
 // HTML Builders
 
-const infoContainer = document.querySelector("#info")
-info.forEach((item) => {
-  const infoItems = buildInfo(item);
-
-  infoContainer.innerHTML = infoContainer.innerHTML + infoItems
-})
-
-const infoGallery = document.querySelector(".info__gallery")
-details.forEach((item) => {
-  const infoImages = buildInfoImages(item);
-  
-  infoGallery.innerHTML = infoGallery.innerHTML + infoImages
-})
-
-const modalContainer = document.querySelector(".modal__list")
+const modalContainer = document.querySelector("#modal")
 modal.forEach((item) => {
   const modalItems = buildModal(item);
-  
+
   modalContainer.innerHTML = modalContainer.innerHTML + modalItems
+})
+
+const modalGallery = document.querySelector(".modal__gallery")
+details.forEach((item) => {
+  const modalImages = buildModalImages(item);
+  
+  modalGallery.innerHTML = modalGallery.innerHTML + modalImages
+})
+
+const timelineContainer = document.querySelector(".timeline__list")
+timeline.forEach((item) => {
+  const timelineItems = buildTimeline(item);
+  
+  timelineContainer.innerHTML = timelineContainer.innerHTML + timelineItems
 })
 
 const detailsContainer = document.querySelector(".details__grid")
 details.forEach((item) => {
-  const detailsItems = buildDetails(item);
+  const detailsItems = buildDetailsList(item);
 
   detailsContainer.innerHTML = detailsContainer.innerHTML + detailsItems
 })
@@ -46,10 +48,10 @@ window.addEventListener('click', function(event) {
 })
 
 // Dropdown Close
-// document.querySelector(`[data-dropdown-click="${info.id}"]`).addEventListener('click', openModalinfo);
+// document.querySelectorAll('[data-dropdown-click]').addEventListener('click', openModalinfo);
 // window.addEventListener('click', function(event) {
-//   if (!event.target.matches(`[data-dropdown-click="${info.id}"]`)) {
-//     var visible = document.querySelector(`[data-dropdown-info="${info.id}"]`);
+//   if (!event.target.matches('[data-dropdown-click]')) {
+//     var visible = document.querySelectorAll('[data-dropdown-info]');
 //     if (visible.classList.contains('is-visible')) {
 //       visible.classList.remove('is-visible');
 //     }
@@ -68,7 +70,6 @@ window.addEventListener('click', function(event) {
 // })
 
 // Exec Functions
-
 window.openUserDropdown = openUserDropdown
 window.openRoadmapDropdown = openRoadmapDropdown
 window.openModalinfo = openModalinfo
