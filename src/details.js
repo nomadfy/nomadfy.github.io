@@ -1,4 +1,4 @@
-import { dropDownOptions, openModalDD, openDetailsDD, openInfo } from "./js/dropdown.js";
+import { openMainDropdown, openUserDropdown, openRoadmapDropdown, openModalinfo } from "./js/dropdown.js";
 import { modal } from "./data/modal.json"
 import { details } from "./data/details.json"
 import { info } from "./data/info.json"
@@ -34,32 +34,33 @@ details.forEach((item) => {
   detailsContainer.innerHTML = detailsContainer.innerHTML + detailsItems
 })
 
-// Buttons
-
-document.querySelector('#optionsButton').addEventListener('click', dropDownOptions);
+// Main Dropdown Click
+document.querySelector('#mainDropdownButton').addEventListener('click', openMainDropdown);
 window.addEventListener('click', function(event) {
-  if (!event.target.matches('#optionsButton')) {
-    var visible = document.getElementById('editDropDown');
+  if (!event.target.matches('#mainDropdownButton')) {
+    var visible = document.getElementById('mainDropdown');
     if (visible.classList.contains('is-visible')) {
       visible.classList.remove('is-visible');
     }
   }
 })
 
-// document.querySelector(`data-closeArea="${info.id}"`).addEventListener('click', openInfo);
+// Dropdown Close
+// document.querySelector(`[data-dropdown-click="${info.id}"]`).addEventListener('click', openModalinfo);
 // window.addEventListener('click', function(event) {
-//   if (!event.target.matches(`data-closeArea="${info.id}"`)) {
-//     var visible = document.querySelector(`[data-info="${info.id}"]`);
+//   if (!event.target.matches(`[data-dropdown-click="${info.id}"]`)) {
+//     var visible = document.querySelector(`[data-dropdown-info="${info.id}"]`);
 //     if (visible.classList.contains('is-visible')) {
 //       visible.classList.remove('is-visible');
 //     }
 //   }
 // })
 
-// document.querySelector(`data-close="${info.id}"`).addEventListener('click', openInfo);
+// // Modal Click
+// document.querySelector(`[data-close="${info.id}"]`).addEventListener('click', openModalinfo);
 // window.addEventListener('click', function(event) {
-//   if (!event.target.matches(`data-close="${info.id}"`)) {
-//     var visible = document.querySelector(`[data-info="${info.id}"]`);
+//   if (!event.target.matches(`[data-close="${info.id}"]`)) {
+//     var visible = document.querySelector(`[data-modal-info="${info.id}"]`);
 //     if (visible.classList.contains('is-visible')) {
 //       visible.classList.remove('is-visible');
 //     }
@@ -68,6 +69,6 @@ window.addEventListener('click', function(event) {
 
 // Exec Functions
 
-window.openModalDD = openModalDD
-window.openDetailsDD = openDetailsDD
-window.openInfo = openInfo
+window.openUserDropdown = openUserDropdown
+window.openRoadmapDropdown = openRoadmapDropdown
+window.openModalinfo = openModalinfo

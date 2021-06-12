@@ -3,13 +3,13 @@ export const buildModal = (modal) => {
     <li class="modal__item in-column">
       <div class="in-row modal__time">
         <span class="modal__hour">${modal.hour}</span>
-        <button class="button__menu button--right button--modal" onclick="openModalDD(${modal.id})">
+        <button class="button__menu button--right button--modal" data-dropdown-click="${modal.id}" onclick="openUserDropdown(${modal.id})">
           <svg class="icon__menu">
             <use xlink:href="#icon-menu"></use>
           </svg>
         </button>
         <div class="in-column">
-          <ul class="dropdown" data-value="${modal.id}">
+          <ul class="dropdown" data-dropdown-info="${modal.id}">
             <li class="dropdown__item"><a class="dropdown__text dropdown__link--details" href="#">Detalhes</a></li>
             <li class="dropdown__item"><a class="dropdown__text dropdown__link--reorder" href="#">Reordenar</a></li>
             <li class="dropdown__item"><a class="dropdown__text dropdown__link--hour" href="#">Alterar horário</a></li>
@@ -58,19 +58,19 @@ export const buildDetails = (details) => {
     <div class="details__options in-row">
         <p class="details__text--options details__text--guide">3 dias</p>
         <div class="in-column details__button--info">
-          <button class="button__menu has-margin-right" onclick="openInfo(${details.id})">
+          <button class="button__menu has-margin-right" onclick="openModalinfo(${details.id})">
             <svg class="icon__info">
               <use xlink:href="#icon-info"></use>
               </svg>
             </button>
           </div>
         <div class="in-column details__button--menu"> 
-          <button class="button__menu has-margin-right" onclick="openDetailsDD(${details.id})">
+          <button class="button__menu has-margin-right" onclick="openRoadmapDropdown(${details.id})">
             <svg class="icon__menu">
               <use xlink:href="#icon-menu"></use>
             </svg>
           </button>
-          <ul class="dropdown dropdown__option" data-details="${details.id}">
+          <ul class="dropdown dropdown__option" data-roadmap-info="${details.id}">
             <li class="dropdown__item"><a class="dropdown__text dropdown__link--check" href="#">Usar</a></li>
             <li class="dropdown__item"><a class="dropdown__text dropdown__link--save" href="#">Salvar</a></li>
             <li class="dropdown__item"><a class="dropdown__text dropdown__link--share" href="#">Compartilhar</a></li>
@@ -84,7 +84,7 @@ export const buildDetails = (details) => {
 
 export const buildInfo = (info) => {
   return`
-  <div class="info" data-info="${info.id}">
+  <div class="info" data-modal-info="${info.id}">
     <div class="info__close" data-closeArea="${info.id}"></div>
     <div class="info__modal in-column">
       <div class="in-row">
