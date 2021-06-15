@@ -26,6 +26,7 @@ const buildDestination = (destinations) => {
     <img class="explore__image" src="${destinations.image}">
     <div class="explore__linear">
       <h3 class="explore__subtitles explore__subtitles--dest">${destinations.city}</h3>
+      <p class="explore__days"> 3 dias </p>
     </div>
   </a>
 `;

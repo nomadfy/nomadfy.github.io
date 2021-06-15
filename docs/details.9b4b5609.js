@@ -1,0 +1,777 @@
+// modules are defined as an array
+// [ module function, map of requires ]
+//
+// map of requires is short require name -> numeric require
+//
+// anything defined in a previous bundle is accessed via the
+// orig method which is the require for previous bundles
+parcelRequire = (function (modules, cache, entry, globalName) {
+  // Save the require from previous bundle to this closure if any
+  var previousRequire = typeof parcelRequire === 'function' && parcelRequire;
+  var nodeRequire = typeof require === 'function' && require;
+
+  function newRequire(name, jumped) {
+    if (!cache[name]) {
+      if (!modules[name]) {
+        // if we cannot find the module within our internal map or
+        // cache jump to the current global require ie. the last bundle
+        // that was added to the page.
+        var currentRequire = typeof parcelRequire === 'function' && parcelRequire;
+        if (!jumped && currentRequire) {
+          return currentRequire(name, true);
+        }
+
+        // If there are other bundles on this page the require from the
+        // previous one is saved to 'previousRequire'. Repeat this as
+        // many times as there are bundles until the module is found or
+        // we exhaust the require chain.
+        if (previousRequire) {
+          return previousRequire(name, true);
+        }
+
+        // Try the node require function if it exists.
+        if (nodeRequire && typeof name === 'string') {
+          return nodeRequire(name);
+        }
+
+        var err = new Error('Cannot find module \'' + name + '\'');
+        err.code = 'MODULE_NOT_FOUND';
+        throw err;
+      }
+
+      localRequire.resolve = resolve;
+      localRequire.cache = {};
+
+      var module = cache[name] = new newRequire.Module(name);
+
+      modules[name][0].call(module.exports, localRequire, module, module.exports, this);
+    }
+
+    return cache[name].exports;
+
+    function localRequire(x){
+      return newRequire(localRequire.resolve(x));
+    }
+
+    function resolve(x){
+      return modules[name][1][x] || x;
+    }
+  }
+
+  function Module(moduleName) {
+    this.id = moduleName;
+    this.bundle = newRequire;
+    this.exports = {};
+  }
+
+  newRequire.isParcelRequire = true;
+  newRequire.Module = Module;
+  newRequire.modules = modules;
+  newRequire.cache = cache;
+  newRequire.parent = previousRequire;
+  newRequire.register = function (id, exports) {
+    modules[id] = [function (require, module) {
+      module.exports = exports;
+    }, {}];
+  };
+
+  var error;
+  for (var i = 0; i < entry.length; i++) {
+    try {
+      newRequire(entry[i]);
+    } catch (e) {
+      // Save first error but execute all entries
+      if (!error) {
+        error = e;
+      }
+    }
+  }
+
+  if (entry.length) {
+    // Expose entry point to Node, AMD or browser globals
+    // Based on https://github.com/ForbesLindesay/umd/blob/master/template.js
+    var mainExports = newRequire(entry[entry.length - 1]);
+
+    // CommonJS
+    if (typeof exports === "object" && typeof module !== "undefined") {
+      module.exports = mainExports;
+
+    // RequireJS
+    } else if (typeof define === "function" && define.amd) {
+     define(function () {
+       return mainExports;
+     });
+
+    // <script>
+    } else if (globalName) {
+      this[globalName] = mainExports;
+    }
+  }
+
+  // Override the current require with this new one
+  parcelRequire = newRequire;
+
+  if (error) {
+    // throw error from earlier, _after updating parcelRequire_
+    throw error;
+  }
+
+  return newRequire;
+})({"data/timeline.json":[function(require,module,exports) {
+module.exports = {
+  "timeline": [{
+    "id": "1",
+    "hour": "8:00 às 10:00",
+    "local": "Jurere Internacional",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }, {
+    "id": "2",
+    "hour": "8:00 às 15:00",
+    "local": "Rio De Janeiro",
+    "gradeBold": "4",
+    "grade": "(1.500 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }, {
+    "id": "3",
+    "hour": "8:00 às 11:00",
+    "local": "São Paulo",
+    "gradeBold": "4.2",
+    "grade": "(1.230 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }, {
+    "id": "4",
+    "hour": "8:00 às 10:00",
+    "local": "Jurere Internacional",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }, {
+    "id": "5",
+    "hour": "8:00 às 15:00",
+    "local": "Rio De Janeiro",
+    "gradeBold": "4",
+    "grade": "(1.500 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }, {
+    "id": "6",
+    "hour": "8:00 às 11:00",
+    "local": "São Paulo",
+    "gradeBold": "4.2",
+    "grade": "(1.230 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }, {
+    "id": "7",
+    "hour": "8:00 às 10:00",
+    "local": "Jurere Internacional",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }, {
+    "id": "8",
+    "hour": "8:00 às 15:00",
+    "local": "Rio De Janeiro",
+    "gradeBold": "4",
+    "grade": "(1.500 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }, {
+    "id": "9",
+    "hour": "8:00 às 11:00",
+    "local": "São Paulo",
+    "gradeBold": "4.2",
+    "grade": "(1.230 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }, {
+    "id": "10",
+    "hour": "8:00 às 10:00",
+    "local": "Jurere Internacional",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }, {
+    "id": "11",
+    "hour": "8:00 às 15:00",
+    "local": "Rio De Janeiro",
+    "gradeBold": "4",
+    "grade": "(1.500 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }, {
+    "id": "12",
+    "hour": "8:00 às 11:00",
+    "local": "São Paulo",
+    "gradeBold": "4.2",
+    "grade": "(1.230 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }]
+};
+},{}],"data/details.json":[function(require,module,exports) {
+module.exports = {
+  "details": [{
+    "id": "1",
+    "hour": "8:00 às 10:00",
+    "local": "Jurere Internacional",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }, {
+    "id": "2",
+    "hour": "8:00 às 15:00",
+    "local": "Rio De Janeiro",
+    "gradeBold": "4",
+    "grade": "(1.500 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }, {
+    "id": "3",
+    "hour": "8:00 às 11:00",
+    "local": "São Paulo",
+    "gradeBold": "4.2",
+    "grade": "(1.230 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }, {
+    "id": "4",
+    "hour": "8:00 às 10:00",
+    "local": "Jurere Internacional",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }, {
+    "id": "5",
+    "hour": "8:00 às 15:00",
+    "local": "Rio De Janeiro",
+    "gradeBold": "4",
+    "grade": "(1.500 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }, {
+    "id": "6",
+    "hour": "8:00 às 11:00",
+    "local": "São Paulo",
+    "gradeBold": "4.2",
+    "grade": "(1.230 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }, {
+    "id": "7",
+    "hour": "8:00 às 10:00",
+    "local": "Jurere Internacional",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }, {
+    "id": "8",
+    "hour": "8:00 às 15:00",
+    "local": "Rio De Janeiro",
+    "gradeBold": "4",
+    "grade": "(1.500 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }, {
+    "id": "9",
+    "hour": "8:00 às 11:00",
+    "local": "São Paulo",
+    "gradeBold": "4.2",
+    "grade": "(1.230 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }, {
+    "id": "10",
+    "hour": "8:00 às 10:00",
+    "local": "Jurere Internacional",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }, {
+    "id": "11",
+    "hour": "8:00 às 15:00",
+    "local": "Rio De Janeiro",
+    "gradeBold": "4",
+    "grade": "(1.500 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }, {
+    "id": "12",
+    "hour": "8:00 às 11:00",
+    "local": "São Paulo",
+    "gradeBold": "4.2",
+    "grade": "(1.230 avaliações)",
+    "image": "roteiro-sao-paulo.png"
+  }]
+};
+},{}],"data/modal.json":[function(require,module,exports) {
+module.exports = {
+  "modal": [{
+    "id": "1",
+    "content": "1 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }, {
+    "id": "2",
+    "content": "2 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }, {
+    "id": "3",
+    "content": "3 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }, {
+    "id": "4",
+    "content": "4 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }, {
+    "id": "5",
+    "content": "5 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }, {
+    "id": "6",
+    "content": "6 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }, {
+    "id": "7",
+    "content": "7 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }, {
+    "id": "8",
+    "content": "8 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }, {
+    "id": "9",
+    "content": "9 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }, {
+    "id": "10",
+    "content": "10 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }, {
+    "id": "11",
+    "content": "11 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }, {
+    "id": "12",
+    "content": "12 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Jurere Internacional"
+  }]
+};
+},{}],"js/dropdown.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.openMainDropdown = openMainDropdown;
+exports.openRoadmapDropdown = exports.openUserDropdown = void 0;
+
+function openMainDropdown() {
+  document.getElementById('mainDropdown').classList.toggle('is-visible');
+}
+
+var openUserDropdown = function openUserDropdown(id) {
+  document.querySelector("[data-dropdown-info=\"".concat(id, "\"]")).classList.toggle('is-visible');
+};
+
+exports.openUserDropdown = openUserDropdown;
+
+var openRoadmapDropdown = function openRoadmapDropdown(id) {
+  var t = document.querySelector("[data-roadmap-info=\"".concat(id, "\"]")).classList.toggle('is-visible');
+};
+
+exports.openRoadmapDropdown = openRoadmapDropdown;
+},{}],"js/modal.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.buildModalImages = exports.buildModal = exports.openModalinfo = void 0;
+
+var openModalinfo = function openModalinfo(id) {
+  document.querySelector("[data-modal-info=\"".concat(id, "\"]")).classList.toggle('is-visible');
+};
+
+exports.openModalinfo = openModalinfo;
+
+var buildModal = function buildModal(modal) {
+  return "\n  <div class=\"modal\" data-modal-info=\"".concat(modal.id, "\">\n    <div class=\"modal__close\" data-closeArea=\"").concat(modal.id, "\"></div>\n    <div class=\"modal__modal in-column\">\n      <div class=\"in-row\">\n        <p class=\"modal__title\">").concat(modal.local, "</p>\n        <button class=\"icon__close is-absolute-right\" data-close=\"").concat(modal.id, "\"></button>\n      </div>\n      <hr class=\"underline underline--shine underline__modal--margin\" />\n      <div class=\"details__rating details__rating--text in-row\">\n        <svg class=\"icon__star\">\n          <use xlink:href=\"#icon-star\"></use>\n        </svg>\n        <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n        <p class=\"details__grade\">").concat(modal.grade, "</p>\n        <p class=\"tag tag__margin\">natureza</p>\n        <p class=\"tag tag__margin\">lazer</p>\n      </div>\n      <p class=\"modal__text\">").concat(modal.content, "</p> \n      <a class=\"modal__link\" href=\"#\">Clique para ver a descri\xE7\xE3o completa...</a>\n      <div class=\"modal__gallery in-row\"></div>\n      <div class=\"modal__footer in-row\">\n        <button class=\"icon__arrow icon__arrow--left\"></button>\n        <button class=\"icon__arrow icon__arrow--right\"></button>\n      </div>\n    </div>\n  </div>\n  ");
+};
+
+exports.buildModal = buildModal;
+
+var buildModalImages = function buildModalImages(details) {
+  return "\n  <img class=\"modal__images\" src=\"".concat(details.image, "\">\n  ");
+};
+
+exports.buildModalImages = buildModalImages;
+},{}],"js/timeline.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.buildTimeline = void 0;
+
+var buildTimeline = function buildTimeline(modal) {
+  return "\n    <li class=\"timeline__item in-column\">\n      <div class=\"in-row timeline__time\">\n        <span class=\"timeline__hour\">".concat(modal.hour, "</span>\n        <button class=\"button__menu button--right button--modal\" data-dropdown-click=\"").concat(modal.id, "\" onclick=\"openUserDropdown(").concat(modal.id, ")\">\n          <svg class=\"icon__menu\">\n            <use xlink:href=\"#icon-menu\"></use>\n          </svg>\n        </button>\n        <div class=\"in-column\">\n          <ul class=\"dropdown\" data-dropdown-info=\"").concat(modal.id, "\">\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--details\" href=\"#\">Detalhes</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--reorder\" href=\"#\">Reordenar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--hour\" href=\"#\">Alterar hor\xE1rio</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--calendar\" href=\"#\">Alterar data</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__text--red dropdown__link--delete\" href=\"#\">Remover ponto</a></li>\n          </ul>\n        </div>\n      </div>\n      <p class=\"timeline__local\">").concat(modal.local, "</p>\n      <div class=\"details__rating details__rating--text in-row\">    \n        <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-star\"></use>\n        </svg>\n        <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n        <p class=\"details__grade\">").concat(modal.grade, "</p>\n      </div>\n      <div class=\"in-row timeline__category\">\n        <p class=\"tag\">natureza</p>\n        <p class=\"tag\">lazer</p>\n      </div>\n      <hr class=\"underline underline--shine underline__timeline--margin\" />\n    </li>\n  ");
+};
+
+exports.buildTimeline = buildTimeline;
+},{}],"js/list.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.buildDetailsList = void 0;
+
+var buildDetailsList = function buildDetailsList(details) {
+  return "\n  <div class=\"details__items in-column\">\n    <div class=\"details__content in-row\">\n      <img class=\"details__image\" src=\"".concat(details.image, "\"/>\n      <div class=\"details__rating--text in-column\">\n          <p class=\"details__title\">").concat(details.local, "</p>\n          <div class=\"details__rating in-row\">\n            <svg class=\"icon__star\">\n              <use xlink:href=\"#icon-star\"></use>\n            </svg>\n            <p class=\"details__grade details__grade--bold\">").concat(details.gradeBold, "</p>\n            <p class=\"details__grade\">").concat(details.grade, "</p>\n          </div>\n          <div class=\"in-row\">\n              <p class=\"tag\">natureza</p>\n              <p class=\"tag\">lazer</p>\n          </div>\n      </div>\n    </div>\n    <div class=\"details__options in-row\">\n        <p class=\"details__text--options details__text--guide\">3 dias</p>\n        <div class=\"in-column details__button--info\">\n          <button class=\"button__menu has-margin-right\" onclick=\"openModalinfo(").concat(details.id, ")\">\n            <svg class=\"icon__info\">\n              <use xlink:href=\"#icon-info\"></use>\n              </svg>\n            </button>\n          </div>\n        <div class=\"in-column details__button--menu\"> \n          <button class=\"button__menu has-margin-right\" onclick=\"openRoadmapDropdown(").concat(details.id, ")\">\n            <svg class=\"icon__menu\">\n              <use xlink:href=\"#icon-menu\"></use>\n            </svg>\n          </button>\n          <ul class=\"dropdown dropdown__option\" data-roadmap-info=\"").concat(details.id, "\">\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--check\" href=\"#\">Usar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--save\" href=\"#\">Salvar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--share\" href=\"#\">Compartilhar</a></li>\n          </ul>\n        </div>\n      </div>\n    </div>\n    <hr class=\"underline underline--shine\" />\n  ");
+};
+
+exports.buildDetailsList = buildDetailsList;
+},{}],"js/active.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.activeSpots = activeSpots;
+exports.activeGuide = activeGuide;
+
+function activeSpots() {
+  document.getElementById('pontosTuristicos').classList.toggle('is-active');
+  document.getElementById('roteiros').classList.remove('is-active');
+}
+
+function activeGuide() {
+  document.getElementById('roteiros').classList.toggle('is-active');
+  document.getElementById('pontosTuristicos').classList.remove('is-active');
+}
+},{}],"details.js":[function(require,module,exports) {
+"use strict";
+
+var _timeline = require("./data/timeline.json");
+
+var _details = require("./data/details.json");
+
+var _modal = require("./data/modal.json");
+
+var _dropdown = require("./js/dropdown.js");
+
+var _modal2 = require("./js/modal.js");
+
+var _timeline2 = require("./js/timeline.js");
+
+var _list = require("./js/list.js");
+
+var _active = require("./js/active.js");
+
+// HTML Builders
+var modalContainer = document.querySelector("#modal");
+
+_modal.modal.forEach(function (item) {
+  var modalItems = (0, _modal2.buildModal)(item);
+  modalContainer.innerHTML = modalContainer.innerHTML + modalItems;
+});
+
+var modalGallery = document.querySelector(".modal__gallery");
+
+_details.details.forEach(function (item) {
+  var modalImages = (0, _modal2.buildModalImages)(item);
+  modalGallery.innerHTML = modalGallery.innerHTML + modalImages;
+});
+
+var timelineContainer = document.querySelector(".timeline__list");
+
+_timeline.timeline.forEach(function (item) {
+  var timelineItems = (0, _timeline2.buildTimeline)(item);
+  timelineContainer.innerHTML = timelineContainer.innerHTML + timelineItems;
+});
+
+var detailsContainer = document.querySelector(".details__grid");
+
+_details.details.forEach(function (item) {
+  var detailsItems = (0, _list.buildDetailsList)(item);
+  detailsContainer.innerHTML = detailsContainer.innerHTML + detailsItems;
+}); // Main Dropdown Click
+
+
+document.querySelector('#mainDropdownButton').addEventListener('click', _dropdown.openMainDropdown);
+window.addEventListener('click', function (event) {
+  if (!event.target.matches('#mainDropdownButton')) {
+    var visible = document.getElementById('mainDropdown');
+
+    if (visible.classList.contains('is-visible')) {
+      visible.classList.remove('is-visible');
+    }
+  }
+});
+document.querySelector('#mainDropdownButton').addEventListener('click', _dropdown.openMainDropdown);
+window.addEventListener('click', function (event) {
+  if (!event.target.matches('#mainDropdownButton')) {
+    var visible = document.getElementById('mainDropdown');
+
+    if (visible.classList.contains('is-visible')) {
+      visible.classList.remove('is-visible');
+    }
+  }
+});
+document.querySelector('#roteiros').addEventListener('click', _active.activeGuide);
+document.querySelector('#pontosTuristicos').addEventListener('click', _active.activeSpots); // Dropdown Close
+// document.querySelectorAll('[data-dropdown-click]').addEventListener('click', openModalinfo);
+// window.addEventListener('click', function(event) {
+//   if (!event.target.matches('[data-dropdown-click]')) {
+//     var visible = document.querySelectorAll('[data-dropdown-info]');
+//     if (visible.classList.contains('is-visible')) {
+//       visible.classList.remove('is-visible');
+//     }
+//   }
+// })
+// // Modal Click
+// document.querySelector(`[data-close="${info.id}"]`).addEventListener('click', openModalinfo);
+// window.addEventListener('click', function(event) {
+//   if (!event.target.matches(`[data-close="${info.id}"]`)) {
+//     var visible = document.querySelector(`[data-modal-info="${info.id}"]`);
+//     if (visible.classList.contains('is-visible')) {
+//       visible.classList.remove('is-visible');
+//     }
+//   }
+// })
+// Exec Functions
+
+window.openUserDropdown = _dropdown.openUserDropdown;
+window.openRoadmapDropdown = _dropdown.openRoadmapDropdown;
+window.openModalinfo = _modal2.openModalinfo;
+},{"./data/timeline.json":"data/timeline.json","./data/details.json":"data/details.json","./data/modal.json":"data/modal.json","./js/dropdown.js":"js/dropdown.js","./js/modal.js":"js/modal.js","./js/timeline.js":"js/timeline.js","./js/list.js":"js/list.js","./js/active.js":"js/active.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var global = arguments[3];
+var OVERLAY_ID = '__parcel__error__overlay__';
+var OldModule = module.bundle.Module;
+
+function Module(moduleName) {
+  OldModule.call(this, moduleName);
+  this.hot = {
+    data: module.bundle.hotData,
+    _acceptCallbacks: [],
+    _disposeCallbacks: [],
+    accept: function (fn) {
+      this._acceptCallbacks.push(fn || function () {});
+    },
+    dispose: function (fn) {
+      this._disposeCallbacks.push(fn);
+    }
+  };
+  module.bundle.hotData = null;
+}
+
+module.bundle.Module = Module;
+var checkedAssets, assetsToAccept;
+var parent = module.bundle.parent;
+
+if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
+  var hostname = "" || location.hostname;
+  var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45401" + '/');
+
+  ws.onmessage = function (event) {
+    checkedAssets = {};
+    assetsToAccept = [];
+    var data = JSON.parse(event.data);
+
+    if (data.type === 'update') {
+      var handled = false;
+      data.assets.forEach(function (asset) {
+        if (!asset.isNew) {
+          var didAccept = hmrAcceptCheck(global.parcelRequire, asset.id);
+
+          if (didAccept) {
+            handled = true;
+          }
+        }
+      }); // Enable HMR for CSS by default.
+
+      handled = handled || data.assets.every(function (asset) {
+        return asset.type === 'css' && asset.generated.js;
+      });
+
+      if (handled) {
+        console.clear();
+        data.assets.forEach(function (asset) {
+          hmrApply(global.parcelRequire, asset);
+        });
+        assetsToAccept.forEach(function (v) {
+          hmrAcceptRun(v[0], v[1]);
+        });
+      } else if (location.reload) {
+        // `location` global exists in a web worker context but lacks `.reload()` function.
+        location.reload();
+      }
+    }
+
+    if (data.type === 'reload') {
+      ws.close();
+
+      ws.onclose = function () {
+        location.reload();
+      };
+    }
+
+    if (data.type === 'error-resolved') {
+      console.log('[parcel] ✨ Error resolved');
+      removeErrorOverlay();
+    }
+
+    if (data.type === 'error') {
+      console.error('[parcel] 🚨  ' + data.error.message + '\n' + data.error.stack);
+      removeErrorOverlay();
+      var overlay = createErrorOverlay(data);
+      document.body.appendChild(overlay);
+    }
+  };
+}
+
+function removeErrorOverlay() {
+  var overlay = document.getElementById(OVERLAY_ID);
+
+  if (overlay) {
+    overlay.remove();
+  }
+}
+
+function createErrorOverlay(data) {
+  var overlay = document.createElement('div');
+  overlay.id = OVERLAY_ID; // html encode message and stack trace
+
+  var message = document.createElement('div');
+  var stackTrace = document.createElement('pre');
+  message.innerText = data.error.message;
+  stackTrace.innerText = data.error.stack;
+  overlay.innerHTML = '<div style="background: black; font-size: 16px; color: white; position: fixed; height: 100%; width: 100%; top: 0px; left: 0px; padding: 30px; opacity: 0.85; font-family: Menlo, Consolas, monospace; z-index: 9999;">' + '<span style="background: red; padding: 2px 4px; border-radius: 2px;">ERROR</span>' + '<span style="top: 2px; margin-left: 5px; position: relative;">🚨</span>' + '<div style="font-size: 18px; font-weight: bold; margin-top: 20px;">' + message.innerHTML + '</div>' + '<pre>' + stackTrace.innerHTML + '</pre>' + '</div>';
+  return overlay;
+}
+
+function getParents(bundle, id) {
+  var modules = bundle.modules;
+
+  if (!modules) {
+    return [];
+  }
+
+  var parents = [];
+  var k, d, dep;
+
+  for (k in modules) {
+    for (d in modules[k][1]) {
+      dep = modules[k][1][d];
+
+      if (dep === id || Array.isArray(dep) && dep[dep.length - 1] === id) {
+        parents.push(k);
+      }
+    }
+  }
+
+  if (bundle.parent) {
+    parents = parents.concat(getParents(bundle.parent, id));
+  }
+
+  return parents;
+}
+
+function hmrApply(bundle, asset) {
+  var modules = bundle.modules;
+
+  if (!modules) {
+    return;
+  }
+
+  if (modules[asset.id] || !bundle.parent) {
+    var fn = new Function('require', 'module', 'exports', asset.generated.js);
+    asset.isNew = !modules[asset.id];
+    modules[asset.id] = [fn, asset.deps];
+  } else if (bundle.parent) {
+    hmrApply(bundle.parent, asset);
+  }
+}
+
+function hmrAcceptCheck(bundle, id) {
+  var modules = bundle.modules;
+
+  if (!modules) {
+    return;
+  }
+
+  if (!modules[id] && bundle.parent) {
+    return hmrAcceptCheck(bundle.parent, id);
+  }
+
+  if (checkedAssets[id]) {
+    return;
+  }
+
+  checkedAssets[id] = true;
+  var cached = bundle.cache[id];
+  assetsToAccept.push([bundle, id]);
+
+  if (cached && cached.hot && cached.hot._acceptCallbacks.length) {
+    return true;
+  }
+
+  return getParents(global.parcelRequire, id).some(function (id) {
+    return hmrAcceptCheck(global.parcelRequire, id);
+  });
+}
+
+function hmrAcceptRun(bundle, id) {
+  var cached = bundle.cache[id];
+  bundle.hotData = {};
+
+  if (cached) {
+    cached.hot.data = bundle.hotData;
+  }
+
+  if (cached && cached.hot && cached.hot._disposeCallbacks.length) {
+    cached.hot._disposeCallbacks.forEach(function (cb) {
+      cb(bundle.hotData);
+    });
+  }
+
+  delete bundle.cache[id];
+  bundle(id);
+  cached = bundle.cache[id];
+
+  if (cached && cached.hot && cached.hot._acceptCallbacks.length) {
+    cached.hot._acceptCallbacks.forEach(function (cb) {
+      cb();
+    });
+
+    return true;
+  }
+}
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","details.js"], null)
+//# sourceMappingURL=/details.9b4b5609.js.map

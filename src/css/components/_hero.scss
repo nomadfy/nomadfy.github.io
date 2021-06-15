@@ -28,12 +28,11 @@
   }
 
   &__input {
-    border-radius: 25px;
+    border-radius: 8px;
     border: 1px solid $gray2;
     color: $gray3;
     display: block;
     height: 55px;
-    opacity: .75;
     padding: 0 10px 0 60px !important;
     position: relative;
 
@@ -57,7 +56,7 @@
     position: relative;
     height: 55px;
     bottom: 55px;
-    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m23.79 22.776-5.832-5.832a10.192 10.192 0 0 0 2.512-6.71C20.47 4.586 15.877 0 10.236 0 4.59 0 .003 4.592.003 10.233c0 5.641 4.593 10.233 10.233 10.233 2.565 0 4.912-.947 6.71-2.511l5.833 5.832a.723.723 0 0 0 .506.213.72.72 0 0 0 .505-1.224zM1.435 10.233c0-4.853 3.948-8.796 8.796-8.796 4.853 0 8.797 3.948 8.797 8.796 0 4.848-3.944 8.802-8.797 8.802-4.848 0-8.796-3.949-8.796-8.802z' fill='%23888'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m23.79 22.776-5.832-5.832a10.192 10.192 0 0 0 2.512-6.71C20.47 4.586 15.877 0 10.236 0 4.59 0 .003 4.592.003 10.233c0 5.641 4.593 10.233 10.233 10.233 2.565 0 4.912-.947 6.71-2.511l5.833 5.832a.723.723 0 0 0 .506.213.72.72 0 0 0 .505-1.224zM1.435 10.233c0-4.853 3.948-8.796 8.796-8.796 4.853 0 8.797 3.948 8.797 8.796 0 4.848-3.944 8.802-8.797 8.802-4.848 0-8.796-3.949-8.796-8.802z' fill='%23888'/%3E%3C/svg%3E");
     background-position: center;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -75,12 +74,12 @@
 
   &__search:hover {
     background-color: $gray3;
-    border-radius: 28px 0 0 28px;
+    border-radius: 8px 0 0 8px;
     opacity: .7;
   }
 
   &__placeholder {
-    color: $gray3;
+    color: $gray2;
     height: 0;
     max-width: 300px;
     padding: 0;

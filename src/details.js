@@ -5,6 +5,7 @@ import { openMainDropdown, openUserDropdown, openRoadmapDropdown } from "./js/dr
 import { openModalinfo, buildModal, buildModalImages } from "./js/modal.js";
 import { buildTimeline } from "./js/timeline.js";
 import { buildDetailsList } from "./js/list.js";
+import { activeGuide, activeSpots } from "./js/active.js";
 
 // HTML Builders
 
@@ -46,6 +47,19 @@ window.addEventListener('click', function(event) {
     }
   }
 })
+
+document.querySelector('#mainDropdownButton').addEventListener('click', openMainDropdown);
+window.addEventListener('click', function(event) {
+  if (!event.target.matches('#mainDropdownButton')) {
+    var visible = document.getElementById('mainDropdown');
+    if (visible.classList.contains('is-visible')) {
+      visible.classList.remove('is-visible');
+    }
+  }
+})
+
+document.querySelector('#roteiros').addEventListener('click', activeGuide);
+document.querySelector('#pontosTuristicos').addEventListener('click', activeSpots);
 
 // Dropdown Close
 // document.querySelectorAll('[data-dropdown-click]').addEventListener('click', openModalinfo);
