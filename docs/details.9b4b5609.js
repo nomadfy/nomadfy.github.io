@@ -389,13 +389,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.openMainDropdown = openMainDropdown;
 exports.openRoadmapDropdown = exports.openUserDropdown = void 0;
+var openedItem;
 
 function openMainDropdown() {
   document.getElementById('mainDropdown').classList.toggle('is-visible');
 }
 
 var openUserDropdown = function openUserDropdown(id) {
-  document.querySelector("[data-dropdown-info=\"".concat(id, "\"]")).classList.toggle('is-visible');
+  openedItem = document.querySelector("[data-dropdown-info=\"".concat(id, "\"]"));
+  openedItem.classList.toggle('is-visible');
 };
 
 exports.openUserDropdown = openUserDropdown;
@@ -405,6 +407,14 @@ var openRoadmapDropdown = function openRoadmapDropdown(id) {
 };
 
 exports.openRoadmapDropdown = openRoadmapDropdown;
+document.addEventListener('click', function (event) {
+  var isClickInside = openedItem && openedItem.contains(event.target);
+  console.log(isClickInside);
+
+  if (!isClickInside) {
+    openedItem.classList.toggle('is-visible');
+  }
+});
 },{}],"js/modal.js":[function(require,module,exports) {
 "use strict";
 
@@ -439,7 +449,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.buildTimeline = void 0;
 
 var buildTimeline = function buildTimeline(modal) {
-  return "\n    <li class=\"timeline__item in-column\">\n      <div class=\"in-row timeline__time\">\n        <span class=\"timeline__hour\">".concat(modal.hour, "</span>\n        <button class=\"button__menu button--right button--modal\" data-dropdown-click=\"").concat(modal.id, "\" onclick=\"openUserDropdown(").concat(modal.id, ")\">\n          <svg class=\"icon__menu\">\n            <use xlink:href=\"#icon-menu\"></use>\n          </svg>\n        </button>\n        <div class=\"in-column\">\n          <ul class=\"dropdown\" data-dropdown-info=\"").concat(modal.id, "\">\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--details\" href=\"#\">Detalhes</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--reorder\" href=\"#\">Reordenar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--hour\" href=\"#\">Alterar hor\xE1rio</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--calendar\" href=\"#\">Alterar data</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__text--red dropdown__link--delete\" href=\"#\">Remover ponto</a></li>\n          </ul>\n        </div>\n      </div>\n      <p class=\"timeline__local\">").concat(modal.local, "</p>\n      <div class=\"details__rating details__rating--text in-row\">    \n        <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-star\"></use>\n        </svg>\n        <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n        <p class=\"details__grade\">").concat(modal.grade, "</p>\n      </div>\n      <div class=\"in-row timeline__category\">\n        <p class=\"tag\">natureza</p>\n        <p class=\"tag\">lazer</p>\n      </div>\n      <hr class=\"underline underline--shine underline__timeline--margin\" />\n    </li>\n  ");
+  return "\n    <li class=\"timeline__item in-column\">\n      <div class=\"in-row timeline__time\">\n        <span class=\"timeline__hour\">".concat(modal.hour, "</span>\n        <button class=\"button__menu button--right button--modal\" data-dropdown-click=\"").concat(modal.id, "\" onclick=\"openUserDropdown(").concat(modal.id, ", event)\">\n          <svg class=\"icon__menu\">\n            <use xlink:href=\"#icon-menu\"></use>\n          </svg>\n        </button>\n        <div class=\"in-column\">\n          <ul class=\"dropdown\" data-dropdown-info=\"").concat(modal.id, "\">\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--details\" href=\"#\">Detalhes</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--reorder\" href=\"#\">Reordenar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--hour\" href=\"#\">Alterar hor\xE1rio</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--calendar\" href=\"#\">Alterar data</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__text--red dropdown__link--delete\" href=\"#\">Remover ponto</a></li>\n          </ul>\n        </div>\n      </div>\n      <p class=\"timeline__local\">").concat(modal.local, "</p>\n      <div class=\"details__rating details__rating--text in-row\">    \n        <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-star\"></use>\n        </svg>\n        <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n        <p class=\"details__grade\">").concat(modal.grade, "</p>\n      </div>\n      <div class=\"in-row timeline__category\">\n        <p class=\"tag\">natureza</p>\n        <p class=\"tag\">lazer</p>\n      </div>\n      <hr class=\"underline underline--shine underline__timeline--margin\" />\n    </li>\n  ");
 };
 
 exports.buildTimeline = buildTimeline;
@@ -597,7 +607,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45401" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "32837" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

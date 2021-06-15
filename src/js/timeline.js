@@ -3,7 +3,7 @@ export const buildTimeline = (modal) => {
     <li class="timeline__item in-column">
       <div class="in-row timeline__time">
         <span class="timeline__hour">${modal.hour}</span>
-        <button class="button__menu button--right button--modal" data-dropdown-click="${modal.id}" onclick="openUserDropdown(${modal.id})">
+        <button class="button__menu button--right button--modal" data-dropdown-click="${modal.id}" onclick="openUserDropdown(${modal.id}, event)">
           <svg class="icon__menu">
             <use xlink:href="#icon-menu"></use>
           </svg>
