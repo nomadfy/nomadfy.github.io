@@ -269,6 +269,21 @@ li {
   list-style: none;
 }
 
+select, input {
+  border-radius: 8px;
+  border: 1px solid #888888;
+  background-color: #FFFFFF;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.065 4.957.49.441a.288.288 0 0 0-.406 0 .28.28 0 0 0 0 .4L4.863 5.56a.288.288 0 0 0 .405 0L10.045.84a.274.274 0 0 0 0-.398.288.288 0 0 0-.406 0L5.065 4.957z' fill='%23444'/%3E%3C/svg%3E");
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+
 .button {
   display: inline-block;
   cursor: pointer;
@@ -280,6 +295,9 @@ li {
   background-color: #FF6117;
   color: #FFFFFF;
   transition: 0.2s;
+}
+.button--borderless {
+  border: transparent;
 }
 .button--login {
   padding: 15px 0;
@@ -363,6 +381,23 @@ li {
 .button--modal {
   margin-top: -10px;
   z-index: 993;
+}
+.button--collapse {
+  position: relative;
+  display: flex;
+  align-self: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 0 24px 24px 0;
+  z-index: 9999;
+  background-color: #FFFFFF;
+  box-shadow: 5px 2px 5px 0px rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 5px 2px 5px 0px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 5px 2px 5px 0px rgba(0, 0, 0, 0.26);
+}
+.button--collapse::before {
+  display: flex;
+  content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 17h2v.5H3v1h1v.5H2v1h3v-4H2v1zm1-9h1V4H2v1h1v3zm-1 3h1.8L2 13.1v.9h3v-1H3.2L5 10.9V10H2v1zm5-6v2h14V5H7zm0 14h14v-2H7v2zm0-6h14v-2H7v2z' fill='%23FF6117'/%3E%3C/svg%3E");
 }
 
 .input {
@@ -651,7 +686,7 @@ select:focus, textarea:focus, input:focus {
 .explore__components {
   display: flex;
   flex-direction: row;
-  height: 375px;
+  height: 370px;
   margin: auto;
   overflow-x: auto;
   width: 100%;
@@ -837,6 +872,49 @@ select:focus, textarea:focus, input:focus {
 .details__button--nav:first-of-type {
   margin-left: 10px;
 }
+.details__select {
+  background-position-x: 90%;
+  width: 45%;
+  height: 32px;
+  margin-right: 10px;
+  padding: 0 16px;
+  color: #888888;
+}
+.details__input {
+  position: absolute;
+  width: 47%;
+  height: 32px;
+  left: 47%;
+  padding-left: 30px;
+}
+.details__input:focus ~ span, .details__input:valid ~ span {
+  opacity: 0;
+}
+.details__search {
+  position: relative;
+  left: -5px;
+  width: 30px;
+  background-image: url("data:image/svg+xml,%3Csvg width='11' height='13' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m23.79 22.776-5.832-5.832a10.192 10.192 0 0 0 2.512-6.71C20.47 4.586 15.877 0 10.236 0 4.59 0 .003 4.592.003 10.233c0 5.641 4.593 10.233 10.233 10.233 2.565 0 4.912-.947 6.71-2.511l5.833 5.832a.723.723 0 0 0 .506.213.72.72 0 0 0 .505-1.224zM1.435 10.233c0-4.853 3.948-8.796 8.796-8.796 4.853 0 8.797 3.948 8.797 8.796 0 4.848-3.944 8.802-8.797 8.802-4.848 0-8.796-3.949-8.796-8.802z' fill='%23888'/%3E%3C/svg%3E");
+  background-position-x: 15px;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+.details__search:hover {
+  background-color: #444444;
+  border-radius: 8px 0 0 8px;
+  opacity: 0.7;
+}
+.details__placeholder {
+  position: relative;
+  display: flex;
+  align-self: center;
+  color: #888888;
+  pointer-events: none;
+}
 .details__image {
   min-width: 145px;
   height: 120px;
@@ -896,6 +974,7 @@ select:focus, textarea:focus, input:focus {
 }
 
 .timeline {
+  display: none;
   background-color: #FFFFFF;
   height: 100%;
   min-width: 300px;
@@ -916,9 +995,6 @@ select:focus, textarea:focus, input:focus {
   justify-content: space-between;
 }
 .timeline__input {
-  background-color: #FFFFFF;
-  border-radius: 8px;
-  border: 1px solid #888888;
   display: flex;
   height: 32px;
   margin-top: -8px;
@@ -937,16 +1013,7 @@ select:focus, textarea:focus, input:focus {
   margin-left: 15px;
 }
 .timeline__select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: #FFFFFF;
-  background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.065 4.957.49.441a.288.288 0 0 0-.406 0 .28.28 0 0 0 0 .4L4.863 5.56a.288.288 0 0 0 .405 0L10.045.84a.274.274 0 0 0 0-.398.288.288 0 0 0-.406 0L5.065 4.957z' fill='%23444'/%3E%3C/svg%3E");
   background-position-x: 25px;
-  background-position-y: center;
-  background-repeat: no-repeat;
-  border-radius: 8px;
-  border: 1px solid #888888;
   color: #000000;
   height: 22px;
   margin: 0 8px;
@@ -958,6 +1025,7 @@ select:focus, textarea:focus, input:focus {
   color: #444444;
   counter-reset: part 1;
   overflow-y: auto;
+  overflow-x: hidden;
   padding-right: 5px;
   scrollbar-width: none;
   width: 100%;
@@ -1235,6 +1303,15 @@ select:focus, textarea:focus, input:focus {
 .is-absolute-left {
   position: absolute;
   left: 2em;
+}
+
+.grabbing {
+  cursor: grabbing;
+}
+
+.is-visible {
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=/main.54166fbf.css.map */

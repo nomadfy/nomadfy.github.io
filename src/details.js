@@ -6,6 +6,7 @@ import { openModalinfo, buildModal, buildModalImages } from "./js/modal.js";
 import { buildTimeline } from "./js/timeline.js";
 import { buildDetailsList } from "./js/list.js";
 import { activeGuide, activeSpots } from "./js/active.js";
+import { collapseButton } from "./js/collapse.js"
 
 // HTML Builders
 
@@ -37,7 +38,8 @@ details.forEach((item) => {
   detailsContainer.innerHTML = detailsContainer.innerHTML + detailsItems
 })
 
-// Main Dropdown Click
+// Click Events
+
 document.querySelector('#mainDropdownButton').addEventListener('click', openMainDropdown);
 window.addEventListener('click', function(event) {
   if (!event.target.matches('#mainDropdownButton')) {
@@ -60,6 +62,7 @@ window.addEventListener('click', function(event) {
 
 document.querySelector('#roteiros').addEventListener('click', activeGuide);
 document.querySelector('#pontosTuristicos').addEventListener('click', activeSpots);
+document.querySelector('#collapseButton').addEventListener('click', collapseButton);
 
 // Dropdown Close
 // document.querySelectorAll('[data-dropdown-click]').addEventListener('click', openModalinfo);
@@ -83,7 +86,7 @@ document.querySelector('#pontosTuristicos').addEventListener('click', activeSpot
 //   }
 // })
 
-// Exec Functions
-window.openUserDropdown = openUserDropdown
-window.openRoadmapDropdown = openRoadmapDropdown
-window.openModalinfo = openModalinfo
+  // Exec Functions
+  window.openUserDropdown = openUserDropdown
+  window.openRoadmapDropdown = openRoadmapDropdown
+  window.openModalinfo = openModalinfo

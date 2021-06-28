@@ -143,6 +143,18 @@ module.exports = {
     "image": "roteiro-gramado.png",
     "title": "Final de semana romântico",
     "city": "Gramado / RS"
+  }, {
+    "image": "roteiro-manaus.png",
+    "title": "Se conectando com a natureza",
+    "city": "Manaus / AM"
+  }, {
+    "image": "roteiro-manaus.png",
+    "title": "Se conectando com a natureza",
+    "city": "Manaus / AM"
+  }, {
+    "image": "roteiro-manaus.png",
+    "title": "Se conectando com a natureza",
+    "city": "Manaus / AM"
   }],
   "destinations": [{
     "image": "destinos-sao-paulo.png",
@@ -188,7 +200,55 @@ _explore.destinations.forEach(function (item) {
 _explore.guide.forEach(function (item) {
   var guide = buildGuide(item);
   containerGuide.innerHTML = containerGuide.innerHTML + guide;
-});
+}); // // Explore Scroll
+// const slider = document.querySelector(".explore__components")
+// let isDown = false;
+// let startX;
+// let scrollLeft;
+// slider.addEventListener('mousedown', (e) => {
+//   isDown = true;
+//   slider.classList.add('grabbing')
+//   startX = e.pageX - slider.offsetLeft;
+//   scrollLeft = slider.scrollLeft;
+// })
+// slider.addEventListener('mouseleave', () => {
+//   isDown = false;
+//   slider.classList.remove('grabbing')
+// })
+// slider.addEventListener('mouseup', () => {
+//   isDown = false;
+//   slider.classList.remove('grabbing')
+// })
+// slider.addEventListener('mousemove', (e) => {
+//   if(!isDown) return;
+//   e.preventDefault();
+//   const x = e.pageX - slider.offsetLeft;
+//   const walk = x - startX;
+//   slider.scrollLeft = scrollLeft - walk;
+// })
+// // Destination Scroll
+//   const secondSlider = document.querySelector(".explore__components--destination")
+//   secondSlider.addEventListener('mousedown', (e) => {
+//     isDown = true;
+//     secondSlider.classList.add('grabbing')
+//     startX = e.pageX - secondSlider.offsetLeft;
+//     scrollLeft = secondSlider.scrollLeft;
+//   })
+//   secondSlider.addEventListener('mouseleave', () => {
+//     isDown = false;
+//     secondSlider.classList.remove('grabbing')
+//   })
+//   secondSlider.addEventListener('mouseup', () => {
+//     isDown = false;
+//     secondSlider.classList.remove('grabbing')
+//   })
+//   secondSlider.addEventListener('mousemove', (e) => {
+//     if(!isDown) return;
+//     e.preventDefault();
+//     const x = e.pageX - secondSlider.offsetLeft;
+//     const walk = x - startX;
+//     secondSlider.scrollLeft = scrollLeft - walk;
+//   })
 },{"./data/explore.json":"data/explore.json"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -217,7 +277,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "32837" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38509" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

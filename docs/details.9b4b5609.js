@@ -382,39 +382,24 @@ module.exports = {
   }]
 };
 },{}],"js/dropdown.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.openMainDropdown = openMainDropdown;
-exports.openRoadmapDropdown = exports.openUserDropdown = void 0;
-var openedItem;
-
-function openMainDropdown() {
-  document.getElementById('mainDropdown').classList.toggle('is-visible');
-}
-
-var openUserDropdown = function openUserDropdown(id) {
-  openedItem = document.querySelector("[data-dropdown-info=\"".concat(id, "\"]"));
-  openedItem.classList.toggle('is-visible');
-};
-
-exports.openUserDropdown = openUserDropdown;
-
-var openRoadmapDropdown = function openRoadmapDropdown(id) {
-  var t = document.querySelector("[data-roadmap-info=\"".concat(id, "\"]")).classList.toggle('is-visible');
-};
-
-exports.openRoadmapDropdown = openRoadmapDropdown;
-document.addEventListener('click', function (event) {
-  var isClickInside = openedItem && openedItem.contains(event.target);
-  console.log(isClickInside);
-
-  if (!isClickInside) {
-    openedItem.classList.toggle('is-visible');
-  }
-});
+// let openedItem;
+// export function openMainDropdown() {
+//   document.getElementById('mainDropdown').classList.toggle('is-visible');
+// }
+// export const openUserDropdown = (id) => {
+//   openedItem = document.querySelector(`[data-dropdown-info="${id}"]`);
+//   openedItem.classList.toggle('is-visible');
+// }
+// export const openRoadmapDropdown = (id) => {
+//   var t = document.querySelector(`[data-roadmap-info="${id}"]`).classList.toggle('is-visible');
+// }
+// document.addEventListener('click', function(event) {
+//   var isClickInside = openedItem && openedItem.contains(event.target);
+//   console.log(isClickInside)
+//   if (!isClickInside) {
+//     openedItem.classList.toggle('is-visible');
+//   }
+// });
 },{}],"js/modal.js":[function(require,module,exports) {
 "use strict";
 
@@ -484,6 +469,17 @@ function activeGuide() {
   document.getElementById('roteiros').classList.toggle('is-active');
   document.getElementById('pontosTuristicos').classList.remove('is-active');
 }
+},{}],"js/collapse.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.collapseButton = collapseButton;
+
+function collapseButton() {
+  document.querySelector('.timeline').classList.toggle('is-visible');
+}
 },{}],"details.js":[function(require,module,exports) {
 "use strict";
 
@@ -502,6 +498,8 @@ var _timeline2 = require("./js/timeline.js");
 var _list = require("./js/list.js");
 
 var _active = require("./js/active.js");
+
+var _collapse = require("./js/collapse.js");
 
 // HTML Builders
 var modalContainer = document.querySelector("#modal");
@@ -530,7 +528,7 @@ var detailsContainer = document.querySelector(".details__grid");
 _details.details.forEach(function (item) {
   var detailsItems = (0, _list.buildDetailsList)(item);
   detailsContainer.innerHTML = detailsContainer.innerHTML + detailsItems;
-}); // Main Dropdown Click
+}); // Click Events
 
 
 document.querySelector('#mainDropdownButton').addEventListener('click', _dropdown.openMainDropdown);
@@ -554,7 +552,8 @@ window.addEventListener('click', function (event) {
   }
 });
 document.querySelector('#roteiros').addEventListener('click', _active.activeGuide);
-document.querySelector('#pontosTuristicos').addEventListener('click', _active.activeSpots); // Dropdown Close
+document.querySelector('#pontosTuristicos').addEventListener('click', _active.activeSpots);
+document.querySelector('#collapseButton').addEventListener('click', _collapse.collapseButton); // Dropdown Close
 // document.querySelectorAll('[data-dropdown-click]').addEventListener('click', openModalinfo);
 // window.addEventListener('click', function(event) {
 //   if (!event.target.matches('[data-dropdown-click]')) {
@@ -579,7 +578,7 @@ document.querySelector('#pontosTuristicos').addEventListener('click', _active.ac
 window.openUserDropdown = _dropdown.openUserDropdown;
 window.openRoadmapDropdown = _dropdown.openRoadmapDropdown;
 window.openModalinfo = _modal2.openModalinfo;
-},{"./data/timeline.json":"data/timeline.json","./data/details.json":"data/details.json","./data/modal.json":"data/modal.json","./js/dropdown.js":"js/dropdown.js","./js/modal.js":"js/modal.js","./js/timeline.js":"js/timeline.js","./js/list.js":"js/list.js","./js/active.js":"js/active.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./data/timeline.json":"data/timeline.json","./data/details.json":"data/details.json","./data/modal.json":"data/modal.json","./js/dropdown.js":"js/dropdown.js","./js/modal.js":"js/modal.js","./js/timeline.js":"js/timeline.js","./js/list.js":"js/list.js","./js/active.js":"js/active.js","./js/collapse.js":"js/collapse.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -607,7 +606,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "32837" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38509" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

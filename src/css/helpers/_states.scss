@@ -47,3 +47,12 @@
   position: absolute;
   left: 2em;
 }
+
+.grabbing {
+  cursor: grabbing;
+}
+
+.is-visible {
+  display: flex;
+  flex-direction: column;
+}

@@ -44,3 +44,64 @@ guide.forEach((item) => {
   containerGuide.innerHTML = containerGuide.innerHTML + guide;
 })
 
+// // Explore Scroll
+
+// const slider = document.querySelector(".explore__components")
+// let isDown = false;
+// let startX;
+// let scrollLeft;
+
+// slider.addEventListener('mousedown', (e) => {
+//   isDown = true;
+//   slider.classList.add('grabbing')
+//   startX = e.pageX - slider.offsetLeft;
+//   scrollLeft = slider.scrollLeft;
+// })
+
+// slider.addEventListener('mouseleave', () => {
+//   isDown = false;
+//   slider.classList.remove('grabbing')
+// })
+
+// slider.addEventListener('mouseup', () => {
+//   isDown = false;
+//   slider.classList.remove('grabbing')
+// })
+
+// slider.addEventListener('mousemove', (e) => {
+//   if(!isDown) return;
+//   e.preventDefault();
+//   const x = e.pageX - slider.offsetLeft;
+//   const walk = x - startX;
+//   slider.scrollLeft = scrollLeft - walk;
+// })
+
+// // Destination Scroll
+
+//   const secondSlider = document.querySelector(".explore__components--destination")
+
+//   secondSlider.addEventListener('mousedown', (e) => {
+//     isDown = true;
+//     secondSlider.classList.add('grabbing')
+//     startX = e.pageX - secondSlider.offsetLeft;
+//     scrollLeft = secondSlider.scrollLeft;
+//   })
+
+//   secondSlider.addEventListener('mouseleave', () => {
+//     isDown = false;
+//     secondSlider.classList.remove('grabbing')
+//   })
+
+//   secondSlider.addEventListener('mouseup', () => {
+//     isDown = false;
+//     secondSlider.classList.remove('grabbing')
+//   })
+
+//   secondSlider.addEventListener('mousemove', (e) => {
+//     if(!isDown) return;
+//     e.preventDefault();
+//     const x = e.pageX - secondSlider.offsetLeft;
+//     const walk = x - startX;
+//     secondSlider.scrollLeft = scrollLeft - walk;
+//   })
+
