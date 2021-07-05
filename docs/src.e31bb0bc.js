@@ -176,13 +176,134 @@ module.exports = {
     "city": "Florianópolis / SC"
   }]
 };
+},{}],"js/password.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.showPassword = showPassword;
+
+function showPassword() {
+  var password = document.getElementById('password');
+
+  if (password.type === 'password') {
+    password.type = 'text';
+  } else {
+    password.type = 'password';
+  }
+}
+},{}],"js/modal.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.modalLogin = modalLogin;
+exports.closeLogin = closeLogin;
+exports.buildSpotsModalImages = exports.buildSpotsModal = exports.openModalinfo = void 0;
+
+var openModalinfo = function openModalinfo(id) {
+  document.querySelector("[data-modal-info=\"".concat(id, "\"]")).classList.toggle('is-visible');
+};
+
+exports.openModalinfo = openModalinfo;
+
+var buildSpotsModal = function buildSpotsModal(modal) {
+  return "\n  <div class=\"modal\" data-modal-info=\"".concat(modal.id, "\">\n    <div class=\"modal__close\" data-closeArea=\"").concat(modal.id, "\"></div>\n    <div class=\"modal_container in-column\">\n      <div class=\"in-row\">\n        <p class=\"modal__title\">").concat(modal.local, "</p>\n        <button class=\"icon__close is-absolute-right\" data-close=\"").concat(modal.id, "\"></button>\n      </div>\n      <hr class=\"underline underline--shine underline--modal--margin\" />\n      <div class=\"details__rating details__rating--text in-row\">\n        <svg class=\"icon__star\">\n          <use xlink:href=\"#icon-star\"></use>\n        </svg>\n        <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n        <p class=\"details__grade\">").concat(modal.grade, "</p>\n        <p class=\"tag tag__margin\">natureza</p>\n        <p class=\"tag tag__margin\">lazer</p>\n      </div>\n      <p class=\"modal__text\">").concat(modal.content, "</p> \n      <a class=\"modal__link\" href=\"#\">Clique para ver a descri\xE7\xE3o completa...</a>\n      <div class=\"modal__gallery in-row\"></div>\n      <div class=\"modal__footer in-row\">\n        <button class=\"icon__arrow icon__arrow--left\"></button>\n        <button class=\"icon__arrow icon__arrow--right\"></button>\n      </div>\n    </div>\n  </div>\n  ");
+};
+
+exports.buildSpotsModal = buildSpotsModal;
+
+var buildSpotsModalImages = function buildSpotsModalImages(details) {
+  return "\n  <img class=\"modal__images\" src=\"".concat(details.image, "\">\n  ");
+}; // export const openModalGuide = (id) => {
+// }
+// export const buildGuideModal = (modal) => {
+//   return `
+//   <div class="modal" data-modal-info="${modal.id}">
+//     <div class="modal__close" data-closeArea="${modal.id}"></div>
+//     <div class="modal__container in-column">
+//       <div class="in-row">
+//         <p class="modal__title">${modal.local}</p>
+//         <button class="icon__close is-absolute-right" data-close="${modal.id}"></button>
+//       </div>
+//       <hr class="underline underline--shine underline__modal--margin" />
+//       <div class="in-row">
+//         <div class="modal__spots in-column">
+//           <div class="details__rating details__rating--text in-row">
+//             <svg class="icon__star">
+//               <use xlink:href="#icon-star"></use>
+//             </svg>
+//             <p class="details__grade details__grade--bold">${modal.gradeBold}</p>
+//             <p class="details__grade">${modal.grade}</p>
+//             <p class="tag tag__margin">natureza</p>
+//             <p class="tag tag__margin">lazer</p>
+//           </div>
+//           <div class="modal__select in-row">
+//             <p> Dia
+//             <select class="select" name="days">
+//               <option value="1"> 1
+//               <option value="2"> 2
+//               <option value="3"> 3
+//               <option value="4"> 4
+//               <option value="5"> 5
+//           </div>
+//           <ul class="modal__list in-column">
+//             <li> 1 
+//             <li> 2
+//             <li> 3
+//             <li> 4
+//             <li> 5
+//             <li> 6
+//         <div class="details__rating details__rating--text in-row">
+//           <svg class="icon__star">
+//             <use xlink:href="#icon-star"></use>
+//           </svg>
+//           <p class="details__grade details__grade--bold">${modal.gradeBold}</p>
+//           <p class="details__grade">${modal.grade}</p>
+//           <p class="tag tag__margin">natureza</p>
+//           <p class="tag tag__margin">lazer</p>
+//         </div>
+//         <p class="modal__text">${modal.content}</p> 
+//         <a class="modal__link" href="#">Clique para ver a descrição completa...</a>
+//         <div class="modal__gallery in-row"></div>
+//         <div class="modal__footer in-row">
+//           <button class="icon__arrow icon__arrow--left"></button>
+//           <button class="icon__arrow icon__arrow--right"></button>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+//   `
+// }
+
+
+exports.buildSpotsModalImages = buildSpotsModalImages;
+
+function modalLogin() {
+  document.getElementById('login').classList.toggle('is-visible');
+  document.getElementById('closeLogin').classList.toggle('is-visible');
+}
+
+function closeLogin() {
+  document.getElementById('login').classList.remove('is-visible');
+  document.getElementById('closeLogin').classList.remove('is-visible');
+}
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _explore = require("./data/explore.json");
 
+var _password = require("./js/password.js");
+
+var _modal = require("./js/modal.js");
+
 var containerGuide = document.querySelector(".explore__components");
 var containerDest = document.querySelector(".explore__components--destination");
+document.getElementById('modalLogin').addEventListener('click', _modal.modalLogin);
+document.getElementById('closeLogin').addEventListener('click', _modal.closeLogin);
+document.getElementById('showPassword').addEventListener('click', _password.showPassword);
 
 var buildGuide = function buildGuide(guide) {
   return "\n  <a class=\"explore__card\" href=\"/details/index.html\">\n    <img class=\"explore__image\" src=\"".concat(guide.image, "\">\n    <div class=\"explore__linear\">\n      <h2 class=\"explore__subtitles explore__subtitles--guide\">").concat(guide.title, "</h3>\n      <div class=\"explore__location\">\n        <svg class=\"explore__icon\">\n          <use xlink:href=\"#icon-location\"></use>\n        </svg>\n        <h3 class=\"explore__city\" data-city=\"\">").concat(guide.city, "</p>\n      </div>\n    </div>\n  </a>\n  ");
@@ -249,7 +370,10 @@ _explore.guide.forEach(function (item) {
 //     const walk = x - startX;
 //     secondSlider.scrollLeft = scrollLeft - walk;
 //   })
-},{"./data/explore.json":"data/explore.json"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+
+window.showPassword = _password.showPassword;
+},{"./data/explore.json":"data/explore.json","./js/password.js":"js/password.js","./js/modal.js":"js/modal.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -277,7 +401,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38509" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39095" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

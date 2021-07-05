@@ -5,6 +5,7 @@
   min-width: 300px;
   overflow-x: hidden;
   overflow-y: hidden;
+  flex-direction: column;
   padding: 20px 0 2em 20px;
   position: relative;
   max-width: 350px;
@@ -41,17 +42,7 @@
     margin-bottom: -10px;
     margin-left: 15px;
   }
-
-  &__select {
-    background-position-x: 25px;
-    color: $black;
-    height: 22px;
-    margin: 0 8px;
-    opacity: .75;
-    padding: 0 6px;
-    width: 42px;
-  }
-
+  
   &__list {
     color: $gray3;
     counter-reset: part 1;
@@ -141,9 +132,10 @@
     box-shadow: 0 -2px 4px rgba(0, 0, 0, .25);
     display: flex;
     height: 65px;
-    justify-content: center;
+    justify-content: space-between;
     left: 0;
     position: absolute;
+    padding: 0 24px;
     width: 100%;
     z-index: 999;
   }

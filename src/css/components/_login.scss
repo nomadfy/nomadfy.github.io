@@ -1,0 +1,102 @@
+.login {
+  position: absolute;
+  visibility: hidden;
+  height: 650px;
+  max-width: 580px;
+  z-index: 9999;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-color: white;
+  padding: 32px 40px;
+  border-radius: 8px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    color: $gray3;
+    margin-top: -10px;
+    margin-bottom: -10px;
+  }
+
+  &__desc {
+    font-size: 16px;
+    font-weight: normal;
+    color: $gray3;
+    margin: -5px 0 0;
+  }
+
+  &__else {
+    text-align: center;
+    color: $gray2;
+    margin: 24px 0;
+    font-size: 16px;
+  }
+
+  &__container {
+    display: flex;
+    position: absolute;
+    width: 500px;
+  }
+
+  &__input {
+    height: 48px;
+    border-radius: 8px;
+    margin: 0;
+    padding: 0 24px;
+    color: $gray3;
+
+    &:focus ~ span,
+    &:valid ~ span {
+      opacity: 0;
+    }
+  }
+
+  &__input:first-of-type {
+    margin-bottom: 24px;
+  }
+
+  &__label {
+    font-size: 16px;
+    margin: 0 0 -10px;
+    color: $gray3;
+  }
+
+  &__placeholder {
+    position: relative;
+    color: $gray2;
+    pointer-events: none;
+    margin-left: 24px;
+    font-size: 16px;
+  }
+
+  &--mail {
+    top: 32px;
+  }
+
+  &--password {
+    top: 35px;
+  }
+
+  &__recover {
+    text-align: right;
+    color: $orange;
+    margin: 24px;
+  }
+
+  &__close {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+    background-color: $gray3;
+    opacity: .35;
+    visibility: hidden;
+  }
+}

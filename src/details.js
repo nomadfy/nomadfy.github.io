@@ -2,27 +2,27 @@ import { timeline } from "./data/timeline.json";
 import { details } from "./data/details.json";
 import { modal } from "./data/modal.json";
 import { openMainDropdown, openUserDropdown, openRoadmapDropdown } from "./js/dropdown.js";
-import { openModalinfo, buildModal, buildModalImages } from "./js/modal.js";
+import { openModalinfo, buildSpotsModal, buildSpotsModalImages, modalLogin, closeLogin } from "./js/modal.js";
 import { buildTimeline } from "./js/timeline.js";
-import { buildDetailsList } from "./js/list.js";
+import { buildDetailsList, buildSpotsList } from "./js/list.js";
 import { activeGuide, activeSpots } from "./js/active.js";
 import { collapseButton } from "./js/collapse.js"
-
+import { showPassword } from "./js/password.js"
 // HTML Builders
 
-const modalContainer = document.querySelector("#modal")
-modal.forEach((item) => {
-  const modalItems = buildModal(item);
+// const modalContainer = document.querySelector("#modalSpots")
+// modal.forEach((item) => {
+//   const modalItems = buildSpotsModal(item);
 
-  modalContainer.innerHTML = modalContainer.innerHTML + modalItems
-})
+//   modalContainer.innerHTML = modalContainer.innerHTML + modalItems
+// })
 
-const modalGallery = document.querySelector(".modal__gallery")
-details.forEach((item) => {
-  const modalImages = buildModalImages(item);
+// const modalGallery = document.querySelector(".modal__gallery")
+// details.forEach((item) => {
+//   const modalImages = buildSpotsModalImages(item);
   
-  modalGallery.innerHTML = modalGallery.innerHTML + modalImages
-})
+//   modalGallery.innerHTML = modalGallery.innerHTML + modalImages
+// })
 
 const timelineContainer = document.querySelector(".timeline__list")
 timeline.forEach((item) => {
@@ -38,17 +38,21 @@ details.forEach((item) => {
   detailsContainer.innerHTML = detailsContainer.innerHTML + detailsItems
 })
 
+const spotsContainer = document.querySelector(".details__spots")
+details.forEach((item) =>{
+  const spotsItems = buildSpotsList(item);
+
+  spotsContainer.innerHTML = spotsContainer.innerHTML + spotsItems
+})
+
 // Click Events
 
-document.querySelector('#mainDropdownButton').addEventListener('click', openMainDropdown);
-window.addEventListener('click', function(event) {
-  if (!event.target.matches('#mainDropdownButton')) {
-    var visible = document.getElementById('mainDropdown');
-    if (visible.classList.contains('is-visible')) {
-      visible.classList.remove('is-visible');
-    }
-  }
-})
+document.getElementById('modalLogin').addEventListener('click', modalLogin);
+
+document.getElementById('closeLogin').addEventListener('click', closeLogin);
+
+document.getElementById('showPassword').addEventListener('click', showPassword);
+
 
 document.querySelector('#mainDropdownButton').addEventListener('click', openMainDropdown);
 window.addEventListener('click', function(event) {
@@ -60,20 +64,9 @@ window.addEventListener('click', function(event) {
   }
 })
 
-document.querySelector('#roteiros').addEventListener('click', activeGuide);
-document.querySelector('#pontosTuristicos').addEventListener('click', activeSpots);
+document.querySelector('#activeGuide').addEventListener('click', activeGuide);
+document.querySelector('#activeSpots').addEventListener('click', activeSpots);
 document.querySelector('#collapseButton').addEventListener('click', collapseButton);
-
-// Dropdown Close
-// document.querySelectorAll('[data-dropdown-click]').addEventListener('click', openModalinfo);
-// window.addEventListener('click', function(event) {
-//   if (!event.target.matches('[data-dropdown-click]')) {
-//     var visible = document.querySelectorAll('[data-dropdown-info]');
-//     if (visible.classList.contains('is-visible')) {
-//       visible.classList.remove('is-visible');
-//     }
-//   }
-// })
 
 // // Modal Click
 // document.querySelector(`[data-close="${info.id}"]`).addEventListener('click', openModalinfo);
@@ -90,3 +83,4 @@ document.querySelector('#collapseButton').addEventListener('click', collapseButt
   window.openUserDropdown = openUserDropdown
   window.openRoadmapDropdown = openRoadmapDropdown
   window.openModalinfo = openModalinfo
+  window.showPassword = showPassword

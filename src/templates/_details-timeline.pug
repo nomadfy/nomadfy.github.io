@@ -6,7 +6,7 @@ section.timeline
     .in-row.timeline__header
       .timeline__days.in-row.in-vertical-center
         p Dia 
-        select.timeline__select(name="choice")
+        select.select(name="choice")
           option(value="1") 1
           option(value="2") 2
           option(value="3") 3
@@ -29,4 +29,5 @@ section.timeline
     hr.underline.underline--shine
   ul.timeline__list.in-column
   footer.timeline__footer
-    button#save.button.button--orange.button--save Salvar
+    button#cancel.button.button--borderless.button--cancel.button--upper Cancelar
+    button#save.button.button--orange.button--save.button--upper Salvar

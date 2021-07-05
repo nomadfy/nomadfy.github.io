@@ -11,8 +11,8 @@ main.details
       //- Dinamic City ->
       p.details__city Florianópolis
     .details__nav
-      a#roteiros.details__button--nav.is-active(href="#roteiros") Roteiros
-      a#pontosTuristicos.details__button--nav(href="#pontosTuristicos") Pontos turísticos
+      button#activeGuide.details__button--nav.is-active Roteiros
+      button#activeSpots.details__button--nav Pontos turísticos
       hr.underline.underline--dark
       nav.in-row
         select.details__select(name="categoria")
@@ -22,19 +22,8 @@ main.details
         button.details__search
         input.details__input(type="text", required)
         span.details__placeholder Pesquisar por...
-      .details__grid.in-column
-        //- Pontos Turisticos ->
-
-        //- .details__options.in-row
-        //-   p.details__text--options.details__text--add (Já adicionado ao roteiro)
-        //-   .in-column.details__button--info
-        //-     button#infos.button__menu.has-margin-right
-        //-       svg.icon__info
-        //-         use(xlink:href="#icon-info")
-        //-   .in-column.details__button--menu
-        //-     button#addOption.button__menu.has-margin-right
-        //-       svg.icon__checked
-        //-         use(xlink:href="#icon-checked")
+      #roteiros.details__grid.in-column
+      #pontosTuristicos.details__spots.in-column
   iframe.details__map(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31753918.49138118!2d-69.64872607287624!3d-13.705681771544725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9c59c7ebcc28cf%3A0x295a1506f2293e63!2sBrasil!5e0!3m2!1spt-BR!2sbr!4v1621868031749!5m2!1spt-BR!2sbr' style='border:0;' allowfullscreen='' loading='lazy')
   include ../templates/_details-timeline.pug
   button#collapseButton.button.button--borderless.button--collapse

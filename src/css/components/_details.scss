@@ -114,7 +114,6 @@
     }
   }
 
-
   &__search {
     position: relative;
     left: -5px;
@@ -154,8 +153,15 @@
     margin-top: 15px;
     margin-bottom: 25px;
   }
-  
-  
+
+  &__grid {
+    display: flex; 
+  }
+
+  &__spots {
+    display: none;
+  }
+
   &__title {
     font-size: 16px;
     margin-top: 0;

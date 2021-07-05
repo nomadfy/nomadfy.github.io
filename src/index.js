@@ -1,7 +1,15 @@
 import { guide, destinations } from "./data/explore.json";
-  
+import { showPassword } from "./js/password.js";
+import { modalLogin, closeLogin } from "./js/modal.js";
+
 const containerGuide = document.querySelector(".explore__components");
 const containerDest = document.querySelector(".explore__components--destination");
+
+document.getElementById('modalLogin').addEventListener('click', modalLogin);
+
+document.getElementById('closeLogin').addEventListener('click', closeLogin);
+
+document.getElementById('showPassword').addEventListener('click', showPassword);
 
 const buildGuide = (guide) => {
   return `
@@ -105,3 +113,4 @@ guide.forEach((item) => {
 //     secondSlider.scrollLeft = scrollLeft - walk;
 //   })
 
+window.showPassword = showPassword

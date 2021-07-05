@@ -10,7 +10,6 @@
 
 .is-visible {
   visibility: visible;
-  opacity: 1;
 }
 
 .in-horizontal-end {
@@ -34,7 +33,6 @@
 }
 
 .in-column {
-  display: flex;
   flex-direction: column;
 }
 
@@ -52,7 +50,10 @@
   cursor: grabbing;
 }
 
-.is-visible {
+.is-showing {
   display: flex;
-  flex-direction: column;
+}
+
+.is-hidden {
+  display: none;
 }
