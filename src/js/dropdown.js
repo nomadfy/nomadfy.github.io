@@ -9,8 +9,13 @@ export const openUserDropdown = (id) => {
   openedItem.classList.toggle('is-visible');
 }
 
+export const openTimeLineModal = (id) => {
+  var t = document.querySelector(`[data-dropdown-info="${id}]`).classList.toggle('is-visible');
+}
+
 export const openRoadmapDropdown = (id) => {
   var t = document.querySelector(`[data-roadmap-info="${id}"]`).classList.toggle('is-visible');
+  var i = document.querySelector(`[data-roadmap-info="${id}"]`).setAttribute('data', 'remove')
 }
 
 // document.addEventListener('click', function(event) {

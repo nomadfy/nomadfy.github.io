@@ -388,7 +388,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.openMainDropdown = openMainDropdown;
-exports.openRoadmapDropdown = exports.openUserDropdown = void 0;
+exports.openRoadmapDropdown = exports.openTimeLineModal = exports.openUserDropdown = void 0;
 var openedItem;
 
 function openMainDropdown() {
@@ -402,8 +402,15 @@ var openUserDropdown = function openUserDropdown(id) {
 
 exports.openUserDropdown = openUserDropdown;
 
+var openTimeLineModal = function openTimeLineModal(id) {
+  var t = document.querySelector("[data-dropdown-info=\"".concat(id, "]")).classList.toggle('is-visible');
+};
+
+exports.openTimeLineModal = openTimeLineModal;
+
 var openRoadmapDropdown = function openRoadmapDropdown(id) {
   var t = document.querySelector("[data-roadmap-info=\"".concat(id, "\"]")).classList.toggle('is-visible');
+  var i = document.querySelector("[data-roadmap-info=\"".concat(id, "\"]")).setAttribute('data', 'remove');
 }; // document.addEventListener('click', function(event) {
 //   var isClickInside = openedItem && openedItem.contains(event.target);
 //   console.log(isClickInside)
@@ -422,7 +429,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.modalLogin = modalLogin;
 exports.closeLogin = closeLogin;
-exports.buildSpotsModalImages = exports.buildSpotsModal = exports.openModalinfo = void 0;
+exports.buildGuideModal = exports.openModalGuide = exports.buildSpotsModalImages = exports.buildSpotsModal = exports.openModalinfo = void 0;
 
 var openModalinfo = function openModalinfo(id) {
   document.querySelector("[data-modal-info=\"".concat(id, "\"]")).classList.toggle('is-visible');
@@ -431,76 +438,28 @@ var openModalinfo = function openModalinfo(id) {
 exports.openModalinfo = openModalinfo;
 
 var buildSpotsModal = function buildSpotsModal(modal) {
-  return "\n  <div class=\"modal\" data-modal-info=\"".concat(modal.id, "\">\n    <div class=\"modal__close\" data-closeArea=\"").concat(modal.id, "\"></div>\n    <div class=\"modal_container in-column\">\n      <div class=\"in-row\">\n        <p class=\"modal__title\">").concat(modal.local, "</p>\n        <button class=\"icon__close is-absolute-right\" data-close=\"").concat(modal.id, "\"></button>\n      </div>\n      <hr class=\"underline underline--shine underline--modal--margin\" />\n      <div class=\"details__rating details__rating--text in-row\">\n        <svg class=\"icon__star\">\n          <use xlink:href=\"#icon-star\"></use>\n        </svg>\n        <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n        <p class=\"details__grade\">").concat(modal.grade, "</p>\n        <p class=\"tag tag__margin\">natureza</p>\n        <p class=\"tag tag__margin\">lazer</p>\n      </div>\n      <p class=\"modal__text\">").concat(modal.content, "</p> \n      <a class=\"modal__link\" href=\"#\">Clique para ver a descri\xE7\xE3o completa...</a>\n      <div class=\"modal__gallery in-row\"></div>\n      <div class=\"modal__footer in-row\">\n        <button class=\"icon__arrow icon__arrow--left\"></button>\n        <button class=\"icon__arrow icon__arrow--right\"></button>\n      </div>\n    </div>\n  </div>\n  ");
+  return "\n  <div class=\"modal\" data-modal-info=\"".concat(modal.id, "\">\n    <div class=\"modal__close\" id=\"closeArea\"></div>\n    <div class=\"modal_container in-column\">\n      <div class=\"in-row\">\n        <p class=\"modal__title\">").concat(modal.local, "</p>\n        <button class=\"icon__close is-absolute-right\" data-close=\"").concat(modal.id, "\"></button>\n      </div>\n      <hr class=\"underline underline--shine underline--modal--margin\" />\n      <div class=\"details__rating details__rating--text in-row\">\n        <svg class=\"icon__star\">\n          <use xlink:href=\"#icon-star\"></use>\n        </svg>\n        <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n        <p class=\"details__grade\">").concat(modal.grade, "</p>\n        <p class=\"tag tag__margin\">natureza</p>\n        <p class=\"tag tag__margin\">lazer</p>\n      </div>\n      <p class=\"modal__text\">").concat(modal.content, "</p> \n      <a class=\"modal__link\" href=\"#\">Clique para ver a descri\xE7\xE3o completa...</a>\n      <div class=\"modal__gallery in-row\"></div>\n      <div class=\"modal__footer in-row\">\n        <button class=\"icon__arrow icon__arrow--left\"></button>\n        <button class=\"icon__arrow icon__arrow--right\"></button>\n      </div>\n    </div>\n  </div>\n  ");
 };
 
 exports.buildSpotsModal = buildSpotsModal;
 
 var buildSpotsModalImages = function buildSpotsModalImages(details) {
   return "\n  <img class=\"modal__images\" src=\"".concat(details.image, "\">\n  ");
-}; // export const openModalGuide = (id) => {
-// }
-// export const buildGuideModal = (modal) => {
-//   return `
-// <div class="modal" data-modal-info="${modal.id}">
-// <div class="modal__close" data-closearea="${modal.id}"></div>
-// <div class="in-row">
-//     <div class="modal__container in-column">
-//         <div class="in-row">
-//             <p class="modal__title">${modal.local}</p><button class="icon__close is-absolute-right" data-close="${modal.id}"></button>
-//         </div>
-//         <hr class="underline underline--shine underline__modal--margin" />
-//         <div class="in-row">
-//             <div class="modal__spots in-column">
-//                 <div class="details__rating--text in-row"><svg class="icon__star">
-//                         <use xlink:href="#icon-star"></use>
-//                     </svg>
-//                     <p class="details__grade details__grade--bold">${modal.gradeBold}</p>
-//                     <p class="details__grade details__grade--margin">${modal.grade}</p>
-//                     <p class="tag tag__margin">natureza</p>
-//                     <p class="tag tag__margin">lazer</p>
-//                 </div>
-//                 <div class="modal__select in-row">
-//                     <p>Dia<select class="select" name="days">
-//                             <option value="1">1</option>
-//                             <option value="2">2</option>
-//                             <option value="3">3</option>
-//                             <option value="4">4</option>
-//                             <option value="5">5</option>
-//                             <option value="6">6</option>
-//                         </select></p><span>de 6</span>
-//                 </div>
-//                 <ul class="modal__list in-column">
-//                     <li class="modal__item">Ponto turistico 1</li>
-//                     <li class="modal__item">Ponto turistico 2</li>
-//                     <li class="modal__item">Ponto turistico 3</li>
-//                     <li class="modal__item">Ponto turistico 4</li>
-//                     <li class="modal__item">Ponto turistico 5</li>
-//                     <li class="modal__item">Ponto turistico 6</li>
-//                 </ul>
-//             </div>
-//             <div class="modal__content in-column">
-//                 <div class="details__rating details__rating--text in-row"><svg class="icon__star">
-//                         <use xlink:href="#icon-star"></use>
-//                     </svg>
-//                     <p class="details__grade details__grade--bold">${modal.gradeBold}</p>
-//                     <p class="details__grade details__grade--margin">${modal.grade}</p>
-//                     <p class="tag tag__margin">natureza</p>
-//                     <p class="tag tag__margin">lazer</p>
-//                 </div>
-//                 <p class="modal__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.</p><a class="modal__link" href="#">Clique para ver a descri&ccedil;&atilde;o completa...</a>
-//                 <div class="modal__gallery in-row"></div>
-//                 <div class="modal__footer in-row"><button class="icon__arrow icon__arrow--left"></button><button class="icon__arrow icon__arrow--right"></button></div>
-//             </div>
-//         </div>
-//     </div>
-// </div>
-// </div>
-//   `
-// }
-
+};
 
 exports.buildSpotsModalImages = buildSpotsModalImages;
+
+var openModalGuide = function openModalGuide(id) {
+  document.querySelector("data-modal-info=\"".concat(id, "\"")).classList.toggle('is-visible');
+};
+
+exports.openModalGuide = openModalGuide;
+
+var buildGuideModal = function buildGuideModal(modal) {
+  return "\n<div class=\"modal\" data-modal-info=\"".concat(modal.id, "\">\n<div class=\"modal__close\" data-close=").concat(modal.id, " onclick=\"closeModal(").concat(modal.id, ")\"></div>\n<div class=\"in-row\">\n  <div class=\"modal__container in-column\">\n    <div class=\"in-row\">\n      <p class=\"modal__title\">").concat(modal.local, "</p>\n      <button class=\"icon__close is-absolute-right\" data-close=\"").concat(modal.id, "\"></button>\n    </div>\n    <hr class=\"underline underline--shine underline__modal--margin\" />\n    <div class=\"in-row\">\n      <div class=\"modal__spots in-column\">\n        <div class=\"details__rating--text in-row\">\n          <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-star\"></use>\n          </svg>\n          <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n          <p class=\"details__grade details__grade--margin\">").concat(modal.grade, "</p>\n          <p class=\"tag tag__margin\">natureza</p>\n          <p class=\"tag tag__margin\">lazer</p>\n        </div>\n        <div class=\"modal__select in-row\">\n          <p>Dia<select class=\"select\" name=\"days\">\n          <option value=\"1\">1</option>\n          <option value=\"2\">2</option>\n          <option value=\"3\">3</option>\n          <option value=\"4\">4</option>\n          <option value=\"5\">5</option>\n          <option value=\"6\">6</option>\n          </select></p><span>de 6</span>\n        </div>\n        <ul class=\"modal__list in-column\">\n          <li class=\"modal__item\">Ponto turistico 1</li>\n          <li class=\"modal__item\">Ponto turistico 2</li>\n          <li class=\"modal__item\">Ponto turistico 3</li>\n          <li class=\"modal__item\">Ponto turistico 4</li>\n          <li class=\"modal__item\">Ponto turistico 5</li>\n          <li class=\"modal__item\">Ponto turistico 6</li>\n        </ul>\n      </div>\n      <div class=\"modal__content in-column\">\n        <div class=\"details__rating details__rating--text in-row\">\n          <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-clock\"></use>\n          </svg>\n          <p class=\"details__grade details__grade--margin\"> 11:00 \xE0s 15:00 </p>\n          <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-star\"></use>\n          </svg>\n          <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n          <p class=\"details__grade details__grade--margin\">").concat(modal.grade, "</p>\n          <p class=\"tag tag__margin\">natureza</p>\n          <p class=\"tag tag__margin\">lazer</p>\n        </div>\n        <p class=\"modal__text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.</p><a class=\"modal__link\" href=\"#\">Clique para ver a descri&ccedil;&atilde;o completa...</a>\n        <div class=\"modal__gallery in-row\"></div>\n        <div class=\"modal__footer in-row\">\n          <button class=\"icon__arrow icon__arrow--left\"></button>\n          <button class=\"icon__arrow icon__arrow--right\"></button>\n        </div>\n      </div>\n    </div>\n  </div>\n  </div>\n</div>\n  ");
+};
+
+exports.buildGuideModal = buildGuideModal;
 
 function modalLogin() {
   document.getElementById('login').classList.toggle('is-visible');
@@ -520,7 +479,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.buildTimeline = void 0;
 
 var buildTimeline = function buildTimeline(modal) {
-  return "\n    <li class=\"timeline__item in-column\">\n      <div class=\"in-row timeline__time\">\n        <span class=\"timeline__hour\">".concat(modal.hour, "</span>\n        <button class=\"button__menu button--right button--modal\" data-dropdown-click=\"").concat(modal.id, "\" onclick=\"openUserDropdown(").concat(modal.id, ", event)\">\n          <svg class=\"icon__menu\">\n            <use xlink:href=\"#icon-menu\"></use>\n          </svg>\n        </button>\n        <div class=\"in-column\">\n          <ul class=\"dropdown\" data-dropdown-info=\"").concat(modal.id, "\">\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--details\" href=\"#\">Detalhes</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--reorder\" href=\"#\">Reordenar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--hour\" href=\"#\">Alterar hor\xE1rio</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--calendar\" href=\"#\">Alterar data</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__text--red dropdown__link--delete\" href=\"#\">Remover ponto</a></li>\n          </ul>\n        </div>\n      </div>\n      <p class=\"timeline__local\">").concat(modal.local, "</p>\n      <div class=\"details__rating details__rating--text in-row\">    \n        <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-star\"></use>\n        </svg>\n        <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n        <p class=\"details__grade\">").concat(modal.grade, "</p>\n      </div>\n      <div class=\"in-row timeline__category\">\n        <p class=\"tag\">natureza</p>\n        <p class=\"tag\">lazer</p>\n      </div>\n      <hr class=\"underline underline--shine underline__timeline--margin\" />\n    </li>\n  ");
+  return "\n    <li class=\"timeline__item in-column\">\n      <div class=\"in-row timeline__time\">\n        <span class=\"timeline__hour\">".concat(modal.hour, "</span>\n        <button class=\"button__timeline button__menu button--right button--modal\" data-dropdown-click=\"").concat(modal.id, "\" onclick=\"openUserDropdown(").concat(modal.id, ", event)\">\n          <svg class=\"icon__menu\">\n            <use xlink:href=\"#icon-menu\"></use>\n          </svg>\n        </button>\n        <div class=\"in-column\">\n          <ul class=\"dropdown dropdown--margin\" data-dropdown-info=\"").concat(modal.id, "\">\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--details\" href=\"#\">Detalhes</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--reorder\" href=\"#\">Reordenar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--hour\" href=\"#\">Alterar hor\xE1rio</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--calendar\" href=\"#\">Alterar data</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__text--red dropdown__link--delete\" href=\"#\">Remover ponto</a></li>\n          </ul>\n        </div>\n      </div>\n      <p class=\"timeline__local\">").concat(modal.local, "</p>\n      <div class=\"details__rating details__rating--text in-row\">    \n        <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-star\"></use>\n        </svg>\n        <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n        <p class=\"details__grade\">").concat(modal.grade, "</p>\n      </div>\n      <div class=\"in-row timeline__category\">\n        <p class=\"tag\">natureza</p>\n        <p class=\"tag\">lazer</p>\n      </div>\n      <hr class=\"underline underline--shine underline__timeline--margin\" />\n    </li>\n  ");
 };
 
 exports.buildTimeline = buildTimeline;
@@ -621,16 +580,6 @@ var _collapse = require("./js/collapse.js");
 var _password = require("./js/password.js");
 
 // HTML Builders
-// const modalContainer = document.querySelector("#modalSpots")
-// modal.forEach((item) => {
-//   const modalItems = buildSpotsModal(item);
-//   modalContainer.innerHTML = modalContainer.innerHTML + modalItems
-// })
-// const modalGallery = document.querySelector(".modal__gallery")
-// details.forEach((item) => {
-//   const modalImages = buildSpotsModalImages(item);
-//   modalGallery.innerHTML = modalGallery.innerHTML + modalImages
-// })
 var timelineContainer = document.querySelector(".timeline__list");
 
 _timeline.timeline.forEach(function (item) {
@@ -650,12 +599,23 @@ var spotsContainer = document.querySelector(".details__spots");
 _details.details.forEach(function (item) {
   var spotsItems = (0, _list.buildSpotsList)(item);
   spotsContainer.innerHTML = spotsContainer.innerHTML + spotsItems;
+});
+
+var modalGuide = document.querySelector(".modal__guide");
+
+_details.details.forEach(function (item) {
+  var modalItem = (0, _modal2.buildGuideModal)(item);
+  modalGuide.innerHTML = modalGuide.innerHTML + modalItem;
 }); // Click Events
 
 
 document.getElementById('modalLogin').addEventListener('click', _modal2.modalLogin);
 document.getElementById('closeLogin').addEventListener('click', _modal2.closeLogin);
 document.getElementById('showPassword').addEventListener('click', _password.showPassword);
+document.querySelector('#activeGuide').addEventListener('click', _active.activeGuide);
+document.querySelector('#activeSpots').addEventListener('click', _active.activeSpots);
+document.querySelector('#collapseButton').addEventListener('click', _collapse.collapseButton);
+document.querySelector('#closeIcon').addEventListener('click', _modal2.closeLogin);
 document.querySelector('#mainDropdownButton').addEventListener('click', _dropdown.openMainDropdown);
 window.addEventListener('click', function (event) {
   if (!event.target.matches('#mainDropdownButton')) {
@@ -666,24 +626,48 @@ window.addEventListener('click', function (event) {
     }
   }
 });
-document.querySelector('#activeGuide').addEventListener('click', _active.activeGuide);
-document.querySelector('#activeSpots').addEventListener('click', _active.activeSpots);
-document.querySelector('#collapseButton').addEventListener('click', _collapse.collapseButton); // // Modal Click
-// document.querySelector(`[data-close="${info.id}"]`).addEventListener('click', openModalinfo);
-// window.addEventListener('click', function(event) {
-//   if (!event.target.matches(`[data-close="${info.id}"]`)) {
-//     var visible = document.querySelector(`[data-modal-info="${info.id}"]`);
-//     if (visible.classList.contains('is-visible')) {
-//       visible.classList.remove('is-visible');
-//     }
-//   }
-// })
-// Exec Functions
+document.querySelector(".modal__close").addEventListener('click', _modal2.closeModalInfo); // Dropdown Close
+
+var buttons = document.querySelectorAll('.remove');
+var dropdowns = document.querySelectorAll('.dropdown');
+buttons.forEach(function (button) {
+  return button.addEventListener('click', function (e) {
+    var targetDropdown = e.target.nextElementSibling;
+    Array.from(dropdowns).filter(function (dd) {
+      return dd != targetDropdown;
+    }).forEach(function (dd) {
+      return dd.classList.remove('is-visible');
+    });
+    targetDropdown.classList.toggle('is-visible');
+  });
+});
+document.addEventListener('click', function (e) {
+  if (e.target.classList.contains('dropdown') || e.target.tagName === 'BUTTON') return;
+  dropdowns.forEach(function (dd) {
+    return dd.classList.remove('is-visible');
+  });
+  dropdowns.forEach(function (dd) {
+    return dd.removeAttribute('data');
+  });
+}); // Modal Close 
+
+var closeModal = function closeModal(id) {
+  var modal = document.querySelector("[data-modal-info=\"".concat(id, "\"]"));
+  var close = document.querySelector("[data-close=\"".concat(id, "\"]"));
+
+  if (modal.classList.contains('is-visible')) {
+    close.classList.remove('is-visible');
+    modal.classList.remove('is-visible');
+  }
+}; // Exec Functions
+
 
 window.openUserDropdown = _dropdown.openUserDropdown;
 window.openRoadmapDropdown = _dropdown.openRoadmapDropdown;
 window.openModalinfo = _modal2.openModalinfo;
 window.showPassword = _password.showPassword;
+window.openTimeLineModal = _dropdown.openTimeLineModal;
+window.closeModal = closeModal;
 },{"./data/timeline.json":"data/timeline.json","./data/details.json":"data/details.json","./data/modal.json":"data/modal.json","./js/dropdown.js":"js/dropdown.js","./js/modal.js":"js/modal.js","./js/timeline.js":"js/timeline.js","./js/list.js":"js/list.js","./js/active.js":"js/active.js","./js/collapse.js":"js/collapse.js","./js/password.js":"js/password.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -712,7 +696,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "32911" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42949" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
