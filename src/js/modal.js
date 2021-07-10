@@ -1,10 +1,12 @@
-export const openModalinfo = (id) => {
-  document.querySelector(`[data-modal-info="${id}"]`).classList.toggle('is-visible');
+// Modal Spots
+
+export const openSpotsModal = (id) => {
+  document.querySelector(`[data-modal-spots="${id}"]`).classList.toggle('is-visible');
 }
 
 export const buildSpotsModal = (modal) => {
   return`
-  <div class="modal" data-modal-info="${modal.id}">
+  <div class="modal" data-modal-spots="${modal.id}">
     <div class="modal__close" id="closeArea"></div>
     <div class="modal_container in-column">
       <div class="in-row">
@@ -33,14 +35,16 @@ export const buildSpotsModal = (modal) => {
   `
 }
 
-export const buildSpotsModalImages = (details) => {
+export const buildModalImages = (details) => {
   return `
   <img class="modal__images" src="${details.image}">
   `
 }
 
-export const openModalGuide = (id) => {
-  document.querySelector(`data-modal-info="${id}"`).classList.toggle('is-visible')
+// Modal Guide
+
+export const openGuideModal = (id) => {
+  document.querySelector(`[data-modal-info="${id}"]`).classList.toggle('is-visible');
 }
 
 export const buildGuideModal = (modal) => {
@@ -76,12 +80,24 @@ export const buildGuideModal = (modal) => {
           </select></p><span>de 6</span>
         </div>
         <ul class="modal__list in-column">
-          <li class="modal__item">Ponto turistico 1</li>
-          <li class="modal__item">Ponto turistico 2</li>
-          <li class="modal__item">Ponto turistico 3</li>
-          <li class="modal__item">Ponto turistico 4</li>
-          <li class="modal__item">Ponto turistico 5</li>
-          <li class="modal__item">Ponto turistico 6</li>
+          <li class="modal__item">
+            <a> Ponto turistico 1 </a>
+          </li>
+          <li class="modal__item">
+            <a> Ponto turistico 2 </a>
+          </li>
+          <li class="modal__item">
+            <a> Ponto turistico 3 </a>
+          </li>
+          <li class="modal__item">
+            <a> Ponto turistico 4 </a>
+          </li>
+          <li class="modal__item">
+            <a> Ponto turistico 5 </a>
+          </li>
+          <li class="modal__item">
+            <a> Ponto turistico 6 </a>
+          </li>
         </ul>
       </div>
       <div class="modal__content in-column">

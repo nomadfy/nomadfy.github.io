@@ -429,34 +429,36 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.modalLogin = modalLogin;
 exports.closeLogin = closeLogin;
-exports.buildGuideModal = exports.openModalGuide = exports.buildSpotsModalImages = exports.buildSpotsModal = exports.openModalinfo = void 0;
+exports.buildGuideModal = exports.openGuideModal = exports.buildModalImages = exports.buildSpotsModal = exports.openSpotsModal = void 0;
 
-var openModalinfo = function openModalinfo(id) {
-  document.querySelector("[data-modal-info=\"".concat(id, "\"]")).classList.toggle('is-visible');
+// Modal Spots
+var openSpotsModal = function openSpotsModal(id) {
+  document.querySelector("[data-modal-spots=\"".concat(id, "\"]")).classList.toggle('is-visible');
 };
 
-exports.openModalinfo = openModalinfo;
+exports.openSpotsModal = openSpotsModal;
 
 var buildSpotsModal = function buildSpotsModal(modal) {
-  return "\n  <div class=\"modal\" data-modal-info=\"".concat(modal.id, "\">\n    <div class=\"modal__close\" id=\"closeArea\"></div>\n    <div class=\"modal_container in-column\">\n      <div class=\"in-row\">\n        <p class=\"modal__title\">").concat(modal.local, "</p>\n        <button class=\"icon__close is-absolute-right\" data-close=\"").concat(modal.id, "\"></button>\n      </div>\n      <hr class=\"underline underline--shine underline--modal--margin\" />\n      <div class=\"details__rating details__rating--text in-row\">\n        <svg class=\"icon__star\">\n          <use xlink:href=\"#icon-star\"></use>\n        </svg>\n        <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n        <p class=\"details__grade\">").concat(modal.grade, "</p>\n        <p class=\"tag tag__margin\">natureza</p>\n        <p class=\"tag tag__margin\">lazer</p>\n      </div>\n      <p class=\"modal__text\">").concat(modal.content, "</p> \n      <a class=\"modal__link\" href=\"#\">Clique para ver a descri\xE7\xE3o completa...</a>\n      <div class=\"modal__gallery in-row\"></div>\n      <div class=\"modal__footer in-row\">\n        <button class=\"icon__arrow icon__arrow--left\"></button>\n        <button class=\"icon__arrow icon__arrow--right\"></button>\n      </div>\n    </div>\n  </div>\n  ");
+  return "\n  <div class=\"modal\" data-modal-spots=\"".concat(modal.id, "\">\n    <div class=\"modal__close\" id=\"closeArea\"></div>\n    <div class=\"modal_container in-column\">\n      <div class=\"in-row\">\n        <p class=\"modal__title\">").concat(modal.local, "</p>\n        <button class=\"icon__close is-absolute-right\" data-close=\"").concat(modal.id, "\"></button>\n      </div>\n      <hr class=\"underline underline--shine underline--modal--margin\" />\n      <div class=\"details__rating details__rating--text in-row\">\n        <svg class=\"icon__star\">\n          <use xlink:href=\"#icon-star\"></use>\n        </svg>\n        <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n        <p class=\"details__grade\">").concat(modal.grade, "</p>\n        <p class=\"tag tag__margin\">natureza</p>\n        <p class=\"tag tag__margin\">lazer</p>\n      </div>\n      <p class=\"modal__text\">").concat(modal.content, "</p> \n      <a class=\"modal__link\" href=\"#\">Clique para ver a descri\xE7\xE3o completa...</a>\n      <div class=\"modal__gallery in-row\"></div>\n      <div class=\"modal__footer in-row\">\n        <button class=\"icon__arrow icon__arrow--left\"></button>\n        <button class=\"icon__arrow icon__arrow--right\"></button>\n      </div>\n    </div>\n  </div>\n  ");
 };
 
 exports.buildSpotsModal = buildSpotsModal;
 
-var buildSpotsModalImages = function buildSpotsModalImages(details) {
+var buildModalImages = function buildModalImages(details) {
   return "\n  <img class=\"modal__images\" src=\"".concat(details.image, "\">\n  ");
+}; // Modal Guide
+
+
+exports.buildModalImages = buildModalImages;
+
+var openGuideModal = function openGuideModal(id) {
+  document.querySelector("[data-modal-info=\"".concat(id, "\"]")).classList.toggle('is-visible');
 };
 
-exports.buildSpotsModalImages = buildSpotsModalImages;
-
-var openModalGuide = function openModalGuide(id) {
-  document.querySelector("data-modal-info=\"".concat(id, "\"")).classList.toggle('is-visible');
-};
-
-exports.openModalGuide = openModalGuide;
+exports.openGuideModal = openGuideModal;
 
 var buildGuideModal = function buildGuideModal(modal) {
-  return "\n<div class=\"modal\" data-modal-info=\"".concat(modal.id, "\">\n<div class=\"modal__close\" data-close=").concat(modal.id, " onclick=\"closeModal(").concat(modal.id, ")\"></div>\n<div class=\"in-row\">\n  <div class=\"modal__container in-column\">\n    <div class=\"in-row\">\n      <p class=\"modal__title\">").concat(modal.local, "</p>\n      <button class=\"icon__close is-absolute-right\" data-close=\"").concat(modal.id, "\"></button>\n    </div>\n    <hr class=\"underline underline--shine underline__modal--margin\" />\n    <div class=\"in-row\">\n      <div class=\"modal__spots in-column\">\n        <div class=\"details__rating--text in-row\">\n          <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-star\"></use>\n          </svg>\n          <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n          <p class=\"details__grade details__grade--margin\">").concat(modal.grade, "</p>\n          <p class=\"tag tag__margin\">natureza</p>\n          <p class=\"tag tag__margin\">lazer</p>\n        </div>\n        <div class=\"modal__select in-row\">\n          <p>Dia<select class=\"select\" name=\"days\">\n          <option value=\"1\">1</option>\n          <option value=\"2\">2</option>\n          <option value=\"3\">3</option>\n          <option value=\"4\">4</option>\n          <option value=\"5\">5</option>\n          <option value=\"6\">6</option>\n          </select></p><span>de 6</span>\n        </div>\n        <ul class=\"modal__list in-column\">\n          <li class=\"modal__item\">Ponto turistico 1</li>\n          <li class=\"modal__item\">Ponto turistico 2</li>\n          <li class=\"modal__item\">Ponto turistico 3</li>\n          <li class=\"modal__item\">Ponto turistico 4</li>\n          <li class=\"modal__item\">Ponto turistico 5</li>\n          <li class=\"modal__item\">Ponto turistico 6</li>\n        </ul>\n      </div>\n      <div class=\"modal__content in-column\">\n        <div class=\"details__rating details__rating--text in-row\">\n          <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-clock\"></use>\n          </svg>\n          <p class=\"details__grade details__grade--margin\"> 11:00 \xE0s 15:00 </p>\n          <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-star\"></use>\n          </svg>\n          <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n          <p class=\"details__grade details__grade--margin\">").concat(modal.grade, "</p>\n          <p class=\"tag tag__margin\">natureza</p>\n          <p class=\"tag tag__margin\">lazer</p>\n        </div>\n        <p class=\"modal__text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.</p><a class=\"modal__link\" href=\"#\">Clique para ver a descri&ccedil;&atilde;o completa...</a>\n        <div class=\"modal__gallery in-row\"></div>\n        <div class=\"modal__footer in-row\">\n          <button class=\"icon__arrow icon__arrow--left\"></button>\n          <button class=\"icon__arrow icon__arrow--right\"></button>\n        </div>\n      </div>\n    </div>\n  </div>\n  </div>\n</div>\n  ");
+  return "\n<div class=\"modal\" data-modal-info=\"".concat(modal.id, "\">\n<div class=\"modal__close\" data-close=").concat(modal.id, " onclick=\"closeModal(").concat(modal.id, ")\"></div>\n<div class=\"in-row\">\n  <div class=\"modal__container in-column\">\n    <div class=\"in-row\">\n      <p class=\"modal__title\">").concat(modal.local, "</p>\n      <button class=\"icon__close is-absolute-right\" data-close=\"").concat(modal.id, "\"></button>\n    </div>\n    <hr class=\"underline underline--shine underline__modal--margin\" />\n    <div class=\"in-row\">\n      <div class=\"modal__spots in-column\">\n        <div class=\"details__rating--text in-row\">\n          <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-star\"></use>\n          </svg>\n          <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n          <p class=\"details__grade details__grade--margin\">").concat(modal.grade, "</p>\n          <p class=\"tag tag__margin\">natureza</p>\n          <p class=\"tag tag__margin\">lazer</p>\n        </div>\n        <div class=\"modal__select in-row\">\n          <p>Dia<select class=\"select\" name=\"days\">\n          <option value=\"1\">1</option>\n          <option value=\"2\">2</option>\n          <option value=\"3\">3</option>\n          <option value=\"4\">4</option>\n          <option value=\"5\">5</option>\n          <option value=\"6\">6</option>\n          </select></p><span>de 6</span>\n        </div>\n        <ul class=\"modal__list in-column\">\n          <li class=\"modal__item\">\n            <a> Ponto turistico 1 </a>\n          </li>\n          <li class=\"modal__item\">\n            <a> Ponto turistico 2 </a>\n          </li>\n          <li class=\"modal__item\">\n            <a> Ponto turistico 3 </a>\n          </li>\n          <li class=\"modal__item\">\n            <a> Ponto turistico 4 </a>\n          </li>\n          <li class=\"modal__item\">\n            <a> Ponto turistico 5 </a>\n          </li>\n          <li class=\"modal__item\">\n            <a> Ponto turistico 6 </a>\n          </li>\n        </ul>\n      </div>\n      <div class=\"modal__content in-column\">\n        <div class=\"details__rating details__rating--text in-row\">\n          <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-clock\"></use>\n          </svg>\n          <p class=\"details__grade details__grade--margin\"> 11:00 \xE0s 15:00 </p>\n          <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-star\"></use>\n          </svg>\n          <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n          <p class=\"details__grade details__grade--margin\">").concat(modal.grade, "</p>\n          <p class=\"tag tag__margin\">natureza</p>\n          <p class=\"tag tag__margin\">lazer</p>\n        </div>\n        <p class=\"modal__text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.</p><a class=\"modal__link\" href=\"#\">Clique para ver a descri&ccedil;&atilde;o completa...</a>\n        <div class=\"modal__gallery in-row\"></div>\n        <div class=\"modal__footer in-row\">\n          <button class=\"icon__arrow icon__arrow--left\"></button>\n          <button class=\"icon__arrow icon__arrow--right\"></button>\n        </div>\n      </div>\n    </div>\n  </div>\n  </div>\n</div>\n  ");
 };
 
 exports.buildGuideModal = buildGuideModal;
@@ -492,13 +494,13 @@ Object.defineProperty(exports, "__esModule", {
 exports.buildSpotsList = exports.buildDetailsList = void 0;
 
 var buildDetailsList = function buildDetailsList(details) {
-  return "\n  <div id=\"roteiros\" class=\"details__items in-column\">\n    <div class=\"details__content in-row\">\n      <img class=\"details__image\" src=\"".concat(details.image, "\"/>\n      <div class=\"details__rating--text in-column\">\n          <p class=\"details__title\">").concat(details.local, "</p>\n          <div class=\"details__rating in-row\">\n            <svg class=\"icon__star\">\n              <use xlink:href=\"#icon-star\"></use>\n            </svg>\n            <p class=\"details__grade details__grade--bold\">").concat(details.gradeBold, "</p>\n            <p class=\"details__grade\">").concat(details.grade, "</p>\n          </div>\n          <div class=\"in-row\">\n              <p class=\"tag\">natureza</p>\n              <p class=\"tag\">lazer</p>\n          </div>\n      </div>\n    </div>\n    <div class=\"details__options in-row\">\n        <p class=\"details__text--options details__text--guide\">3 dias</p>\n        <div class=\"in-column details__button--info\">\n          <button class=\"button__menu has-margin-right\" onclick=\"openModalinfo(").concat(details.id, ")\">\n            <svg class=\"icon__info\">\n              <use xlink:href=\"#icon-info\"></use>\n              </svg>\n          </button>\n        </div> \n        <div class=\"in-column details__button--menu\"> \n          <button class=\"button__menu has-margin-right\" onclick=\"openRoadmapDropdown(").concat(details.id, ")\">\n            <svg class=\"icon__menu\">\n              <use xlink:href=\"#icon-menu\"></use>\n            </svg>\n          </button>\n          <ul class=\"dropdown dropdown__option\" data-roadmap-info=\"").concat(details.id, "\">\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--check\" href=\"#\">Usar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--save\" href=\"#\">Salvar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--share\" href=\"#\">Compartilhar</a></li>\n          </ul>\n        </div>\n      </div>\n    </div>\n    <hr class=\"underline underline--shine\" />\n  ");
+  return "\n  <div id=\"roteiros\" class=\"details__items in-column\">\n    <div class=\"details__content in-row\">\n      <img class=\"details__image\" src=\"".concat(details.image, "\"/>\n      <div class=\"details__rating--text in-column\">\n          <p class=\"details__title\">").concat(details.local, "</p>\n          <div class=\"details__rating in-row\">\n            <svg class=\"icon__star\">\n              <use xlink:href=\"#icon-star\"></use>\n            </svg>\n            <p class=\"details__grade details__grade--bold\">").concat(details.gradeBold, "</p>\n            <p class=\"details__grade\">").concat(details.grade, "</p>\n          </div>\n          <div class=\"in-row\">\n              <p class=\"tag\">natureza</p>\n              <p class=\"tag\">lazer</p>\n          </div>\n      </div>\n    </div>\n    <div class=\"details__options in-row\">\n        <p class=\"details__text--options details__text--guide\">3 dias</p>\n        <div class=\"in-column details__button--info\">\n          <button class=\"button__menu has-margin-right\" onclick=\"openGuideModal(").concat(details.id, ")\">\n            <svg class=\"icon__info\">\n              <use xlink:href=\"#icon-info\"></use>\n              </svg>\n          </button>\n        </div> \n        <div class=\"in-column details__button--menu\"> \n          <button class=\"button__menu has-margin-right\" onclick=\"openRoadmapDropdown(").concat(details.id, ")\">\n            <svg class=\"icon__menu\">\n              <use xlink:href=\"#icon-menu\"></use>\n            </svg>\n          </button>\n          <ul class=\"dropdown dropdown__option\" data-roadmap-info=\"").concat(details.id, "\">\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--check\" href=\"#\">Usar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--save\" href=\"#\">Salvar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--share\" href=\"#\">Compartilhar</a></li>\n          </ul>\n        </div>\n      </div>\n    </div>\n    <hr class=\"underline underline--shine\" />\n  ");
 };
 
 exports.buildDetailsList = buildDetailsList;
 
 var buildSpotsList = function buildSpotsList(details) {
-  return "\n  <div id=\"pontosTuristicos\" class=\"details__items in-column\">\n    <div class=\"details__content in-row\">\n      <img class=\"details__image\" src=\"".concat(details.image, "\"/>\n      <div class=\"details__rating--text in-column\">\n          <p class=\"details__title\">").concat(details.local, "</p>\n          <div class=\"details__rating in-row\">\n            <svg class=\"icon__star\">\n              <use xlink:href=\"#icon-star\"></use>\n            </svg>\n            <p class=\"details__grade details__grade--bold\">").concat(details.gradeBold, "</p>\n            <p class=\"details__grade\">").concat(details.grade, "</p>\n          </div>\n          <div class=\"in-row\">\n              <p class=\"tag\">natureza</p>\n              <p class=\"tag\">lazer</p>\n          </div>\n      </div>\n    </div>\n    <div class=\"details__options in-row\">\n        <p class=\"details__text--options details__text--guide\">3 dias</p>\n        <div class=\"in-column details__button--info\">\n          <button class=\"button__menu has-margin-right\" onclick=\"openModalinfo(").concat(details.id, ")\">\n            <svg class=\"icon__info\">\n              <use xlink:href=\"#icon-info\"></use>\n              </svg>\n          </button>\n        </div> \n        <div class=\"in-column details__button--menu\"> \n          <button class=\"button__menu has-margin-right\" onclick=\"openRoadmapDropdown(").concat(details.id, ")\">\n            <svg class=\"icon__menu\">\n              <use xlink:href=\"#icon-menu\"></use>\n            </svg>\n          </button>\n          <ul class=\"dropdown dropdown__option\" data-roadmap-info=\"").concat(details.id, "\">\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--check\" href=\"#\">Usar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--save\" href=\"#\">Salvar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--share\" href=\"#\">Compartilhar</a></li>\n          </ul>\n        </div>\n      </div>\n    </div>\n    <hr class=\"underline underline--shine\" />\n  ");
+  return "\n  <div id=\"pontosTuristicos\" class=\"details__items in-column\">\n    <div class=\"details__content in-row\">\n      <img class=\"details__image\" src=\"".concat(details.image, "\"/>\n      <div class=\"details__rating--text in-column\">\n          <p class=\"details__title\">").concat(details.local, "</p>\n          <div class=\"details__rating in-row\">\n            <svg class=\"icon__star\">\n              <use xlink:href=\"#icon-star\"></use>\n            </svg>\n            <p class=\"details__grade details__grade--bold\">").concat(details.gradeBold, "</p>\n            <p class=\"details__grade\">").concat(details.grade, "</p>\n          </div>\n          <div class=\"in-row\">\n              <p class=\"tag\">natureza</p>\n              <p class=\"tag\">lazer</p>\n          </div>\n      </div>\n    </div>\n    <div class=\"details__options in-row\">\n        <p class=\"details__text--options details__text--guide\">3 dias</p>\n        <div class=\"in-column details__button--info\">\n          <button class=\"button__menu has-margin-right\" onclick=\"openGuideModal(").concat(details.id, ")\">\n            <svg class=\"icon__info\">\n              <use xlink:href=\"#icon-info\"></use>\n              </svg>\n          </button>\n        </div> \n        <div class=\"in-column details__button--menu\"> \n          <button class=\"button__menu has-margin-right\" onclick=\"openRoadmapDropdown(").concat(details.id, ")\">\n            <svg class=\"icon__menu\">\n              <use xlink:href=\"#icon-menu\"></use>\n            </svg>\n          </button>\n          <ul class=\"dropdown dropdown__option\" data-roadmap-info=\"").concat(details.id, "\">\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--check\" href=\"#\">Usar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--save\" href=\"#\">Salvar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--share\" href=\"#\">Compartilhar</a></li>\n          </ul>\n        </div>\n      </div>\n    </div>\n    <hr class=\"underline underline--shine\" />\n  ");
 };
 
 exports.buildSpotsList = buildSpotsList;
@@ -510,22 +512,20 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.activeSpots = activeSpots;
 exports.activeGuide = activeGuide;
-var spots = document.getElementById('pontosTuristicos');
-var guide = document.getElementById('roteiros');
+var spots = document.getElementById('activeSpots');
+var guide = document.getElementById('activeGuide');
 
 function activeSpots() {
-  document.getElementById('pontosTuristicos').classList.toggle('is-showing');
-
-  if (guide.className == 'is-showing') {
-    document.getElementById('roteiros').classList.toggle('is-hidden');
+  if (guide.className == 'is-active') {
+    document.getElementById('roteiros').classList.toggle('is-showing');
+    document.getElementById('pontosTuristicos').classList.remove('is-showing');
   }
 }
 
 function activeGuide() {
-  document.getElementById('roteiros').classList.toggle('is-showing');
-
-  if (spots.className == 'is-showing') {
-    document.getElementById('pontosTuristicos').classList.remove('is-showing');
+  if (spots.className == 'is-active') {
+    document.getElementById('pontosTuristicos').classList.toggle('is-showing');
+    document.getElementById('roteiros').classList.remove('is-showing');
   }
 }
 },{}],"js/collapse.js":[function(require,module,exports) {
@@ -579,43 +579,73 @@ var _collapse = require("./js/collapse.js");
 
 var _password = require("./js/password.js");
 
+//DropDown
+//Modal
 // HTML Builders
+// Build Timeline
 var timelineContainer = document.querySelector(".timeline__list");
 
 _timeline.timeline.forEach(function (item) {
   var timelineItems = (0, _timeline2.buildTimeline)(item);
   timelineContainer.innerHTML = timelineContainer.innerHTML + timelineItems;
-});
+}); // Build Details Guide
+
 
 var detailsContainer = document.querySelector(".details__grid");
 
 _details.details.forEach(function (item) {
   var detailsItems = (0, _list.buildDetailsList)(item);
   detailsContainer.innerHTML = detailsContainer.innerHTML + detailsItems;
-});
+}); // Build Details Spots
+
 
 var spotsContainer = document.querySelector(".details__spots");
 
 _details.details.forEach(function (item) {
   var spotsItems = (0, _list.buildSpotsList)(item);
   spotsContainer.innerHTML = spotsContainer.innerHTML + spotsItems;
-});
+}); // Build Modal Images List
+
+
+var modalImages = document.getElementsByClassName(".modal__gallery");
+
+_details.details.forEach(function (item) {
+  var imagesItems = (0, _modal2.buildModalImages)(item);
+  modalImages.innerHTML = modalImages.innerHTML + imagesItems.innerHTML;
+}); // Build Guide Modal
+
 
 var modalGuide = document.querySelector(".modal__guide");
 
 _details.details.forEach(function (item) {
   var modalItem = (0, _modal2.buildGuideModal)(item);
   modalGuide.innerHTML = modalGuide.innerHTML + modalItem;
+}); // Build Spots Modal
+
+
+var modalSpots = document.querySelector(".modal__spots");
+
+_details.details.forEach(function (item) {
+  var spotsItem = (0, _modal2.buildSpotsModal)(item);
+  modalSpots.innerHTML = modalSpots.innerHTML + spotsItem;
 }); // Click Events
+// Open Login Modal
 
 
-document.getElementById('modalLogin').addEventListener('click', _modal2.modalLogin);
-document.getElementById('closeLogin').addEventListener('click', _modal2.closeLogin);
-document.getElementById('showPassword').addEventListener('click', _password.showPassword);
-document.querySelector('#activeGuide').addEventListener('click', _active.activeGuide);
-document.querySelector('#activeSpots').addEventListener('click', _active.activeSpots);
-document.querySelector('#collapseButton').addEventListener('click', _collapse.collapseButton);
-document.querySelector('#closeIcon').addEventListener('click', _modal2.closeLogin);
+document.getElementById('modalLogin').addEventListener('click', _modal2.modalLogin); // Close Login Modal
+
+document.getElementById('closeLogin').addEventListener('click', _modal2.closeLogin); // Show password in login modal
+
+document.getElementById('showPassword').addEventListener('click', _password.showPassword); // document.querySelector('#activeGuide').addEventListener('click', activeGuide);
+// document.querySelector('#activeSpots').addEventListener('click', activeSpots);
+// Click for Collapse Button
+
+document.querySelector('#collapseButton').addEventListener('click', _collapse.collapseButton); // "x" icon for close modal
+
+document.querySelector('#closeIcon').addEventListener('click', _modal2.closeLogin); // Close Area for modal 
+
+document.querySelector(".modal__close").addEventListener('click', _modal2.closeModalInfo); // Timeline main dropdown
+
 document.querySelector('#mainDropdownButton').addEventListener('click', _dropdown.openMainDropdown);
 window.addEventListener('click', function (event) {
   if (!event.target.matches('#mainDropdownButton')) {
@@ -625,8 +655,7 @@ window.addEventListener('click', function (event) {
       visible.classList.remove('is-visible');
     }
   }
-});
-document.querySelector(".modal__close").addEventListener('click', _modal2.closeModalInfo); // Dropdown Close
+}); // Function to close all dropdown
 
 var buttons = document.querySelectorAll('.remove');
 var dropdowns = document.querySelectorAll('.dropdown');
@@ -664,10 +693,12 @@ var closeModal = function closeModal(id) {
 
 window.openUserDropdown = _dropdown.openUserDropdown;
 window.openRoadmapDropdown = _dropdown.openRoadmapDropdown;
-window.openModalinfo = _modal2.openModalinfo;
+window.openGuideModal = _modal2.openGuideModal;
 window.showPassword = _password.showPassword;
 window.openTimeLineModal = _dropdown.openTimeLineModal;
 window.closeModal = closeModal;
+window.activeSpots = _active.activeSpots;
+window.activeGuide = _active.activeGuide;
 },{"./data/timeline.json":"data/timeline.json","./data/details.json":"data/details.json","./data/modal.json":"data/modal.json","./js/dropdown.js":"js/dropdown.js","./js/modal.js":"js/modal.js","./js/timeline.js":"js/timeline.js","./js/list.js":"js/list.js","./js/active.js":"js/active.js","./js/collapse.js":"js/collapse.js","./js/password.js":"js/password.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -696,7 +727,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42949" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39649" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

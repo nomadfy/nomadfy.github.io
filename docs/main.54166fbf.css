@@ -1106,18 +1106,18 @@ select:focus, textarea:focus, input:focus {
 }
 .timeline__item::before {
   align-items: center;
-  border-radius: 25px;
   background-color: #FFFFFF;
-  font-size: 12px;
+  border-radius: 25px;
   border: 1px solid #888888;
   content: "" counter(part) "";
   display: flex;
+  font-size: 12px;
   height: 24px;
   justify-content: center;
-  width: 24px;
-  position: relative;
   left: -30px;
   margin-top: 5px;
+  position: relative;
+  width: 24px;
   z-index: 1;
 }
 .timeline__item:first-of-type:after {
@@ -1129,7 +1129,7 @@ select:focus, textarea:focus, input:focus {
   background-color: transparent;
   border: 1px dashed #888888;
   z-index: 0;
-  margin-top: 5px;
+  margin-top: -130px;
 }
 .timeline__item:not(:first-of-type) {
   margin-top: 10px;

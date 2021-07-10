@@ -21,7 +21,7 @@ export const buildDetailsList = (details) => {
     <div class="details__options in-row">
         <p class="details__text--options details__text--guide">3 dias</p>
         <div class="in-column details__button--info">
-          <button class="button__menu has-margin-right" onclick="openModalinfo(${details.id})">
+          <button class="button__menu has-margin-right" onclick="openGuideModal(${details.id})">
             <svg class="icon__info">
               <use xlink:href="#icon-info"></use>
               </svg>
@@ -68,7 +68,7 @@ export const buildSpotsList = (details) => {
     <div class="details__options in-row">
         <p class="details__text--options details__text--guide">3 dias</p>
         <div class="in-column details__button--info">
-          <button class="button__menu has-margin-right" onclick="openModalinfo(${details.id})">
+          <button class="button__menu has-margin-right" onclick="openGuideModal(${details.id})">
             <svg class="icon__info">
               <use xlink:href="#icon-info"></use>
               </svg>
