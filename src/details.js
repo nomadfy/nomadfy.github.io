@@ -30,8 +30,8 @@ details.forEach((item) => {
 })
 
 // Build Details Spots
-const spotsContainer = document.querySelector(".details__spots")
-details.forEach((item) =>{
+const spotsContainer = document.getElementById("pontosTuristicos")
+details.forEach((item) => {
   const spotsItems = buildSpotsList(item);
 
   spotsContainer.innerHTML = spotsContainer.innerHTML + spotsItems
@@ -39,7 +39,7 @@ details.forEach((item) =>{
 
 // Build Modal Images List
 const modalImages = document.getElementsByClassName(".modal__gallery")
-details.forEach((item) =>{
+details.forEach((item) => {
   const imagesItems = buildModalImages(item);
 
   modalImages.innerHTML = modalImages.innerHTML + imagesItems.innerHTML
@@ -47,7 +47,7 @@ details.forEach((item) =>{
 
 // Build Guide Modal
 const modalGuide = document.querySelector(".modal__guide")
-details.forEach((item) =>{
+details.forEach((item) => {
   const modalItem = buildGuideModal(item);
 
   modalGuide.innerHTML = modalGuide.innerHTML + modalItem
@@ -55,7 +55,7 @@ details.forEach((item) =>{
 
 // Build Spots Modal
 const modalSpots = document.querySelector(".modal__spots")
-details.forEach((item) =>{
+details.forEach((item) => {
   const spotsItem = buildSpotsModal(item);
 
   modalSpots.innerHTML = modalSpots.innerHTML + spotsItem
@@ -72,9 +72,11 @@ document.getElementById('closeLogin').addEventListener('click', closeLogin);
 // Show password in login modal
 document.getElementById('showPassword').addEventListener('click', showPassword);
 
-// document.querySelector('#activeGuide').addEventListener('click', activeGuide);
+// Click for Collapse Button
+document.querySelector('#activeGuide').addEventListener('click', activeGuide);
 
-// document.querySelector('#activeSpots').addEventListener('click', activeSpots);
+// Click for Collapse Button
+document.querySelector('#activeSpots').addEventListener('click', activeSpots);
 
 // Click for Collapse Button
 document.querySelector('#collapseButton').addEventListener('click', collapseButton);

@@ -1,17 +1,19 @@
-var spots = document.getElementById('activeSpots')
-var guide = document.getElementById('activeGuide')
+var guideTab = document.getElementById('activeGuide');
+var spotsTab = document.getElementById('activeSpots');
+var guideContent = document.getElementById('roteiros');
+var spotsContent = document.getElementById('pontosTuristicos');
 
 export function activeSpots() {
-  if(guide.className == 'is-active') {
-    document.getElementById('roteiros').classList.toggle('is-showing')
-    document.getElementById('pontosTuristicos').classList.remove('is-showing')
-  }
+  spotsTab.classList.add('is-active');
+  guideTab.classList.remove('is-active');
+  guideContent.classList.add('is-showing');
+  spotsContent.classList.remove('is-showing');
 }
 
 export function activeGuide() {
-  if(spots.className == 'is-active') {
-    document.getElementById('pontosTuristicos').classList.toggle('is-showing')
-    document.getElementById('roteiros').classList.remove('is-showing')
-  }
+  spotsTab.classList.remove('is-active');
+  guideTab.classList.add('is-active');
+  spotsContent.classList.add('is-showing');
+  guideContent.classList.remove('is-showing');
 }
 

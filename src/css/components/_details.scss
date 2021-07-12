@@ -155,12 +155,12 @@
     margin-bottom: 25px;
   }
 
-  &__grid {
+  &__grid.is-showing {
     display: flex; 
   }
 
-  &__spots {
-    display: none;
+  &__grid:not(.is-showing) {
+    display: none; 
   }
 
   &__title {
