@@ -66,9 +66,8 @@ export const buildSpotsList = (details) => {
       </div>
     </div>
     <div class="details__options in-row">
-        <p class="details__text--options details__text--guide">3 dias</p>
         <div class="in-column details__button--info">
-          <button class="button__menu has-margin-right" onclick="openGuideModal(${details.id})">
+          <button class="button__menu has-margin-right" onclick="openSpotsModal(${details.id})">
             <svg class="icon__info">
               <use xlink:href="#icon-info"></use>
               </svg>

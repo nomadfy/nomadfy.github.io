@@ -1,12 +1,14 @@
+// Data
 import { timeline } from "./data/timeline.json";
 import { details } from "./data/details.json";
-import { modal } from "./data/modal.json";
-//DropDown
+// DropDown
 import { openMainDropdown, openUserDropdown, openRoadmapDropdown, openTimeLineModal, } from "./js/dropdown.js";
-//Modal
-import { openGuideModal, buildSpotsModal, buildGuideModal, modalLogin, closeLogin, closeModalInfo, buildModalImages } from "./js/modal.js";
+// Modal
+import { openGuideModal, openSpotsModal, buildSpotsModal, buildGuideModal, modalLogin, closeLogin, closeModalInfo, buildModalImages } from "./js/modal.js";
+// Builder
 import { buildTimeline } from "./js/timeline.js";
 import { buildDetailsList, buildSpotsList } from "./js/list.js";
+// Secondary Events
 import { activeGuide, activeSpots } from "./js/active.js";
 import { collapseButton } from "./js/collapse.js"
 import { showPassword } from "./js/password.js"
@@ -21,16 +23,16 @@ timeline.forEach((item) => {
   timelineContainer.innerHTML = timelineContainer.innerHTML + timelineItems
 })
 
-// Build Details Guide
-const detailsContainer = document.querySelector(".details__grid")
+// Build Guide list
+const detailsContainer = document.getElementById("guideContent")
 details.forEach((item) => {
   const detailsItems = buildDetailsList(item);
 
   detailsContainer.innerHTML = detailsContainer.innerHTML + detailsItems
 })
 
-// Build Details Spots
-const spotsContainer = document.getElementById("pontosTuristicos")
+// Build Spots list
+const spotsContainer = document.getElementById("spotsContent")
 details.forEach((item) => {
   const spotsItems = buildSpotsList(item);
 
@@ -133,6 +135,7 @@ const closeModal = (id) => {
   window.openUserDropdown = openUserDropdown
   window.openRoadmapDropdown = openRoadmapDropdown
   window.openGuideModal = openGuideModal
+  window.openSpotsModal = openSpotsModal
   window.showPassword = showPassword
   window.openTimeLineModal = openTimeLineModal
   window.closeModal = closeModal

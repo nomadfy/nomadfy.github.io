@@ -143,8 +143,9 @@
     display: flex;
     margin: 24px auto;
     padding: 16px 20px;
-    width: 350px;
-    height: 50px;
+    max-width: 350px;
+    min-height: 50px;
+    align-items: center;
     border-radius: 16px;
     background-color: $white;
     font-size: 16px;
@@ -163,7 +164,7 @@
     position: absolute;
     display: flex;
     right: 24px;
-    top: 137px;
+    top: 143px;
   }
 
   &--show::before {

@@ -7,8 +7,7 @@ export const openSpotsModal = (id) => {
 export const buildSpotsModal = (modal) => {
   return`
   <div class="modal" data-modal-spots="${modal.id}">
-    <div class="modal__close" id="closeArea"></div>
-    <div class="modal_container in-column">
+    <div class="modal__container in-column">
       <div class="in-row">
         <p class="modal__title">${modal.local}</p>
         <button class="icon__close is-absolute-right" data-close="${modal.id}"></button>
@@ -23,7 +22,7 @@ export const buildSpotsModal = (modal) => {
         <p class="tag tag__margin">natureza</p>
         <p class="tag tag__margin">lazer</p>
       </div>
-      <p class="modal__text">${modal.content}</p> 
+      <p class="modal__text">"8 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque."</p> 
       <a class="modal__link" href="#">Clique para ver a descrição completa...</a>
       <div class="modal__gallery in-row"></div>
       <div class="modal__footer in-row">

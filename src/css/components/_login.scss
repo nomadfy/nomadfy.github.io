@@ -1,7 +1,6 @@
 .login {
   position: absolute;
   visibility: hidden;
-  height: 650px;
   max-width: 580px;
   z-index: 9999;
   bottom: 0;
@@ -12,6 +11,15 @@
   background-color: white;
   padding: 32px 40px;
   border-radius: 8px;
+
+  @media screen and (min-width: 450px) {
+    height: 650px;
+  }
+
+  @media screen and (max-width: 449px) {
+    min-height: 650px;
+    max-height: 720px;
+  }
 
   &__header {
     display: flex;
@@ -42,15 +50,16 @@
   &__container {
     display: flex;
     position: absolute;
-    width: 500px;
+    width: calc(100% - 80px);
   }
 
   &__input {
     height: 48px;
     border-radius: 8px;
     margin: 0;
-    padding: 0 24px;
+    padding: 0 48px 0 24px;
     color: $gray3;
+    width: 100%;
 
     &:focus ~ span,
     &:valid ~ span {
@@ -64,30 +73,14 @@
 
   &__label {
     font-size: 16px;
-    margin: 0 0 -10px;
+    margin: 0 0 10px;
     color: $gray3;
-  }
-
-  &__placeholder {
-    position: relative;
-    color: $gray2;
-    pointer-events: none;
-    margin-left: 24px;
-    font-size: 16px;
-  }
-
-  &--mail {
-    top: 32px;
-  }
-
-  &--password {
-    top: 35px;
   }
 
   &__recover {
     text-align: right;
     color: $orange;
-    margin: 24px;
+    margin: 24px 0;
   }
 
   &__close {

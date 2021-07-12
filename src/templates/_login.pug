@@ -7,12 +7,10 @@
   button.button.button--google.button--upper Entrar com a conta do google
   p.login__else - ou -
   form.login__container.in-column
-    label.login__label Email
-    span.login__placeholder.login--mail example@mail.com
-    input.login__input(type="text", required)
-    label.login__label Senha
-    span.login__placeholder.login--password ********
-    input#password.login__input(type="password", required)
+    label.login__label(for="user_mail") Email
+    input#user_mail.login__input(placeholder="example@mail.com" type="text", required)
+    label.login__label(for="password") Senha
+    input#password.login__input(placeholder="********" type="password", required)
     a#showPassword.button--borderless.button--show(href="#" role="button")
     a.login__recover Recuperar senha 
     button.button.button--orange.button--center.button--login.button--upper Entrar
