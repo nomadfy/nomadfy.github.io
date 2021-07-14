@@ -1,10 +1,11 @@
 // Data
 import { timeline } from "./data/timeline.json";
 import { details } from "./data/details.json";
+import { modal } from "./data/modal.json";
 // DropDown
-import { openMainDropdown, openUserDropdown, openRoadmapDropdown, openTimeLineModal, } from "./js/dropdown.js";
+import { openMainDropdown, openUserDropdown, openGuideDropdown, openTimeLineModal, openSpotsDropdown } from "./js/dropdown.js";
 // Modal
-import { openGuideModal, openSpotsModal, buildSpotsModal, buildGuideModal, modalLogin, closeLogin, closeModalInfo, buildModalImages } from "./js/modal.js";
+import { openGuideModal, openSpotsModal, buildSpotsModal, buildGuideModal, modalLogin, closeLogin, closeModalInfo, modalList, modalImages } from "./js/modal.js";
 // Builder
 import { buildTimeline } from "./js/timeline.js";
 import { buildDetailsList, buildSpotsList } from "./js/list.js";
@@ -39,13 +40,33 @@ details.forEach((item) => {
   spotsContainer.innerHTML = spotsContainer.innerHTML + spotsItems
 })
 
-// Build Modal Images List
-const modalImages = document.getElementsByClassName(".modal__gallery")
-details.forEach((item) => {
-  const imagesItems = buildModalImages(item);
+// Build Modal Elements 
+window.onload = function buildModalImages () {
 
-  modalImages.innerHTML = modalImages.innerHTML + imagesItems.innerHTML
-})
+  // Build Modal Images for Spots Modal
+  const modalImagesSpots = document.querySelector("[data-images-spots]")
+  details.forEach((item) => {
+  const imageItems = modalImages(item);
+
+  modalImagesSpots.innerHTML = modalImagesSpots.innerHTML + imageItems
+  })
+
+  // Build Modal List  
+  modal.forEach((item) => {
+    const modalListContainer = document.querySelector(`[data-list="${item.id}"]`)
+  const modalListItems = modalList(item);
+
+  modalListContainer.innerHTML = modalListContainer.innerHTML + modalListItems
+  })
+  
+  // Build Modal Images for Guide Modal
+  const modalImagesGuide = document.querySelector(`[data-images-guide]`)
+  details.forEach((item) => {
+  const imageItems = modalImages(item);
+
+  modalImagesGuide.innerHTML = modalImagesGuide.innerHTML + imageItems
+  })
+}
 
 // Build Guide Modal
 const modalGuide = document.querySelector(".modal__guide")
@@ -56,7 +77,7 @@ details.forEach((item) => {
 })
 
 // Build Spots Modal
-const modalSpots = document.querySelector(".modal__spots")
+const modalSpots = document.querySelector("[data-modal-spots]")
 details.forEach((item) => {
   const spotsItem = buildSpotsModal(item);
 
@@ -122,22 +143,45 @@ document.addEventListener('click', e => {
   // Modal Close 
 
 const closeModal = (id) => {
-  var modal = document.querySelector(`[data-modal-info="${id}"]`);
-  var close = document.querySelector(`[data-close="${id}"]`);
+  var modalGuide = document.querySelector(`[data-modal-guide="${id}"]`);
+  var closeGuide = document.querySelector(`[data-close="${id}"]`);
 
-  if (modal.classList.contains('is-visible')) {
-    close.classList.remove('is-visible');
-    modal.classList.remove('is-visible')
+  if (modalGuide.classList.contains('is-visible')) {
+    closeGuide.classList.remove('is-visible');
+    modalGuide.classList.remove('is-visible')
+  }
+}
+
+const closeModalSpots = (id) => {
+  var modalSpots = document.querySelector(`[data-modal-spots="${id}"]`)
+  var closeSpots = document.querySelector(`[data-close-spots="${id}"]`)
+
+  if (modalSpots.classList.contains('is-visible')) {
+    closeSpots.classList.remove('is-visible');
+    modalSpots.classList.remove('is-visible');
+  }
+}
+
+const closeSpotsButton = (id) => {
+  var modalSpots = document.querySelector(`[data-modal-spots="${id}"]`)
+  var closeSpots = document.querySelector(`[data-close-spots="${id}"]`)
+  
+  if (modalSpots.classList.contains('is-visible')) {
+    closeSpots.classList.remove('is-visible');
+    modalSpots.classList.remove('is-visible');
   }
 }
 
   // Exec Functions
   window.openUserDropdown = openUserDropdown
-  window.openRoadmapDropdown = openRoadmapDropdown
+  window.openGuideDropdown = openGuideDropdown
+  window.openSpotsDropdown = openSpotsDropdown
   window.openGuideModal = openGuideModal
   window.openSpotsModal = openSpotsModal
+  window.closeSpotsButton = closeSpotsButton
   window.showPassword = showPassword
   window.openTimeLineModal = openTimeLineModal
   window.closeModal = closeModal
   window.activeSpots =  activeSpots
   window.activeGuide = activeGuide
+  window.closeModalSpots = closeModalSpots

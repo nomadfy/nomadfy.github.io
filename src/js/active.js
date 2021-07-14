@@ -17,3 +17,7 @@ export function activeGuide() {
   spotsContent.classList.remove('is-showing');
 }
 
+export function activeModalTabs() {
+  
+}
+

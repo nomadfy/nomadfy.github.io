@@ -7,10 +7,11 @@ export const openSpotsModal = (id) => {
 export const buildSpotsModal = (modal) => {
   return`
   <div class="modal" data-modal-spots="${modal.id}">
-    <div class="modal__container in-column">
+  <div class="modal__close" data-close-spots=${modal.id} onclick="closeModalSpots(${modal.id})"></div>
+    <div class="modal__container modal__container--spots in-column">
       <div class="in-row">
         <p class="modal__title">${modal.local}</p>
-        <button class="icon__close is-absolute-right" data-close="${modal.id}"></button>
+        <button class="icon__close is-absolute-right" onclick="closeSpotsButton(${modal.id})"></button>
       </div>
       <hr class="underline underline--shine underline--modal--margin" />
       <div class="details__rating details__rating--text in-row">
@@ -24,7 +25,7 @@ export const buildSpotsModal = (modal) => {
       </div>
       <p class="modal__text">"8 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque."</p> 
       <a class="modal__link" href="#">Clique para ver a descrição completa...</a>
-      <div class="modal__gallery in-row"></div>
+      <div class="modal__gallery in-row" data-images-spots></div>
       <div class="modal__footer in-row">
         <button class="icon__arrow icon__arrow--left"></button>
         <button class="icon__arrow icon__arrow--right"></button>
@@ -34,7 +35,7 @@ export const buildSpotsModal = (modal) => {
   `
 }
 
-export const buildModalImages = (details) => {
+export const modalImages = (details) => {
   return `
   <img class="modal__images" src="${details.image}">
   `
@@ -43,23 +44,23 @@ export const buildModalImages = (details) => {
 // Modal Guide
 
 export const openGuideModal = (id) => {
-  document.querySelector(`[data-modal-info="${id}"]`).classList.toggle('is-visible');
+  document.querySelector(`[data-modal-guide="${id}"]`).classList.toggle('is-visible');
 }
 
 export const buildGuideModal = (modal) => {
   return `
-<div class="modal" data-modal-info="${modal.id}">
+<div class="modal modal__guide" data-modal-guide="${modal.id}">
 <div class="modal__close" data-close=${modal.id} onclick="closeModal(${modal.id})"></div>
 <div class="in-row">
-  <div class="modal__container in-column">
+  <div class="modal__container modal__container--guide in-column">
     <div class="in-row">
       <p class="modal__title">${modal.local}</p>
-      <button class="icon__close is-absolute-right" data-close="${modal.id}"></button>
+      <button class="icon__close is-absolute-right" data-button-close-guide="${modal.id}"></button>
     </div>
     <hr class="underline underline--shine underline__modal--margin" />
     <div class="in-row">
       <div class="modal__spots in-column">
-        <div class="details__rating--text in-row">
+        <div class="details__rating--modal details__rating--text in-row">
           <svg class="icon__star">
             <use xlink:href="#icon-star"></use>
           </svg>
@@ -78,25 +79,7 @@ export const buildGuideModal = (modal) => {
           <option value="6">6</option>
           </select></p><span>de 6</span>
         </div>
-        <ul class="modal__list in-column">
-          <li class="modal__item">
-            <a> Ponto turistico 1 </a>
-          </li>
-          <li class="modal__item">
-            <a> Ponto turistico 2 </a>
-          </li>
-          <li class="modal__item">
-            <a> Ponto turistico 3 </a>
-          </li>
-          <li class="modal__item">
-            <a> Ponto turistico 4 </a>
-          </li>
-          <li class="modal__item">
-            <a> Ponto turistico 5 </a>
-          </li>
-          <li class="modal__item">
-            <a> Ponto turistico 6 </a>
-          </li>
+        <ul class="modal__list in-column" data-list="${modal.id}">
         </ul>
       </div>
       <div class="modal__content in-column">
@@ -114,7 +97,7 @@ export const buildGuideModal = (modal) => {
           <p class="tag tag__margin">lazer</p>
         </div>
         <p class="modal__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.</p><a class="modal__link" href="#">Clique para ver a descri&ccedil;&atilde;o completa...</a>
-        <div class="modal__gallery in-row"></div>
+        <div class="modal__gallery in-row" data-images-guide="${modal.id}"></div>
         <div class="modal__footer in-row">
           <button class="icon__arrow icon__arrow--left"></button>
           <button class="icon__arrow icon__arrow--right"></button>
@@ -124,6 +107,13 @@ export const buildGuideModal = (modal) => {
   </div>
   </div>
 </div>
+  `
+}
+
+export const modalList = (modal) => {
+  return `
+  <li class="modal__item">
+    <a> ${modal.local} </a>
   `
 }
 

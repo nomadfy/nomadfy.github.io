@@ -293,6 +293,94 @@ module.exports = {
     "image": "destinos-florianopolis.png"
   }]
 };
+},{}],"data/modal.json":[function(require,module,exports) {
+module.exports = {
+  "modal": [{
+    "id": "1",
+    "content": "1 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": ["Jurere Internacional"]
+  }, {
+    "id": "2",
+    "content": "2 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "São Paulo"
+  }, {
+    "id": "3",
+    "content": "3 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Rio de Janeiro"
+  }, {
+    "id": "4",
+    "content": "4 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Iacri"
+  }, {
+    "id": "5",
+    "content": "5 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Tupa"
+  }, {
+    "id": "6",
+    "content": "6 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Bastos"
+  }, {
+    "id": "7",
+    "content": "7 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Florianopolis"
+  }, {
+    "id": "8",
+    "content": "8 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Longe demais"
+  }, {
+    "id": "9",
+    "content": "9 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "To sem criatividade"
+  }, {
+    "id": "10",
+    "content": "10 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Cidade"
+  }, {
+    "id": "11",
+    "content": "11 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "Outra cidade"
+  }, {
+    "id": "12",
+    "content": "12 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.",
+    "image": "destinos-gramado.png",
+    "gradeBold": "4.8",
+    "grade": "(1.024 avaliações)",
+    "local": "uiiiii"
+  }]
+};
 },{}],"js/dropdown.js":[function(require,module,exports) {
 "use strict";
 
@@ -300,7 +388,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.openMainDropdown = openMainDropdown;
-exports.openRoadmapDropdown = exports.openTimeLineModal = exports.openUserDropdown = void 0;
+exports.openSpotsDropdown = exports.openGuideDropdown = exports.openTimeLineModal = exports.openUserDropdown = void 0;
 var openedItem;
 
 function openMainDropdown() {
@@ -315,24 +403,24 @@ var openUserDropdown = function openUserDropdown(id) {
 exports.openUserDropdown = openUserDropdown;
 
 var openTimeLineModal = function openTimeLineModal(id) {
-  var t = document.querySelector("[data-dropdown-info=\"".concat(id, "]")).classList.toggle('is-visible');
+  var container = document.querySelector("[data-dropdown-info=\"".concat(id, "]")).classList.toggle('is-visible');
 };
 
 exports.openTimeLineModal = openTimeLineModal;
 
-var openRoadmapDropdown = function openRoadmapDropdown(id) {
-  var t = document.querySelector("[data-roadmap-info=\"".concat(id, "\"]")).classList.toggle('is-visible');
-  var i = document.querySelector("[data-roadmap-info=\"".concat(id, "\"]")).setAttribute('data', 'remove');
-}; // document.addEventListener('click', function(event) {
-//   var isClickInside = openedItem && openedItem.contains(event.target);
-//   console.log(isClickInside)
-//   if (!isClickInside) {
-//     openedItem.classList.toggle('is-visible');
-//   }
-// });
+var openGuideDropdown = function openGuideDropdown(id) {
+  var container = document.querySelector("[data-guide-dd=\"".concat(id, "\"]")).classList.toggle('is-visible');
+  var attribute = document.querySelector("[data-guide-dd=\"".concat(id, "\"]")).setAttribute('data', 'remove');
+};
 
+exports.openGuideDropdown = openGuideDropdown;
 
-exports.openRoadmapDropdown = openRoadmapDropdown;
+var openSpotsDropdown = function openSpotsDropdown(id) {
+  var container = document.querySelector("[data-spots-dd=\"".concat(id, "\"]")).classList.toggle('is-visible');
+  var attribute = document.querySelector("[data-spots-dd=\"".concat(id, "\"]")).setAttribute('data', 'remove');
+};
+
+exports.openSpotsDropdown = openSpotsDropdown;
 },{}],"js/modal.js":[function(require,module,exports) {
 "use strict";
 
@@ -341,7 +429,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.modalLogin = modalLogin;
 exports.closeLogin = closeLogin;
-exports.buildGuideModal = exports.openGuideModal = exports.buildModalImages = exports.buildSpotsModal = exports.openSpotsModal = void 0;
+exports.modalList = exports.buildGuideModal = exports.openGuideModal = exports.modalImages = exports.buildSpotsModal = exports.openSpotsModal = void 0;
 
 // Modal Spots
 var openSpotsModal = function openSpotsModal(id) {
@@ -351,29 +439,35 @@ var openSpotsModal = function openSpotsModal(id) {
 exports.openSpotsModal = openSpotsModal;
 
 var buildSpotsModal = function buildSpotsModal(modal) {
-  return "\n  <div class=\"modal\" data-modal-spots=\"".concat(modal.id, "\">\n    <div class=\"modal__container in-column\">\n      <div class=\"in-row\">\n        <p class=\"modal__title\">").concat(modal.local, "</p>\n        <button class=\"icon__close is-absolute-right\" data-close=\"").concat(modal.id, "\"></button>\n      </div>\n      <hr class=\"underline underline--shine underline--modal--margin\" />\n      <div class=\"details__rating details__rating--text in-row\">\n        <svg class=\"icon__star\">\n          <use xlink:href=\"#icon-star\"></use>\n        </svg>\n        <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n        <p class=\"details__grade\">").concat(modal.grade, "</p>\n        <p class=\"tag tag__margin\">natureza</p>\n        <p class=\"tag tag__margin\">lazer</p>\n      </div>\n      <p class=\"modal__text\">\"8 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.\"</p> \n      <a class=\"modal__link\" href=\"#\">Clique para ver a descri\xE7\xE3o completa...</a>\n      <div class=\"modal__gallery in-row\"></div>\n      <div class=\"modal__footer in-row\">\n        <button class=\"icon__arrow icon__arrow--left\"></button>\n        <button class=\"icon__arrow icon__arrow--right\"></button>\n      </div>\n    </div>\n  </div>\n  ");
+  return "\n  <div class=\"modal\" data-modal-spots=\"".concat(modal.id, "\">\n  <div class=\"modal__close\" data-close-spots=").concat(modal.id, " onclick=\"closeModalSpots(").concat(modal.id, ")\"></div>\n    <div class=\"modal__container modal__container--spots in-column\">\n      <div class=\"in-row\">\n        <p class=\"modal__title\">").concat(modal.local, "</p>\n        <button class=\"icon__close is-absolute-right\" onclick=\"closeSpotsButton(").concat(modal.id, ")\"></button>\n      </div>\n      <hr class=\"underline underline--shine underline--modal--margin\" />\n      <div class=\"details__rating details__rating--text in-row\">\n        <svg class=\"icon__star\">\n          <use xlink:href=\"#icon-star\"></use>\n        </svg>\n        <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n        <p class=\"details__grade\">").concat(modal.grade, "</p>\n        <p class=\"tag tag__margin\">natureza</p>\n        <p class=\"tag tag__margin\">lazer</p>\n      </div>\n      <p class=\"modal__text\">\"8 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.\"</p> \n      <a class=\"modal__link\" href=\"#\">Clique para ver a descri\xE7\xE3o completa...</a>\n      <div class=\"modal__gallery in-row\" data-images-spots></div>\n      <div class=\"modal__footer in-row\">\n        <button class=\"icon__arrow icon__arrow--left\"></button>\n        <button class=\"icon__arrow icon__arrow--right\"></button>\n      </div>\n    </div>\n  </div>\n  ");
 };
 
 exports.buildSpotsModal = buildSpotsModal;
 
-var buildModalImages = function buildModalImages(details) {
+var modalImages = function modalImages(details) {
   return "\n  <img class=\"modal__images\" src=\"".concat(details.image, "\">\n  ");
 }; // Modal Guide
 
 
-exports.buildModalImages = buildModalImages;
+exports.modalImages = modalImages;
 
 var openGuideModal = function openGuideModal(id) {
-  document.querySelector("[data-modal-info=\"".concat(id, "\"]")).classList.toggle('is-visible');
+  document.querySelector("[data-modal-guide=\"".concat(id, "\"]")).classList.toggle('is-visible');
 };
 
 exports.openGuideModal = openGuideModal;
 
 var buildGuideModal = function buildGuideModal(modal) {
-  return "\n<div class=\"modal\" data-modal-info=\"".concat(modal.id, "\">\n<div class=\"modal__close\" data-close=").concat(modal.id, " onclick=\"closeModal(").concat(modal.id, ")\"></div>\n<div class=\"in-row\">\n  <div class=\"modal__container in-column\">\n    <div class=\"in-row\">\n      <p class=\"modal__title\">").concat(modal.local, "</p>\n      <button class=\"icon__close is-absolute-right\" data-close=\"").concat(modal.id, "\"></button>\n    </div>\n    <hr class=\"underline underline--shine underline__modal--margin\" />\n    <div class=\"in-row\">\n      <div class=\"modal__spots in-column\">\n        <div class=\"details__rating--text in-row\">\n          <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-star\"></use>\n          </svg>\n          <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n          <p class=\"details__grade details__grade--margin\">").concat(modal.grade, "</p>\n          <p class=\"tag tag__margin\">natureza</p>\n          <p class=\"tag tag__margin\">lazer</p>\n        </div>\n        <div class=\"modal__select in-row\">\n          <p>Dia<select class=\"select\" name=\"days\">\n          <option value=\"1\">1</option>\n          <option value=\"2\">2</option>\n          <option value=\"3\">3</option>\n          <option value=\"4\">4</option>\n          <option value=\"5\">5</option>\n          <option value=\"6\">6</option>\n          </select></p><span>de 6</span>\n        </div>\n        <ul class=\"modal__list in-column\">\n          <li class=\"modal__item\">\n            <a> Ponto turistico 1 </a>\n          </li>\n          <li class=\"modal__item\">\n            <a> Ponto turistico 2 </a>\n          </li>\n          <li class=\"modal__item\">\n            <a> Ponto turistico 3 </a>\n          </li>\n          <li class=\"modal__item\">\n            <a> Ponto turistico 4 </a>\n          </li>\n          <li class=\"modal__item\">\n            <a> Ponto turistico 5 </a>\n          </li>\n          <li class=\"modal__item\">\n            <a> Ponto turistico 6 </a>\n          </li>\n        </ul>\n      </div>\n      <div class=\"modal__content in-column\">\n        <div class=\"details__rating details__rating--text in-row\">\n          <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-clock\"></use>\n          </svg>\n          <p class=\"details__grade details__grade--margin\"> 11:00 \xE0s 15:00 </p>\n          <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-star\"></use>\n          </svg>\n          <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n          <p class=\"details__grade details__grade--margin\">").concat(modal.grade, "</p>\n          <p class=\"tag tag__margin\">natureza</p>\n          <p class=\"tag tag__margin\">lazer</p>\n        </div>\n        <p class=\"modal__text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.</p><a class=\"modal__link\" href=\"#\">Clique para ver a descri&ccedil;&atilde;o completa...</a>\n        <div class=\"modal__gallery in-row\"></div>\n        <div class=\"modal__footer in-row\">\n          <button class=\"icon__arrow icon__arrow--left\"></button>\n          <button class=\"icon__arrow icon__arrow--right\"></button>\n        </div>\n      </div>\n    </div>\n  </div>\n  </div>\n</div>\n  ");
+  return "\n<div class=\"modal modal__guide\" data-modal-guide=\"".concat(modal.id, "\">\n<div class=\"modal__close\" data-close=").concat(modal.id, " onclick=\"closeModal(").concat(modal.id, ")\"></div>\n<div class=\"in-row\">\n  <div class=\"modal__container modal__container--guide in-column\">\n    <div class=\"in-row\">\n      <p class=\"modal__title\">").concat(modal.local, "</p>\n      <button class=\"icon__close is-absolute-right\" data-button-close-guide=\"").concat(modal.id, "\"></button>\n    </div>\n    <hr class=\"underline underline--shine underline__modal--margin\" />\n    <div class=\"in-row\">\n      <div class=\"modal__spots in-column\">\n        <div class=\"details__rating--modal details__rating--text in-row\">\n          <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-star\"></use>\n          </svg>\n          <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n          <p class=\"details__grade details__grade--margin\">").concat(modal.grade, "</p>\n          <p class=\"tag tag__margin\">natureza</p>\n          <p class=\"tag tag__margin\">lazer</p>\n        </div>\n        <div class=\"modal__select in-row\">\n          <p>Dia<select class=\"select\" name=\"days\">\n          <option value=\"1\">1</option>\n          <option value=\"2\">2</option>\n          <option value=\"3\">3</option>\n          <option value=\"4\">4</option>\n          <option value=\"5\">5</option>\n          <option value=\"6\">6</option>\n          </select></p><span>de 6</span>\n        </div>\n        <ul class=\"modal__list in-column\" data-list=\"").concat(modal.id, "\">\n        </ul>\n      </div>\n      <div class=\"modal__content in-column\">\n        <div class=\"details__rating details__rating--text in-row\">\n          <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-clock\"></use>\n          </svg>\n          <p class=\"details__grade details__grade--margin\"> 11:00 \xE0s 15:00 </p>\n          <svg class=\"icon__star\">\n            <use xlink:href=\"#icon-star\"></use>\n          </svg>\n          <p class=\"details__grade details__grade--bold\">").concat(modal.gradeBold, "</p>\n          <p class=\"details__grade details__grade--margin\">").concat(modal.grade, "</p>\n          <p class=\"tag tag__margin\">natureza</p>\n          <p class=\"tag tag__margin\">lazer</p>\n        </div>\n        <p class=\"modal__text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque.</p><a class=\"modal__link\" href=\"#\">Clique para ver a descri&ccedil;&atilde;o completa...</a>\n        <div class=\"modal__gallery in-row\" data-images-guide=\"").concat(modal.id, "\"></div>\n        <div class=\"modal__footer in-row\">\n          <button class=\"icon__arrow icon__arrow--left\"></button>\n          <button class=\"icon__arrow icon__arrow--right\"></button>\n        </div>\n      </div>\n    </div>\n  </div>\n  </div>\n</div>\n  ");
 };
 
 exports.buildGuideModal = buildGuideModal;
+
+var modalList = function modalList(modal) {
+  return "\n  <li class=\"modal__item\">\n    <a> ".concat(modal.local, " </a>\n  ");
+};
+
+exports.modalList = modalList;
 
 function modalLogin() {
   document.getElementById('login').classList.toggle('is-visible');
@@ -406,13 +500,13 @@ Object.defineProperty(exports, "__esModule", {
 exports.buildSpotsList = exports.buildDetailsList = void 0;
 
 var buildDetailsList = function buildDetailsList(details) {
-  return "\n  <div id=\"roteiros\" class=\"details__items in-column\">\n    <div class=\"details__content in-row\">\n      <img class=\"details__image\" src=\"".concat(details.image, "\"/>\n      <div class=\"details__rating--text in-column\">\n          <p class=\"details__title\">").concat(details.local, "</p>\n          <div class=\"details__rating in-row\">\n            <svg class=\"icon__star\">\n              <use xlink:href=\"#icon-star\"></use>\n            </svg>\n            <p class=\"details__grade details__grade--bold\">").concat(details.gradeBold, "</p>\n            <p class=\"details__grade\">").concat(details.grade, "</p>\n          </div>\n          <div class=\"in-row\">\n              <p class=\"tag\">natureza</p>\n              <p class=\"tag\">lazer</p>\n          </div>\n      </div>\n    </div>\n    <div class=\"details__options in-row\">\n        <p class=\"details__text--options details__text--guide\">3 dias</p>\n        <div class=\"in-column details__button--info\">\n          <button class=\"button__menu has-margin-right\" onclick=\"openGuideModal(").concat(details.id, ")\">\n            <svg class=\"icon__info\">\n              <use xlink:href=\"#icon-info\"></use>\n              </svg>\n          </button>\n        </div> \n        <div class=\"in-column details__button--menu\"> \n          <button class=\"button__menu has-margin-right\" onclick=\"openRoadmapDropdown(").concat(details.id, ")\">\n            <svg class=\"icon__menu\">\n              <use xlink:href=\"#icon-menu\"></use>\n            </svg>\n          </button>\n          <ul class=\"dropdown dropdown__option\" data-roadmap-info=\"").concat(details.id, "\">\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--check\" href=\"#\">Usar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--save\" href=\"#\">Salvar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--share\" href=\"#\">Compartilhar</a></li>\n          </ul>\n        </div>\n      </div>\n    </div>\n    <hr class=\"underline underline--shine\" />\n  ");
+  return "\n  <div id=\"roteiros\" class=\"details__items in-column\">\n    <div class=\"details__content in-row\">\n      <img class=\"details__image\" src=\"".concat(details.image, "\"/>\n      <div class=\"details__rating--text in-column\">\n          <p class=\"details__title\">").concat(details.local, "</p>\n          <div class=\"details__rating in-row\">\n            <svg class=\"icon__star\">\n              <use xlink:href=\"#icon-star\"></use>\n            </svg>\n            <p class=\"details__grade details__grade--bold\">").concat(details.gradeBold, "</p>\n            <p class=\"details__grade\">").concat(details.grade, "</p>\n          </div>\n          <div class=\"in-row\">\n              <p class=\"tag\">natureza</p>\n              <p class=\"tag\">lazer</p>\n          </div>\n      </div>\n    </div>\n    <div class=\"details__options in-row\">\n        <p class=\"details__text--options details__text--guide\">3 dias</p>\n        <div class=\"in-column details__button--info\">\n          <button class=\"button__menu has-margin-right\" onclick=\"openGuideModal(").concat(details.id, ")\">\n            <svg class=\"icon__info\">\n              <use xlink:href=\"#icon-info\"></use>\n              </svg>\n          </button>\n        </div> \n        <div class=\"in-column details__button--menu\"> \n          <button class=\"button__menu has-margin-right\" onclick=\"openGuideDropdown(").concat(details.id, ")\">\n            <svg class=\"icon__menu\">\n              <use xlink:href=\"#icon-menu\"></use>\n            </svg>\n          </button>\n          <ul class=\"dropdown dropdown__option\" data-guide-dd=\"").concat(details.id, "\">\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--check\" href=\"#\">Usar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--save\" href=\"#\">Salvar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--share\" href=\"#\">Compartilhar</a></li>\n          </ul>\n        </div>\n      </div>\n    </div>\n    <hr class=\"underline underline--shine\" />\n  ");
 };
 
 exports.buildDetailsList = buildDetailsList;
 
 var buildSpotsList = function buildSpotsList(details) {
-  return "\n  <div id=\"pontosTuristicos\" class=\"details__items in-column\">\n    <div class=\"details__content in-row\">\n      <img class=\"details__image\" src=\"".concat(details.image, "\"/>\n      <div class=\"details__rating--text in-column\">\n          <p class=\"details__title\">").concat(details.local, "</p>\n          <div class=\"details__rating in-row\">\n            <svg class=\"icon__star\">\n              <use xlink:href=\"#icon-star\"></use>\n            </svg>\n            <p class=\"details__grade details__grade--bold\">").concat(details.gradeBold, "</p>\n            <p class=\"details__grade\">").concat(details.grade, "</p>\n          </div>\n          <div class=\"in-row\">\n              <p class=\"tag\">natureza</p>\n              <p class=\"tag\">lazer</p>\n          </div>\n      </div>\n    </div>\n    <div class=\"details__options in-row\">\n        <div class=\"in-column details__button--info\">\n          <button class=\"button__menu has-margin-right\" onclick=\"openSpotsModal(").concat(details.id, ")\">\n            <svg class=\"icon__info\">\n              <use xlink:href=\"#icon-info\"></use>\n              </svg>\n          </button>\n        </div> \n        <div class=\"in-column details__button--menu\"> \n          <button class=\"button__menu has-margin-right\" onclick=\"openRoadmapDropdown(").concat(details.id, ")\">\n            <svg class=\"icon__menu\">\n              <use xlink:href=\"#icon-menu\"></use>\n            </svg>\n          </button>\n          <ul class=\"dropdown dropdown__option\" data-roadmap-info=\"").concat(details.id, "\">\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--check\" href=\"#\">Usar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--save\" href=\"#\">Salvar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--share\" href=\"#\">Compartilhar</a></li>\n          </ul>\n        </div>\n      </div>\n    </div>\n    <hr class=\"underline underline--shine\" />\n  ");
+  return "\n  <div id=\"pontosTuristicos\" class=\"details__items in-column\">\n    <div class=\"details__content in-row\">\n      <img class=\"details__image\" src=\"".concat(details.image, "\"/>\n      <div class=\"details__rating--text in-column\">\n          <p class=\"details__title\">").concat(details.local, "</p>\n          <div class=\"details__rating in-row\">\n            <svg class=\"icon__star\">\n              <use xlink:href=\"#icon-star\"></use>\n            </svg>\n            <p class=\"details__grade details__grade--bold\">").concat(details.gradeBold, "</p>\n            <p class=\"details__grade\">").concat(details.grade, "</p>\n          </div>\n          <div class=\"in-row\">\n              <p class=\"tag\">natureza</p>\n              <p class=\"tag\">lazer</p>\n          </div>\n      </div>\n    </div>\n    <div class=\"details__options in-row\">\n        <div class=\"in-column details__button--info\">\n          <button class=\"button__menu has-margin-right\" onclick=\"openSpotsModal(").concat(details.id, ")\">\n            <svg class=\"icon__info\">\n              <use xlink:href=\"#icon-info\"></use>\n              </svg>\n          </button>\n        </div> \n        <div class=\"in-column details__button--menu\"> \n          <button class=\"button__menu has-margin-right\" onclick=\"openSpotsDropdown(").concat(details.id, ")\">\n            <svg class=\"icon__menu\">\n              <use xlink:href=\"#icon-menu\"></use>\n            </svg>\n          </button>\n          <ul class=\"dropdown dropdown__option\" data-spots-dd=\"").concat(details.id, "\">\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--check\" href=\"#\">Usar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--save\" href=\"#\">Salvar</a></li>\n            <li class=\"dropdown__item\"><a class=\"dropdown__text dropdown__link--share\" href=\"#\">Compartilhar</a></li>\n          </ul>\n        </div>\n      </div>\n    </div>\n    <hr class=\"underline underline--shine\" />\n  ");
 };
 
 exports.buildSpotsList = buildSpotsList;
@@ -424,6 +518,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.activeSpots = activeSpots;
 exports.activeGuide = activeGuide;
+exports.activeModalTabs = activeModalTabs;
 var guideTab = document.getElementById('activeGuide');
 var spotsTab = document.getElementById('activeSpots');
 var guideContent = document.getElementById('guideContent');
@@ -442,6 +537,8 @@ function activeGuide() {
   guideContent.classList.add('is-showing');
   spotsContent.classList.remove('is-showing');
 }
+
+function activeModalTabs() {}
 },{}],"js/collapse.js":[function(require,module,exports) {
 "use strict";
 
@@ -477,9 +574,11 @@ var _timeline = require("./data/timeline.json");
 
 var _details = require("./data/details.json");
 
+var _modal = require("./data/modal.json");
+
 var _dropdown = require("./js/dropdown.js");
 
-var _modal = require("./js/modal.js");
+var _modal2 = require("./js/modal.js");
 
 var _timeline2 = require("./js/timeline.js");
 
@@ -519,37 +618,55 @@ var spotsContainer = document.getElementById("spotsContent");
 _details.details.forEach(function (item) {
   var spotsItems = (0, _list.buildSpotsList)(item);
   spotsContainer.innerHTML = spotsContainer.innerHTML + spotsItems;
-}); // Build Modal Images List
+}); // Build Modal Elements 
 
 
-var modalImages = document.getElementsByClassName(".modal__gallery");
+window.onload = function buildModalImages() {
+  // Build Modal Images for Spots Modal
+  var modalImagesSpots = document.querySelector("[data-images-spots]");
 
-_details.details.forEach(function (item) {
-  var imagesItems = (0, _modal.buildModalImages)(item);
-  modalImages.innerHTML = modalImages.innerHTML + imagesItems.innerHTML;
-}); // Build Guide Modal
+  _details.details.forEach(function (item) {
+    var imageItems = (0, _modal2.modalImages)(item);
+    modalImagesSpots.innerHTML = modalImagesSpots.innerHTML + imageItems;
+  }); // Build Modal List  
+
+
+  _modal.modal.forEach(function (item) {
+    var modalListContainer = document.querySelector("[data-list=\"".concat(item.id, "\"]"));
+    var modalListItems = (0, _modal2.modalList)(item);
+    modalListContainer.innerHTML = modalListContainer.innerHTML + modalListItems;
+  }); // Build Modal Images for Guide Modal
+
+
+  var modalImagesGuide = document.querySelector("[data-images-guide]");
+
+  _details.details.forEach(function (item) {
+    var imageItems = (0, _modal2.modalImages)(item);
+    modalImagesGuide.innerHTML = modalImagesGuide.innerHTML + imageItems;
+  });
+}; // Build Guide Modal
 
 
 var modalGuide = document.querySelector(".modal__guide");
 
 _details.details.forEach(function (item) {
-  var modalItem = (0, _modal.buildGuideModal)(item);
+  var modalItem = (0, _modal2.buildGuideModal)(item);
   modalGuide.innerHTML = modalGuide.innerHTML + modalItem;
 }); // Build Spots Modal
 
 
-var modalSpots = document.querySelector(".modal__spots");
+var modalSpots = document.querySelector("[data-modal-spots]");
 
 _details.details.forEach(function (item) {
-  var spotsItem = (0, _modal.buildSpotsModal)(item);
+  var spotsItem = (0, _modal2.buildSpotsModal)(item);
   modalSpots.innerHTML = modalSpots.innerHTML + spotsItem;
 }); // Click Events
 // Open Login Modal
 
 
-document.getElementById('modalLogin').addEventListener('click', _modal.modalLogin); // Close Login Modal
+document.getElementById('modalLogin').addEventListener('click', _modal2.modalLogin); // Close Login Modal
 
-document.getElementById('closeLogin').addEventListener('click', _modal.closeLogin); // Show password in login modal
+document.getElementById('closeLogin').addEventListener('click', _modal2.closeLogin); // Show password in login modal
 
 document.getElementById('showPassword').addEventListener('click', _password.showPassword); // Click for Collapse Button
 
@@ -559,9 +676,9 @@ document.querySelector('#activeSpots').addEventListener('click', _active.activeS
 
 document.querySelector('#collapseButton').addEventListener('click', _collapse.collapseButton); // "x" icon for close modal
 
-document.querySelector('#closeIcon').addEventListener('click', _modal.closeLogin); // Close Area for modal 
+document.querySelector('#closeIcon').addEventListener('click', _modal2.closeLogin); // Close Area for modal 
 
-document.querySelector(".modal__close").addEventListener('click', _modal.closeModalInfo); // Timeline main dropdown
+document.querySelector(".modal__close").addEventListener('click', _modal2.closeModalInfo); // Timeline main dropdown
 
 document.querySelector('#mainDropdownButton').addEventListener('click', _dropdown.openMainDropdown);
 window.addEventListener('click', function (event) {
@@ -598,26 +715,49 @@ document.addEventListener('click', function (e) {
 }); // Modal Close 
 
 var closeModal = function closeModal(id) {
-  var modal = document.querySelector("[data-modal-info=\"".concat(id, "\"]"));
-  var close = document.querySelector("[data-close=\"".concat(id, "\"]"));
+  var modalGuide = document.querySelector("[data-modal-guide=\"".concat(id, "\"]"));
+  var closeGuide = document.querySelector("[data-close=\"".concat(id, "\"]"));
 
-  if (modal.classList.contains('is-visible')) {
-    close.classList.remove('is-visible');
-    modal.classList.remove('is-visible');
+  if (modalGuide.classList.contains('is-visible')) {
+    closeGuide.classList.remove('is-visible');
+    modalGuide.classList.remove('is-visible');
+  }
+};
+
+var closeModalSpots = function closeModalSpots(id) {
+  var modalSpots = document.querySelector("[data-modal-spots=\"".concat(id, "\"]"));
+  var closeSpots = document.querySelector("[data-close-spots=\"".concat(id, "\"]"));
+
+  if (modalSpots.classList.contains('is-visible')) {
+    closeSpots.classList.remove('is-visible');
+    modalSpots.classList.remove('is-visible');
+  }
+};
+
+var closeSpotsButton = function closeSpotsButton(id) {
+  var modalSpots = document.querySelector("[data-modal-spots=\"".concat(id, "\"]"));
+  var closeSpots = document.querySelector("[data-close-spots=\"".concat(id, "\"]"));
+
+  if (modalSpots.classList.contains('is-visible')) {
+    closeSpots.classList.remove('is-visible');
+    modalSpots.classList.remove('is-visible');
   }
 }; // Exec Functions
 
 
 window.openUserDropdown = _dropdown.openUserDropdown;
-window.openRoadmapDropdown = _dropdown.openRoadmapDropdown;
-window.openGuideModal = _modal.openGuideModal;
-window.openSpotsModal = _modal.openSpotsModal;
+window.openGuideDropdown = _dropdown.openGuideDropdown;
+window.openSpotsDropdown = _dropdown.openSpotsDropdown;
+window.openGuideModal = _modal2.openGuideModal;
+window.openSpotsModal = _modal2.openSpotsModal;
+window.closeSpotsButton = closeSpotsButton;
 window.showPassword = _password.showPassword;
 window.openTimeLineModal = _dropdown.openTimeLineModal;
 window.closeModal = closeModal;
 window.activeSpots = _active.activeSpots;
 window.activeGuide = _active.activeGuide;
-},{"./data/timeline.json":"data/timeline.json","./data/details.json":"data/details.json","./js/dropdown.js":"js/dropdown.js","./js/modal.js":"js/modal.js","./js/timeline.js":"js/timeline.js","./js/list.js":"js/list.js","./js/active.js":"js/active.js","./js/collapse.js":"js/collapse.js","./js/password.js":"js/password.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+window.closeModalSpots = closeModalSpots;
+},{"./data/timeline.json":"data/timeline.json","./data/details.json":"data/details.json","./data/modal.json":"data/modal.json","./js/dropdown.js":"js/dropdown.js","./js/modal.js":"js/modal.js","./js/timeline.js":"js/timeline.js","./js/list.js":"js/list.js","./js/active.js":"js/active.js","./js/collapse.js":"js/collapse.js","./js/password.js":"js/password.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -645,7 +785,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46221" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46137" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -6,7 +6,7 @@
       "image": "destinos-gramado.png", 
       "gradeBold": "4.8",
       "grade" : "(1.024 avaliações)",
-      "local": "Jurere Internacional" 
+      "local": ["Jurere Internacional"] 
     },
     {
       "id": "2",
@@ -14,7 +14,7 @@
       "image": "destinos-gramado.png", 
       "gradeBold": "4.8",
       "grade" : "(1.024 avaliações)",
-      "local": "Jurere Internacional" 
+      "local": "São Paulo" 
     },
     {
       "id": "3",
@@ -22,7 +22,7 @@
       "image":"destinos-gramado.png", 
       "gradeBold": "4.8",
       "grade" : "(1.024 avaliações)",
-      "local": "Jurere Internacional" 
+      "local": "Rio de Janeiro" 
     },
     {
       "id": "4",
@@ -30,7 +30,7 @@
       "image": "destinos-gramado.png", 
       "gradeBold": "4.8",
       "grade" : "(1.024 avaliações)",
-      "local": "Jurere Internacional" 
+      "local": "Iacri" 
     },
     {
       "id": "5",
@@ -38,7 +38,7 @@
       "image": "destinos-gramado.png", 
       "gradeBold": "4.8",
       "grade" : "(1.024 avaliações)",
-      "local": "Jurere Internacional" 
+      "local": "Tupa" 
     },
     {
       "id": "6",
@@ -46,7 +46,7 @@
       "image": "destinos-gramado.png", 
       "gradeBold": "4.8",
       "grade" : "(1.024 avaliações)",
-      "local": "Jurere Internacional" 
+      "local": "Bastos" 
     },
     {
       "id": "7",
@@ -54,7 +54,7 @@
       "image": "destinos-gramado.png", 
       "gradeBold": "4.8",
       "grade" : "(1.024 avaliações)",
-      "local": "Jurere Internacional" 
+      "local": "Florianopolis" 
     },
     {
       "id": "8",
@@ -62,7 +62,7 @@
       "image": "destinos-gramado.png", 
       "gradeBold": "4.8",
       "grade" : "(1.024 avaliações)",
-      "local": "Jurere Internacional" 
+      "local": "Longe demais" 
     },
     {
       "id": "9",
@@ -70,7 +70,7 @@
       "image": "destinos-gramado.png", 
       "gradeBold": "4.8",
       "grade" : "(1.024 avaliações)",
-      "local": "Jurere Internacional" 
+      "local": "To sem criatividade" 
     },
     {
       "id": "10",
@@ -78,7 +78,7 @@
       "image": "destinos-gramado.png", 
       "gradeBold": "4.8",
       "grade" : "(1.024 avaliações)",
-      "local": "Jurere Internacional" 
+      "local": "Cidade" 
     },
     {
       "id": "11",
@@ -86,7 +86,7 @@
       "image": "destinos-gramado.png", 
       "gradeBold": "4.8",
       "grade" : "(1.024 avaliações)",
-      "local": "Jurere Internacional" 
+      "local": "Outra cidade" 
     },
     {
       "id": "12",
@@ -94,7 +94,7 @@
       "image": "destinos-gramado.png", 
       "gradeBold": "4.8",
       "grade" : "(1.024 avaliações)",
-      "local": "Jurere Internacional" 
+      "local": "uiiiii" 
     }
   ]
 }

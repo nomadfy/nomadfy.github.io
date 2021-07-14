@@ -10,19 +10,16 @@ export const openUserDropdown = (id) => {
 }
 
 export const openTimeLineModal = (id) => {
-  var t = document.querySelector(`[data-dropdown-info="${id}]`).classList.toggle('is-visible');
+  var container = document.querySelector(`[data-dropdown-info="${id}]`).classList.toggle('is-visible');
 }
 
-export const openRoadmapDropdown = (id) => {
-  var t = document.querySelector(`[data-roadmap-info="${id}"]`).classList.toggle('is-visible');
-  var i = document.querySelector(`[data-roadmap-info="${id}"]`).setAttribute('data', 'remove')
+export const openGuideDropdown = (id) => {
+  var container = document.querySelector(`[data-guide-dd="${id}"]`).classList.toggle('is-visible');
+  var attribute = document.querySelector(`[data-guide-dd="${id}"]`).setAttribute('data', 'remove')
 }
 
-// document.addEventListener('click', function(event) {
-//   var isClickInside = openedItem && openedItem.contains(event.target);
-//   console.log(isClickInside)
+export const openSpotsDropdown = (id) => {
+  var container = document.querySelector(`[data-spots-dd="${id}"]`).classList.toggle('is-visible');
+  var attribute = document.querySelector(`[data-spots-dd="${id}"]`).setAttribute('data', 'remove')
+}
 
-//   if (!isClickInside) {
-//     openedItem.classList.toggle('is-visible');
-//   }
-// });

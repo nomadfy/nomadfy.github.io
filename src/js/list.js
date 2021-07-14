@@ -28,12 +28,12 @@ export const buildDetailsList = (details) => {
           </button>
         </div> 
         <div class="in-column details__button--menu"> 
-          <button class="button__menu has-margin-right" onclick="openRoadmapDropdown(${details.id})">
+          <button class="button__menu has-margin-right" onclick="openGuideDropdown(${details.id})">
             <svg class="icon__menu">
               <use xlink:href="#icon-menu"></use>
             </svg>
           </button>
-          <ul class="dropdown dropdown__option" data-roadmap-info="${details.id}">
+          <ul class="dropdown dropdown__option" data-guide-dd="${details.id}">
             <li class="dropdown__item"><a class="dropdown__text dropdown__link--check" href="#">Usar</a></li>
             <li class="dropdown__item"><a class="dropdown__text dropdown__link--save" href="#">Salvar</a></li>
             <li class="dropdown__item"><a class="dropdown__text dropdown__link--share" href="#">Compartilhar</a></li>
@@ -74,12 +74,12 @@ export const buildSpotsList = (details) => {
           </button>
         </div> 
         <div class="in-column details__button--menu"> 
-          <button class="button__menu has-margin-right" onclick="openRoadmapDropdown(${details.id})">
+          <button class="button__menu has-margin-right" onclick="openSpotsDropdown(${details.id})">
             <svg class="icon__menu">
               <use xlink:href="#icon-menu"></use>
             </svg>
           </button>
-          <ul class="dropdown dropdown__option" data-roadmap-info="${details.id}">
+          <ul class="dropdown dropdown__option" data-spots-dd="${details.id}">
             <li class="dropdown__item"><a class="dropdown__text dropdown__link--check" href="#">Usar</a></li>
             <li class="dropdown__item"><a class="dropdown__text dropdown__link--save" href="#">Salvar</a></li>
             <li class="dropdown__item"><a class="dropdown__text dropdown__link--share" href="#">Compartilhar</a></li>
