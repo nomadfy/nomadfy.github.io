@@ -44,29 +44,30 @@ details.forEach((item) => {
 window.onload = function buildModalImages () {
 
   // Build Modal Images for Spots Modal
-  const modalImagesSpots = document.querySelector("[data-images-spots]")
   details.forEach((item) => {
-  const imageItems = modalImages(item);
+    const modalImagesSpots = document.querySelector(`[data-images-spots="${item.id}"]`)
+    const imageItems = modalImages(item);
 
-  modalImagesSpots.innerHTML = modalImagesSpots.innerHTML + imageItems
-  })
-
-  // Build Modal List  
-  modal.forEach((item) => {
-    const modalListContainer = document.querySelector(`[data-list="${item.id}"]`)
-  const modalListItems = modalList(item);
-
-  modalListContainer.innerHTML = modalListContainer.innerHTML + modalListItems
+    modalImagesSpots.innerHTML = modalImagesSpots.innerHTML + imageItems
   })
   
   // Build Modal Images for Guide Modal
-  const modalImagesGuide = document.querySelector(`[data-images-guide]`)
-  details.forEach((item) => {
-  const imageItems = modalImages(item);
+  modal.forEach((item) => {
+    const modalImagesGuide = document.querySelector(`[data-images-guide="${item.id}"]`)
+    const imageItems = modalImages(item);
 
-  modalImagesGuide.innerHTML = modalImagesGuide.innerHTML + imageItems
+    modalImagesGuide.innerHTML = modalImagesGuide.innerHTML + imageItems
+  })
+  
+  // Build Modal List  
+  modal.forEach((item) => {
+    const modalListContainer = document.querySelector(`[data-list="${item.id}"]`)
+    const modalListItems = modalList(item);
+    
+    modalListContainer.innerHTML = modalListContainer.innerHTML + modalListItems
   })
 }
+
 
 // Build Guide Modal
 const modalGuide = document.querySelector(".modal__guide")
@@ -92,6 +93,9 @@ document.getElementById('modalLogin').addEventListener('click', modalLogin);
 // Close Login Modal
 document.getElementById('closeLogin').addEventListener('click', closeLogin);
 
+// "x" icon for close Login modal
+document.querySelector('#closeIcon').addEventListener('click', closeLogin);
+
 // Show password in login modal
 document.getElementById('showPassword').addEventListener('click', showPassword);
 
@@ -103,9 +107,6 @@ document.querySelector('#activeSpots').addEventListener('click', activeSpots);
 
 // Click for Collapse Button
 document.querySelector('#collapseButton').addEventListener('click', collapseButton);
-
-// "x" icon for close modal
-document.querySelector('#closeIcon').addEventListener('click', closeLogin);
 
 // Close Area for modal 
 document.querySelector(".modal__close").addEventListener('click', closeModalInfo)
@@ -172,16 +173,29 @@ const closeSpotsButton = (id) => {
   }
 }
 
+const closeGuideButton = (id) => {
+  var modalGuide = document.querySelector(`[data-modal-guide="${id}"]`)
+  var closeGuide = document.querySelector(`[data-close="${id}"]`)
+
+  if (modalGuide.classList.contains('is-visible')) {
+    closeGuide.classList.remove('is-visible');
+    modalGuide.classList.remove('is-visible');
+  }
+}
+
   // Exec Functions
-  window.openUserDropdown = openUserDropdown
-  window.openGuideDropdown = openGuideDropdown
-  window.openSpotsDropdown = openSpotsDropdown
-  window.openGuideModal = openGuideModal
-  window.openSpotsModal = openSpotsModal
-  window.closeSpotsButton = closeSpotsButton
-  window.showPassword = showPassword
-  window.openTimeLineModal = openTimeLineModal
-  window.closeModal = closeModal
-  window.activeSpots =  activeSpots
-  window.activeGuide = activeGuide
-  window.closeModalSpots = closeModalSpots
+    window.openUserDropdown = openUserDropdown
+    window.showPassword = showPassword
+    window.openTimeLineModal = openTimeLineModal
+    //Guide  
+    window.openGuideDropdown = openGuideDropdown
+    window.openGuideModal = openGuideModal
+    window.activeGuide = activeGuide
+    window.closeModal = closeModal
+    //Spots
+    window.activeSpots =  activeSpots
+    window.openSpotsDropdown = openSpotsDropdown
+    window.openSpotsModal = openSpotsModal
+    window.closeSpotsButton = closeSpotsButton
+    window.closeGuideButton = closeGuideButton
+    window.closeModalSpots = closeModalSpots

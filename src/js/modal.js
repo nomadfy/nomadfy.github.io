@@ -23,9 +23,9 @@ export const buildSpotsModal = (modal) => {
         <p class="tag tag__margin">natureza</p>
         <p class="tag tag__margin">lazer</p>
       </div>
-      <p class="modal__text">"8 ipsum dolor sit amet, consectetur adipiscing elit. At diam in mauris varius maecenas adipiscing. Faucibus erat nisl vel, consequat aliquam vehicula neque, elementum. Non aliquam neque pharetra lacus, et elementum. Posuere ante tristique est faucibus pharetra. Turpis quisque arcu amet libero at dolor sit ipsum pellentesque."</p> 
+      <p class="modal__text">${modal.content}</p> 
       <a class="modal__link" href="#">Clique para ver a descrição completa...</a>
-      <div class="modal__gallery in-row" data-images-spots></div>
+      <div class="modal__gallery in-row" data-images-spots="${modal.id}"></div>
       <div class="modal__footer in-row">
         <button class="icon__arrow icon__arrow--left"></button>
         <button class="icon__arrow icon__arrow--right"></button>
@@ -55,7 +55,7 @@ export const buildGuideModal = (modal) => {
   <div class="modal__container modal__container--guide in-column">
     <div class="in-row">
       <p class="modal__title">${modal.local}</p>
-      <button class="icon__close is-absolute-right" data-button-close-guide="${modal.id}"></button>
+      <button class="icon__close is-absolute-right" onclick="closeGuideButton(${modal.id})"></button>
     </div>
     <hr class="underline underline--shine underline__modal--margin" />
     <div class="in-row">
