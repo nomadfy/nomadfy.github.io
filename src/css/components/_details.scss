@@ -34,7 +34,7 @@
     flex-wrap: wrap;
     width: 100%;
     margin-top: -10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
   &__text--header {
@@ -48,24 +48,7 @@
     height: 20px;
     margin-left: 5px;
     margin-top: 10px;
-  }
-  
-  &__button--header {
-    position: absolute;
-    display: block;
-    height: 32px;
-    width: 32px;
-    right: 2em;
-    border: 1px solid $gray2;
-    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 8h12V6.667H0V8zm0-3.333h12V3.333H0v1.334zM0 0v1.333h12V0H0z' fill='%23FF6117'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 12px 10px;
-  }
-  
-  &__button--header:hover {
-    @include hover-scale-max;
-  }
+}
   
   &__city {
     font-size: 24px;
@@ -80,18 +63,73 @@
     font-weight: 400;
     font-size: 14px;
     z-index: 1;
+    margin-bottom: -15px;
   }
   
-  &__button--nav:target {
+  &__button--nav.is-active {
     border: 2px solid $gray2;
-    border-bottom: 3px solid $white;
-    border-radius: 8px 8px 0 0 ;
+    border-bottom: 4px solid $white;
+    border-radius: 8px 8px 5px 5px;
   }
   
   &__button--nav:first-of-type {
     margin-left: 10px;
   }
+
+  &__search {
+    margin: 24px 0;
+  }
+
+  &__select {
+    background-position-x: 90%;
+    width: 45%;
+    height: 32px;
+    margin-right: 10px;
+    padding: 0 16px;
+    color: $gray2;
+  }
   
+  &__input {
+    position: absolute;
+    width: 47%;
+    height: 32px;
+    left: 47%;
+    padding-left: 30px;
+
+    &:focus ~ span,
+    &:valid ~ span {
+      opacity: 0;
+    }
+  }
+
+  &__magnifier {
+    position: relative;
+    left: -5px;
+    width: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='13' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m23.79 22.776-5.832-5.832a10.192 10.192 0 0 0 2.512-6.71C20.47 4.586 15.877 0 10.236 0 4.59 0 .003 4.592.003 10.233c0 5.641 4.593 10.233 10.233 10.233 2.565 0 4.912-.947 6.71-2.511l5.833 5.832a.723.723 0 0 0 .506.213.72.72 0 0 0 .505-1.224zM1.435 10.233c0-4.853 3.948-8.796 8.796-8.796 4.853 0 8.797 3.948 8.797 8.796 0 4.848-3.944 8.802-8.797 8.802-4.848 0-8.796-3.949-8.796-8.802z' fill='%23888'/%3E%3C/svg%3E");
+    background-position-x: 15px;
+    background-position-y: center ;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  &__magnifier:hover {
+    background-color: $gray3;
+    border-radius: 8px 0 0 8px;
+    opacity: .7;
+  }
+
+  &__placeholder {
+    position: relative;
+    display: flex;
+    align-self: center;
+    color: $gray2;
+    pointer-events: none;
+  }
+
   &__image {
     min-width: 145px;
     height: 120px;
@@ -103,8 +141,15 @@
     margin-top: 15px;
     margin-bottom: 25px;
   }
-  
-  
+
+  &__grid.is-showing {
+    display: flex; 
+  }
+
+  &__grid:not(.is-showing) {
+    display: none; 
+  }
+
   &__title {
     font-size: 16px;
     margin-top: 0;
@@ -112,11 +157,20 @@
   
   &__grade {
     margin-top: -6px;
+    
+  }
+
+  &__grade--margin {
+    margin-right: 20px;
   }
   
   &__grade--bold {
     font-weight: bold;
     margin-right: 8px;
+  }
+
+  &__rating--modal {
+    margin-top: 24px;
   }
   
   &__text--types:not(:last-of-type) {
@@ -139,6 +193,7 @@
     font-size: 12px;
     color: $gray3;
     min-width: 300px;
+    height: 22px;
   }
   
   &__text--options {

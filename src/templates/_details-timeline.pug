@@ -1,12 +1,12 @@
-section.modal.in-column
-  header.modal--padding
+section.timeline
+  header.timeline__headline
     p.details__text--header Título do roteiro
-    input.modal__input(placeholder="Dê um nome ao seu roteiro")
-    span.modal__input--value 30/48
-    .in-row.modal__header
-      .modal__days.in-row.in-vertical-center
+    input.timeline__input(placeholder="Dê um nome ao seu roteiro")
+    span.timeline__input--value 30/48
+    .in-row.timeline__header
+      .timeline__days.in-row.in-vertical-center
         p Dia 
-        select.modal__select(name="choice")
+        select.select(name="choice")
           option(value="1") 1
           option(value="2") 2
           option(value="3") 3
@@ -14,10 +14,10 @@ section.modal.in-column
           option(value="5") 5
         p de 5
       .in-column
-        button#optionsButton.button__menu.button--margin
+        button#mainDropdownButton.button__menu.button--margin
           svg.icon__menu
             use(xlink:href="#icon-menu")
-        ul#editDropdown.dropdown.dropdown--margin
+        ul#mainDropdown.dropdown
           li.dropdown__item
             a.dropdown__text.dropdown__link--details(href="#") Detalhes
           li.dropdown__item
@@ -27,6 +27,7 @@ section.modal.in-column
           li.dropdown__item
             a.dropdown__text.dropdown__text--red.dropdown__link--dump(href="#") Excluir roteiro
     hr.underline.underline--shine
-  ul.modal__list.in-column
-  footer.modal__footer
-    button#save.button.button--orange.button--save Salvar
+  ul.timeline__list.in-column
+  footer.timeline__footer
+    button#cancel.button.button--borderless.button--cancel.button--upper Cancelar
+    button#save.button.button--orange.button--save.button--upper Salvar

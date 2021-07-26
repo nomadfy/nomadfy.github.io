@@ -1,21 +1,25 @@
-export function dropDownOptions() {
-  document.getElementById('optionItem').classList.toggle('is-visible');
+let openedItem;
+
+export function openMainDropdown() {
+  document.getElementById('mainDropdown').classList.toggle('is-visible');
 }
 
-export const openModalDD = (id) => {
-  document.querySelector(`[data-value="${id}"]`).classList.toggle('is-visible');
+export const openUserDropdown = (id) => {
+  openedItem = document.querySelector(`[data-dropdown-info="${id}"]`);
+  openedItem.classList.toggle('is-visible');
 }
 
-export const openDetailsDD = (id) => {
-  var t = document.querySelector(`[data-details="${id}"]`);
-  t.classList.toggle('is-visible')
-  if (t.classList.contains('is-visible')){
-    window.addEventListener('click', function(event) {
-      if (!event.target.matches(t)) {
-        t.classList.remove('is-visible')
-        }
-    })
-  }
+export const openTimeLineModal = (id) => {
+  var container = document.querySelector(`[data-dropdown-info="${id}]`).classList.toggle('is-visible');
 }
 
+export const openGuideDropdown = (id) => {
+  var container = document.querySelector(`[data-guide-dd="${id}"]`).classList.toggle('is-visible');
+  var attribute = document.querySelector(`[data-guide-dd="${id}"]`).setAttribute('data', 'remove')
+}
+
+export const openSpotsDropdown = (id) => {
+  var container = document.querySelector(`[data-spots-dd="${id}"]`).classList.toggle('is-visible');
+  var attribute = document.querySelector(`[data-spots-dd="${id}"]`).setAttribute('data', 'remove')
+}
 

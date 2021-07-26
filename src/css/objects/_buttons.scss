@@ -3,7 +3,7 @@
   cursor: pointer;
 
   &:not(.button--borderless) {
-    border: 2px solid $orange;
+    border: 1px solid $orange;
   }
 
   &--orange {
@@ -12,9 +12,15 @@
     transition: .2s;
   }
 
+  &--borderless {
+    border: transparent;
+    background-color: $white;
+  }
+
   &--login {
     padding: 15px 0;
     border-radius: 15px;
+    text-transform: uppercase;
 
     @media screen and (min-width: 375px) {
       width: 120px;
@@ -25,9 +31,17 @@
     }
   }
 
+  &--upper {
+    text-transform: uppercase;
+  }
+
   &--save {
     border-radius: 8px;
     padding: 5px 16px;
+  }
+
+  &--cancel {
+    color: $orange;
   }
 
   &--orange:hover {
@@ -37,7 +51,7 @@
   &--round {
     border-radius: 50%;
     background-color: $white;
-    opacity: 0.6;
+    opacity: .6;
   }
 
   &__block {
@@ -102,5 +116,68 @@
   &--modal {
     margin-top: -10px;
     z-index: 993;
+  }
+
+  &--collapse {
+    position: relative;
+    display: flex;
+    align-self: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 0 24px 24px 0;
+    z-index: 9997;
+    background-color: $white;
+    box-shadow: 5px 2px 5px 0px rgba(0,0,0,0.26);
+    -webkit-box-shadow: 5px 2px 5px 0px rgba(0,0,0,0.26);
+    -moz-box-shadow: 5px 2px 5px 0px rgba(0,0,0,0.26);
+  }
+
+  &--collapse::before {
+    display: flex;
+    align-self: center;
+    content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 17h2v.5H3v1h1v.5H2v1h3v-4H2v1zm1-9h1V4H2v1h1v3zm-1 3h1.8L2 13.1v.9h3v-1H3.2L5 10.9V10H2v1zm5-6v2h14V5H7zm0 14h14v-2H7v2zm0-6h14v-2H7v2z' fill='%23FF6117'/%3E%3C/svg%3E");
+  }
+
+  &--google {
+    position: relative;
+    display: flex;
+    margin: 24px auto;
+    padding: 16px 20px;
+    max-width: 350px;
+    min-height: 50px;
+    align-items: center;
+    border-radius: 16px;
+    background-color: $white;
+    font-size: 16px;
+    color: $orange;
+  }
+
+  &--google::before {
+    content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.992 8.15c0-.656-.054-1.134-.172-1.63H8.16v2.958h4.496c-.09.736-.58 1.843-1.668 2.587l-.015.1 2.422 1.833.168.016c1.54-1.39 2.43-3.437 2.43-5.864z' fill='%234285F4'/%3E%3Cpath d='M8.16 15.945c2.202 0 4.052-.709 5.403-1.931l-2.575-1.949c-.69.47-1.614.797-2.829.797A4.902 4.902 0 0 1 3.518 9.55l-.096.008-2.519 1.905-.033.09c1.342 2.604 4.098 4.393 7.29 4.393z' fill='%23FF6117'/%3E%3Cpath d='M3.518 9.55a4.807 4.807 0 0 1-.272-1.577c0-.55.1-1.081.263-1.577l-.005-.106-2.55-1.935-.084.039A7.832 7.832 0 0 0 0 7.973a7.83 7.83 0 0 0 .87 3.578L3.518 9.55z' fill='%23FBBC05'/%3E%3Cpath d='M8.16 3.083c1.531 0 2.565.646 3.154 1.187l2.303-2.197C12.203.788 10.362 0 8.159 0 4.97 0 2.212 1.79.87 4.394l2.638 2.002A4.922 4.922 0 0 1 8.16 3.083z' fill='%23EB4335'/%3E%3C/svg%3E");
+    margin-right: 15px;
+  }
+
+  &--show {
+    width: 16px;
+    height: 16px;
+    background-color: $white;
+    position: absolute;
+    display: flex;
+    right: 24px;
+    top: 143px;
+  }
+
+  &--show::before {
+    content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 4c2.527 0 4.78 1.42 5.88 3.667a6.432 6.432 0 0 1-1.607 2.08l.94.94a7.867 7.867 0 0 0 2.12-3.02c-1.153-2.927-4-5-7.333-5a7.9 7.9 0 0 0-2.427.38l1.1 1.1A6.739 6.739 0 0 1 8 4zm-.713.76 1.38 1.38c.38.167.686.473.853.853l1.38 1.38c.053-.226.093-.466.093-.713A2.989 2.989 0 0 0 8 4.667c-.247 0-.48.033-.713.093zM1.34 2.58l1.787 1.787a7.825 7.825 0 0 0-2.46 3.3c1.153 2.926 4 5 7.333 5a7.819 7.819 0 0 0 2.88-.547l2.28 2.28.94-.94L2.28 1.633l-.94.947zm5 5 1.74 1.74a.318.318 0 0 1-.08.013c-.92 0-1.667-.746-1.667-1.666 0-.034.007-.054.007-.087zM4.073 5.313 5.24 6.48a3.005 3.005 0 0 0 3.94 3.947l.653.653A6.95 6.95 0 0 1 8 11.333a6.514 6.514 0 0 1-5.88-3.666 6.601 6.601 0 0 1 1.953-2.354z' fill='%23444'/%3E%3C/svg%3E");
+  }
+
+  &--center {
+    margin: 0 auto;
+  }
+
+  &--create {
+    margin: 24px 0;
+    font-size: 16px;
+    color: $orange;
   }
 }

@@ -1,5 +1,5 @@
 .is-centered {
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 .is-relative {
@@ -10,7 +10,6 @@
 
 .is-visible {
   visibility: visible;
-  opacity: 1;
 }
 
 .in-horizontal-end {
@@ -34,7 +33,6 @@
 }
 
 .in-column {
-  display: flex;
   flex-direction: column;
 }
 
@@ -46,4 +44,16 @@
 .is-absolute-left {
   position: absolute;
   left: 2em;
+}
+
+.grabbing {
+  cursor: grabbing;
+}
+
+.is-showing {
+  display: flex;
+}
+
+.is-hidden {
+  display: none;
 }

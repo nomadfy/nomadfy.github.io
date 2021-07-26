@@ -13,13 +13,17 @@
     background-color: $gray1;
   }
 
-  &__info--margin {
+  &--details--margin {
+    margin-top: 7px;
+  }
+
+  &--modal--margin {
     margin-bottom: 30px;
     margin-top: 0;
   }
 
-  &__modal--margin {
-    margin-bottom: 0px;
+  &--timeline--margin {
+    margin-bottom: 0;
   }
 }
 
