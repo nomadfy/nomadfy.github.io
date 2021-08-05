@@ -6,6 +6,19 @@
     border: 1px solid $orange;
   }
 
+  &--scroll {
+    width: 10px;
+    height: 15px;
+  }
+
+  &--right {
+    margin-right: 50px;
+  }
+
+  &--left {
+    margin-right: 20px;
+  }
+
   &--orange {
     background-color: $orange;
     color: $white;
