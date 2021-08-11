@@ -54,20 +54,32 @@ guide.forEach((item) => {
 
 // Explore Scroll
 
-var button = document.getElementById('guideScrollLeft');
-button.onclick = function () {
+var leftGuide = document.getElementById('guideScrollLeft');
+leftGuide.onclick = function () {
   var container = document.querySelector('.explore__components');
-  sideScroll(container,'left', 5,0,10);
+  sideScroll(container,'left',25,100,10);
 };
 
-var back = document.getElementById('guideScrollRight');
-back.onclick = function () {
+var rightGuide = document.getElementById('guideScrollRight');
+rightGuide.onclick = function () {
   var container = document.querySelector('.explore__components');
-  sideScroll(container, 'right',5,0,10)
+  sideScroll(container, 'right',25,100,10)
+}
+
+var leftDest = document.getElementById('destScrollLeft');
+leftDest.onclick = function () {
+  var container = document.querySelector('.explore__components--destination');
+  sideScroll(container,'left',25,100,10);
+};
+
+var rightDest = document.getElementById('destScrollRight');
+rightDest.onclick = function () {
+  var container = document.querySelector('.explore__components--destination');
+  sideScroll(container, 'right',25,100,10)
 }
 
 function sideScroll(element,direction,speed,distance,step){
-  scrollAmount = 0;
+  var scrollAmount = 0;
   var slideTimer = setInterval(function(){
       if(direction == 'left'){
           element.scrollLeft -= step;
