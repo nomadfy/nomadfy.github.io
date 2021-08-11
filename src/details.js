@@ -200,6 +200,10 @@ const closeGuideButton = (id) => {
   }
 }
 
+// function hideEnter(label) {
+//   document.getElementById('enter').disable = (label.value.length == 0)
+// }
+
   // Exec Functions
     window.openUserDropdown = openUserDropdown
     window.showPassword = showPassword

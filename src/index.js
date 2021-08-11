@@ -9,6 +9,8 @@ document.getElementById('modalLogin').addEventListener('click', modalLogin);
 
 document.getElementById('closeLogin').addEventListener('click', closeLogin);
 
+document.querySelector('#closeIcon').addEventListener('click', closeLogin);
+
 document.getElementById('showPassword').addEventListener('click', showPassword);
 
 const buildGuide = (guide) => {
