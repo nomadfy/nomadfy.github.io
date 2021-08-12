@@ -6,11 +6,25 @@ section.explore
     a.button__explore.button__hover(href="/details/index.pug") 
       p.explore__button--text Explorar outros roteiros.
   nav.explore__components
+  .explore__scroll.in-row
+    button#guideScrollLeft.button.button--borderless
+      svg.button--scroll.button--left
+        use(xlink:href="#icon-scroll-left")
+    button#guideScrollRight.button.button--borderless
+      svg.button--scroll.button--right
+        use(xlink:href="#icon-scroll-right")
   .explore__header
     h1.explore__title Principais 
       strong destinos 
       | no brasil
     a.button__explore.button__hover(href="/details/index.pug") 
       p.explore__button--text Explorar outros destinos.
-  nav.explore__components.explore__components--destination.explore__grab
+  nav.explore__components.explore__components--destination
+  .explore__scroll.in-row
+    button#destScrollLeft.button.button--borderless
+      svg.button--scroll.button--left
+        use(xlink:href="#icon-scroll-left")
+    button#destScrollRight.button.button--borderless
+      svg.button--scroll.button--right
+        use(xlink:href="#icon-scroll-right")
 footer.explore__footer

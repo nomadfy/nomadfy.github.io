@@ -14,6 +14,23 @@ import { activeGuide, activeSpots } from "./js/active.js";
 import { collapseButton } from "./js/collapse.js"
 import { showPassword } from "./js/password.js"
 
+//API
+// function getUrl(url) {
+//   let request = new XMLHttpRequest()
+//   request.open("GET", url, false)
+//   request.send()
+//   return request.responseText
+// }
+
+// function user(user) {
+
+// }
+
+// function main() {
+//   console.log(getUrl("https://api-nomadfy.herokuapp.com/places/search-text"))
+// }
+// main()
+
 // HTML Builders
 
 // Build Timeline
@@ -182,6 +199,10 @@ const closeGuideButton = (id) => {
     modalGuide.classList.remove('is-visible');
   }
 }
+
+// function hideEnter(label) {
+//   document.getElementById('enter').disable = (label.value.length == 0)
+// }
 
   // Exec Functions
     window.openUserDropdown = openUserDropdown

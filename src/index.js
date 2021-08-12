@@ -9,6 +9,8 @@ document.getElementById('modalLogin').addEventListener('click', modalLogin);
 
 document.getElementById('closeLogin').addEventListener('click', closeLogin);
 
+document.querySelector('#closeIcon').addEventListener('click', closeLogin);
+
 document.getElementById('showPassword').addEventListener('click', showPassword);
 
 const buildGuide = (guide) => {
@@ -52,65 +54,45 @@ guide.forEach((item) => {
   containerGuide.innerHTML = containerGuide.innerHTML + guide;
 })
 
-// // Explore Scroll
+// Explore Scroll
 
-// const slider = document.querySelector(".explore__components")
-// let isDown = false;
-// let startX;
-// let scrollLeft;
+var leftGuide = document.getElementById('guideScrollLeft');
+leftGuide.onclick = function () {
+  var container = document.querySelector('.explore__components');
+  sideScroll(container,'left',25,100,10);
+};
 
-// slider.addEventListener('mousedown', (e) => {
-//   isDown = true;
-//   slider.classList.add('grabbing')
-//   startX = e.pageX - slider.offsetLeft;
-//   scrollLeft = slider.scrollLeft;
-// })
+var rightGuide = document.getElementById('guideScrollRight');
+rightGuide.onclick = function () {
+  var container = document.querySelector('.explore__components');
+  sideScroll(container, 'right',25,100,10)
+}
 
-// slider.addEventListener('mouseleave', () => {
-//   isDown = false;
-//   slider.classList.remove('grabbing')
-// })
+var leftDest = document.getElementById('destScrollLeft');
+leftDest.onclick = function () {
+  var container = document.querySelector('.explore__components--destination');
+  sideScroll(container,'left',25,100,10);
+};
 
-// slider.addEventListener('mouseup', () => {
-//   isDown = false;
-//   slider.classList.remove('grabbing')
-// })
+var rightDest = document.getElementById('destScrollRight');
+rightDest.onclick = function () {
+  var container = document.querySelector('.explore__components--destination');
+  sideScroll(container, 'right',25,100,10)
+}
 
-// slider.addEventListener('mousemove', (e) => {
-//   if(!isDown) return;
-//   e.preventDefault();
-//   const x = e.pageX - slider.offsetLeft;
-//   const walk = x - startX;
-//   slider.scrollLeft = scrollLeft - walk;
-// })
-
-// // Destination Scroll
-
-//   const secondSlider = document.querySelector(".explore__components--destination")
-
-//   secondSlider.addEventListener('mousedown', (e) => {
-//     isDown = true;
-//     secondSlider.classList.add('grabbing')
-//     startX = e.pageX - secondSlider.offsetLeft;
-//     scrollLeft = secondSlider.scrollLeft;
-//   })
-
-//   secondSlider.addEventListener('mouseleave', () => {
-//     isDown = false;
-//     secondSlider.classList.remove('grabbing')
-//   })
-
-//   secondSlider.addEventListener('mouseup', () => {
-//     isDown = false;
-//     secondSlider.classList.remove('grabbing')
-//   })
-
-//   secondSlider.addEventListener('mousemove', (e) => {
-//     if(!isDown) return;
-//     e.preventDefault();
-//     const x = e.pageX - secondSlider.offsetLeft;
-//     const walk = x - startX;
-//     secondSlider.scrollLeft = scrollLeft - walk;
-//   })
+function sideScroll(element,direction,speed,distance,step){
+  var scrollAmount = 0;
+  var slideTimer = setInterval(function(){
+      if(direction == 'left'){
+          element.scrollLeft -= step;
+      } else {
+          element.scrollLeft += step;
+      }
+      scrollAmount += step;
+      if(scrollAmount >= distance){
+          window.clearInterval(slideTimer);
+      }
+  }, speed);
+}
 
 window.showPassword = showPassword
